@@ -6,19 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://Yansz.github.io">
-  <title>TechNotes</title>
+  <title>About point cloud analysis | TechNotes</title>
   <meta name="generator" content="hexo-theme-yilia-plus">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
-    
-    <!-- <meta name="keywords" content="">
-    <meta name="description" content=""> -->
-  
-  <meta property="og:type" content="website">
-<meta property="og:title" content="TechNotes">
-<meta property="og:url" content="https://yansz.github.io/index.html">
+  <meta name="description" content="Since 2017Sort out papers on point cloud research from 2017, and add keywords for the research area. For anyone who wants to do research about 3D point cloud, thanks for the Open source community .If">
+<meta property="og:type" content="article">
+<meta property="og:title" content="About point cloud analysis">
+<meta property="og:url" content="https://yansz.github.io/2020/01/10/Point%20cloud%20analysis%20/index.html">
 <meta property="og:site_name" content="TechNotes">
+<meta property="og:description" content="Since 2017Sort out papers on point cloud research from 2017, and add keywords for the research area. For anyone who wants to do research about 3D point cloud, thanks for the Open source community .If">
+<meta property="article:published_time" content="2020-01-09T21:00:00.000Z">
+<meta property="article:modified_time" content="2020-02-04T12:36:52.263Z">
 <meta property="article:author" content="Chris Yan">
+<meta property="article:tag" content="3DSeg">
 <meta name="twitter:card" content="summary">
   
   
@@ -169,25 +170,25 @@
               class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-
-  
-    <article id="post-Point cloud analysis " class="article article-type-post  article-index" itemscope itemprop="blogPost">
+            <article id="post-Point cloud analysis " class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
   
   
-    <h1 itemprop="name">
-	
-	  <a class="article-title" href="/2020/01/10/Point%20cloud%20analysis%20/">About point cloud analysis</a>
-	
+    <h1 class="article-title" itemprop="name">
+      About point cloud analysis
     </h1>
   
 
 
   
   
+        
+        <span id="busuanzi_container_page_pv" style='display:none' class="archive-article-date">
+              <i class="icon-smile icon"></i> 阅读数：<span id="busuanzi_value_page_pv"></span>次
+        </span>
+
 <a href="/2020/01/10/Point%20cloud%20analysis%20/" class="archive-article-date">
         <time datetime="2020-01-09T21:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-01-10</time>
 </a>
@@ -195,6 +196,27 @@
   
   
     
+<div style="margin-top:10px;">
+  <span class="post-time">
+    <span class="post-meta-item-icon">
+      <!-- fonts.scss -->
+      <!-- 百度字体平台:http://fontstore.baidu.com/static/editor/index.html -->
+      <i class="icon-statistics"></i>
+      <span class="post-meta-item-text"> Words=</span>
+      <span class="post-count">5.6k</span>
+    </span>
+  </span>
+
+  <span class="post-time">
+    &nbsp; | &nbsp;
+    <span class="post-meta-item-icon">
+      <i class="icon-book icon"></i>
+      <span class="post-meta-item-text"> Time≈</span>
+      <span class="post-count">34min</span>
+    </span>
+  </span>
+</div>
+
 
   
   </header>
@@ -202,800 +224,494 @@
   <div class="article-entry" itemprop="articleBody">
     
     <h1 id="Since-2017"><a href="#Since-2017" class="headerlink" title="Since 2017"></a>Since 2017</h1><p>Sort out papers on point cloud research from 2017, and add keywords for the research area. For anyone who wants to do research about 3D point cloud, thanks for the Open source community .If you find the awesome paper/code/dataset or have some suggestions, please contact <a href="mailto:linhua2017@ia.ac.cn">linhua2017@ia.ac.cn</a>. </p>
-    
-    
+<a id="more"></a>
+
+<h3> Keywords </h3>
+
+
+<p><strong><code>dat.</code></strong>: dataset &emsp; | &emsp; <strong><code>cls.</code></strong>: classification &emsp;| &emsp; <strong><code>rel.</code></strong>: retrieval &emsp;|&emsp; <strong><code>seg.</code></strong>: segmentation    </p>
+<p><strong><code>det.</code></strong>: detection &emsp; | &emsp; <strong><code>tra.</code></strong>: tracking &emsp; | &emsp; <strong><code>pos.</code></strong>: pose &emsp; | &emsp; <strong><code>dep.</code></strong>: depth     </p>
+<p><strong><code>reg.</code></strong>: registration &emsp;| &emsp; <strong><code>rec.</code></strong>: reconstruction &emsp; | &emsp; <strong><code>aut.</code></strong>: autonomous driving     </p>
+<p><strong><code>oth.</code></strong>: other, including normal-related, correspondence, mapping, matching, alignment, compression, generative model…</p>
+<p>Statistics:  :fire:code is available &amp; stars &gt;= 100 &emsp;|&emsp; :star: citation &gt;= 50</p>
+<hr>
+<h2 id="2017"><a href="#2017" class="headerlink" title="2017"></a>2017</h2><ul>
+<li>[<a href="http://openaccess.thecvf.com/content_cvpr_2017/papers/Qi_PointNet_Deep_Learning_CVPR_2017_paper.pdf" target="_blank" rel="noopener">CVPR</a>] PointNet: Deep Learning on Point Sets for 3D Classification and Segmentation. [<a href="https://github.com/charlesq34/pointnet" target="_blank" rel="noopener">tensorflow</a>][<a href="https://github.com/fxia22/pointnet.pytorch" target="_blank" rel="noopener">pytorch</a>] [<strong><code>cls.</code></strong> <strong><code>seg.</code></strong> <strong><code>det.</code></strong>] :fire: :star:</li>
+<li>[<a href="http://openaccess.thecvf.com/content_cvpr_2017/papers/Simonovsky_Dynamic_Edge-Conditioned_Filters_CVPR_2017_paper.pdf" target="_blank" rel="noopener">CVPR</a>] Dynamic Edge-Conditioned Filters in Convolutional Neural Networks on Graphs. [<strong><code>cls.</code></strong>] :star:</li>
+<li>[<a href="http://openaccess.thecvf.com/content_cvpr_2017/papers/Yi_SyncSpecCNN_Synchronized_Spectral_CVPR_2017_paper.pdf" target="_blank" rel="noopener">CVPR</a>] SyncSpecCNN: Synchronized Spectral CNN for 3D Shape Segmentation. [<a href="https://github.com/ericyi/SyncSpecCNN" target="_blank" rel="noopener">torch</a>] [<strong><code>seg.</code></strong> <strong><code>oth.</code></strong>] :star:</li>
+<li>[<a href="http://openaccess.thecvf.com/content_cvpr_2017/papers/Dai_ScanNet_Richly-Annotated_3D_CVPR_2017_paper.pdf" target="_blank" rel="noopener">CVPR</a>] ScanNet: Richly-annotated 3D Reconstructions of Indoor Scenes. [<a href="http://www.scan-net.org/" target="_blank" rel="noopener">project</a>][<a href="http://www.scan-net.org/" target="_blank" rel="noopener">git</a>] [<strong><code>dat.</code></strong> <strong><code>cls.</code></strong> <strong><code>rel.</code></strong> <strong><code>seg.</code></strong> <strong><code>oth.</code></strong>] :fire: :star:</li>
+<li>[<a href="http://openaccess.thecvf.com/content_cvpr_2017/papers/Mostegel_Scalable_Surface_Reconstruction_CVPR_2017_paper.pdf" target="_blank" rel="noopener">CVPR</a>] Scalable Surface Reconstruction from Point Clouds with Extreme Scale and Density Diversity. [<strong><code>oth.</code></strong>] </li>
+<li>[<a href="http://openaccess.thecvf.com/content_cvpr_2017/papers/Straub_Efficient_Global_Point_CVPR_2017_paper.pdf" target="_blank" rel="noopener">CVPR</a>] Efficient Global Point Cloud Alignment using Bayesian Nonparametric Mixtures. [<a href="http://people.csail.mit.edu/jstraub/" target="_blank" rel="noopener">code</a>] [<strong><code>oth.</code></strong>]</li>
+<li>[<a href="http://openaccess.thecvf.com/content_cvpr_2017/papers/Vongkulbhisal_Discriminative_Optimization_Theory_CVPR_2017_paper.pdf" target="_blank" rel="noopener">CVPR</a>] Discriminative Optimization: Theory and Applications to Point Cloud Registration. [<strong><code>reg.</code></strong>]</li>
+<li>[<a href="http://openaccess.thecvf.com/content_cvpr_2017/papers/Elbaz_3D_Point_Cloud_CVPR_2017_paper.pdf" target="_blank" rel="noopener">CVPR</a>] 3D Point Cloud Registration for Localization using a Deep Neural Network Auto-Encoder. [<a href="https://github.com/gilbaz/LORAX" target="_blank" rel="noopener">git</a>] [<strong><code>reg.</code></strong>]</li>
+<li>[<a href="http://openaccess.thecvf.com/content_cvpr_2017/papers/Chen_Multi-View_3D_Object_CVPR_2017_paper.pdf" target="_blank" rel="noopener">CVPR</a>] Multi-View 3D Object Detection Network for Autonomous Driving. [<a href="https://github.com/bostondiditeam/MV3D" target="_blank" rel="noopener">tensorflow</a>] [<strong><code>det.</code></strong> <strong><code>aut.</code></strong>] :fire: :star:</li>
+<li>[<a href="http://openaccess.thecvf.com/content_cvpr_2017/papers/Zeng_3DMatch_Learning_Local_CVPR_2017_paper.pdf" target="_blank" rel="noopener">CVPR</a>] 3DMatch: Learning Local Geometric Descriptors from RGB-D Reconstructions. [<a href="https://github.com/andyzeng/3dmatch-toolbox" target="_blank" rel="noopener">code</a>] [<strong><code>dat.</code></strong> <strong><code>pos.</code></strong> <strong><code>reg.</code></strong> <strong><code>rec.</code></strong> <strong><code>oth.</code></strong>] :fire: :star:</li>
+<li>[<a href="http://openaccess.thecvf.com/content_cvpr_2017/papers/Riegler_OctNet_Learning_Deep_CVPR_2017_paper.pdf" target="_blank" rel="noopener">CVPR</a>] OctNet: Learning Deep 3D Representations at High Resolutions. [<a href="https://github.com/griegler/octnet" target="_blank" rel="noopener">torch</a>] [<strong><code>cls.</code></strong> <strong><code>seg.</code></strong> <strong><code>oth.</code></strong>] :fire: :star:</li>
+<li></li>
+<li>[<a href="http://openaccess.thecvf.com/content_ICCV_2017/papers/Klokov_Escape_From_Cells_ICCV_2017_paper.pdf" target="_blank" rel="noopener">ICCV</a>] Escape from Cells: Deep Kd-Networks for the Recognition of 3D Point Cloud Models. [<a href="https://github.com/fxia22/kdnet.pytorch" target="_blank" rel="noopener">pytorch</a>] [<strong><code>cls.</code></strong> <strong><code>rel.</code></strong> <strong><code>seg.</code></strong>] :star:</li>
+<li>[<a href="http://openaccess.thecvf.com/content_ICCV_2017/papers/Liu_3DCNN-DQN-RNN_A_Deep_ICCV_2017_paper.pdf" target="_blank" rel="noopener">ICCV</a>] 3DCNN-DQN-RNN: A Deep Reinforcement Learning Framework for Semantic Parsing of Large-scale 3D Point Clouds. [<a href="https://github.com/CKchaos/scn2pointcloud_tool" target="_blank" rel="noopener">code</a>] [<strong><code>seg.</code></strong>]</li>
+<li>[<a href="http://openaccess.thecvf.com/content_ICCV_2017/papers/Park_Colored_Point_Cloud_ICCV_2017_paper.pdf" target="_blank" rel="noopener">ICCV</a>] Colored Point Cloud Registration Revisited. [<strong><code>reg.</code></strong>]</li>
+<li>[<a href="http://openaccess.thecvf.com/content_ICCV_2017/papers/Nan_PolyFit_Polygonal_Surface_ICCV_2017_paper.pdf" target="_blank" rel="noopener">ICCV</a>] PolyFit: Polygonal Surface Reconstruction from Point Clouds. [<a href="https://github.com/LiangliangNan/PolyFit" target="_blank" rel="noopener">code</a>] [<strong><code>rec.</code></strong>] :fire:</li>
+<li>[<a href="http://openaccess.thecvf.com/content_ICCV_2017/papers/Ladicky_From_Point_Clouds_ICCV_2017_paper.pdf" target="_blank" rel="noopener">ICCV</a>] From Point Clouds to Mesh using Regression. [<strong><code>rec.</code></strong>]</li>
+<li>[<a href="http://openaccess.thecvf.com/content_ICCV_2017/papers/Qi_3D_Graph_Neural_ICCV_2017_paper.pdf" target="_blank" rel="noopener">ICCV</a>] 3D Graph Neural Networks for RGBD Semantic Segmentation. [<a href="https://github.com/yanx27/3DGNN_pytorch" target="_blank" rel="noopener">pytorch</a>] [<strong><code>seg.</code></strong>]</li>
+<li></li>
+<li>[<a href="https://papers.nips.cc/paper/7095-pointnet-deep-hierarchical-feature-learning-on-point-sets-in-a-metric-space" target="_blank" rel="noopener">NeurIPS</a>] PointNet++: Deep Hierarchical Feature Learning on Point Sets in a Metric Space. [<a href="https://github.com/charlesq34/pointnet2" target="_blank" rel="noopener">tensorflow</a>][<a href="https://github.com/erikwijmans/Pointnet2_PyTorch" target="_blank" rel="noopener">pytorch</a>] [<strong><code>cls.</code></strong> <strong><code>seg.</code></strong>] :fire: :star:</li>
+<li>[<a href="https://papers.nips.cc/paper/6931-deep-sets" target="_blank" rel="noopener">NeurIPS</a>] Deep Sets. [<a href="https://github.com/manzilzaheer/DeepSets" target="_blank" rel="noopener">pytorch</a>] [<strong><code>cls.</code></strong>] :star:</li>
+<li></li>
+<li>[<a href="https://ieeexplore.ieee.org/document/7989161" target="_blank" rel="noopener">ICRA</a>] Vote3Deep: Fast object detection in 3D point clouds using efficient convolutional neural networks. [<a href="https://github.com/lijiannuist/Vote3Deep_lidar" target="_blank" rel="noopener">code</a>] [<strong><code>det.</code></strong> <strong><code>aut.</code></strong>] :star:</li>
+<li>[<a href="https://ieeexplore.ieee.org/document/7989591" target="_blank" rel="noopener">ICRA</a>] Fast segmentation of 3D point clouds: A paradigm on LiDAR data for autonomous vehicle applications. [<a href="https://github.com/VincentCheungM/Run_based_segmentation" target="_blank" rel="noopener">code</a>] [<strong><code>seg.</code></strong> <strong><code>aut.</code></strong>]</li>
+<li>[<a href="https://ieeexplore.ieee.org/document/7989618" target="_blank" rel="noopener">ICRA</a>] SegMatch: Segment based place recognition in 3D point clouds. [<strong><code>seg.</code></strong> <strong><code>oth.</code></strong>]</li>
+<li>[<a href="https://ieeexplore.ieee.org/document/7989664" target="_blank" rel="noopener">ICRA</a>] Using 2 point+normal sets for fast registration of point clouds with small overlap. [<strong><code>reg.</code></strong>]</li>
+<li></li>
+<li>[<a href="https://ieeexplore.ieee.org/document/8202234" target="_blank" rel="noopener">IROS</a>] Car detection for autonomous vehicle: LIDAR and vision fusion approach through deep learning framework. [<strong><code>det.</code></strong> <strong><code>aut.</code></strong>]</li>
+<li>[<a href="https://ieeexplore.ieee.org/document/8202239" target="_blank" rel="noopener">IROS</a>] 3D object classification with point convolution network. [<strong><code>cls.</code></strong>]</li>
+<li>[<a href="https://ieeexplore.ieee.org/document/8205955" target="_blank" rel="noopener">IROS</a>] 3D fully convolutional network for vehicle detection in point cloud. [<a href="https://github.com/yukitsuji/3D_CNN_tensorflow" target="_blank" rel="noopener">tensorflow</a>] [<strong><code>det.</code></strong> <strong><code>aut.</code></strong>] :fire: :star:</li>
+<li>[<a href="https://ieeexplore.ieee.org/document/8206488" target="_blank" rel="noopener">IROS</a>] Deep learning of directional truncated signed distance function for robust 3D object recognition. [<strong><code>det.</code></strong> <strong><code>pos.</code></strong>]</li>
+<li>[<a href="https://ieeexplore.ieee.org/document/8206584" target="_blank" rel="noopener">IROS</a>] Analyzing the quality of matched 3D point clouds of objects. [<strong><code>oth.</code></strong>]</li>
+<li></li>
+<li>[<a href="http://segcloud.stanford.edu/segcloud_2017.pdf" target="_blank" rel="noopener">3DV</a>] SEGCloud: Semantic Segmentation of 3D Point Clouds. [<a href="http://segcloud.stanford.edu/" target="_blank" rel="noopener">project</a>] [<strong><code>seg.</code></strong> <strong><code>aut.</code></strong>] :star:</li>
+<li></li>
+<li>[<a href="https://ieeexplore.ieee.org/ielx7/34/8454009/08046026.pdf?tp=&arnumber=8046026&isnumber=8454009&ref=aHR0cHM6Ly93d3cuZ29vZ2xlLmNvbS8=" target="_blank" rel="noopener">TPAMI</a>] Structure-aware Data Consolidation. [<strong><code>oth.</code></strong>]</li>
+</ul>
+<hr>
+<h2 id="2018"><a href="#2018" class="headerlink" title="2018"></a>2018</h2><ul>
+<li>[<a href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Su_SPLATNet_Sparse_Lattice_CVPR_2018_paper.pdf" target="_blank" rel="noopener">CVPR</a>] SPLATNet: Sparse Lattice Networks for Point Cloud Processing. [<a href="https://github.com/NVlabs/splatnet" target="_blank" rel="noopener">caffe</a>] [<strong><code>seg.</code></strong>] :fire:</li>
+<li>[<a href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Xie_Attentional_ShapeContextNet_for_CVPR_2018_paper.pdf" target="_blank" rel="noopener">CVPR</a>] Attentional ShapeContextNet for Point Cloud Recognition. [<strong><code>cls.</code></strong> <strong><code>seg.</code></strong>]</li>
+<li>[<a href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Shen_Mining_Point_Cloud_CVPR_2018_paper.pdf" target="_blank" rel="noopener">CVPR</a>] Mining Point Cloud Local Structures by Kernel Correlation and Graph Pooling. [<a href="http://www.merl.com/research/license#KCNet" target="_blank" rel="noopener">code</a>] [<strong><code>cls.</code></strong> <strong><code>seg.</code></strong>]</li>
+<li>[<a href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Yang_FoldingNet_Point_Cloud_CVPR_2018_paper.pdf" target="_blank" rel="noopener">CVPR</a>] FoldingNet: Point Cloud Auto-encoder via Deep Grid Deformation. [<a href="http://www.merl.com/research/license#FoldingNet" target="_blank" rel="noopener">code</a>] [<strong><code>cls.</code></strong>]</li>
+<li>[<a href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Hua_Pointwise_Convolutional_Neural_CVPR_2018_paper.pdf" target="_blank" rel="noopener">CVPR</a>] Pointwise Convolutional Neural Networks. [<a href="https://github.com/scenenn/pointwise" target="_blank" rel="noopener">tensorflow</a>] [<strong><code>cls.</code></strong> <strong><code>seg.</code></strong>]</li>
+<li>[<a href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Yu_PU-Net_Point_Cloud_CVPR_2018_paper.pdf" target="_blank" rel="noopener">CVPR</a>] PU-Net: Point Cloud Upsampling Network. [<a href="https://github.com/yulequan/PU-Net" target="_blank" rel="noopener">tensorflow</a>] [<strong><code>rec.</code></strong> <strong><code>oth.</code></strong>] :fire:</li>
+<li>[<a href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Li_SO-Net_Self-Organizing_Network_CVPR_2018_paper.pdf" target="_blank" rel="noopener">CVPR</a>] SO-Net: Self-Organizing Network for Point Cloud Analysis. [<a href="https://github.com/lijx10/SO-Net" target="_blank" rel="noopener">pytorch</a>] [<strong><code>cls.</code></strong> <strong><code>seg.</code></strong>] :fire: :star:</li>
+<li>[<a href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Huang_Recurrent_Slice_Networks_CVPR_2018_paper.pdf" target="_blank" rel="noopener">CVPR</a>] Recurrent Slice Networks for 3D Segmentation of Point Clouds. [<a href="https://github.com/qianguih/RSNet" target="_blank" rel="noopener">pytorch</a>] [<strong><code>seg.</code></strong>]</li>
+<li>[<a href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Graham_3D_Semantic_Segmentation_CVPR_2018_paper.pdf" target="_blank" rel="noopener">CVPR</a>] 3D Semantic Segmentation with Submanifold Sparse Convolutional Networks. [<a href="https://github.com/facebookresearch/SparseConvNet" target="_blank" rel="noopener">pytorch</a>] [<strong><code>seg.</code></strong>] :fire:</li>
+<li>[<a href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Wang_Deep_Parametric_Continuous_CVPR_2018_paper.pdf" target="_blank" rel="noopener">CVPR</a>] Deep Parametric Continuous Convolutional Neural Networks. [<strong><code>seg.</code></strong> <strong><code>aut.</code></strong>]</li>
+<li>[<a href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Yang_PIXOR_Real-Time_3D_CVPR_2018_paper.pdf" target="_blank" rel="noopener">CVPR</a>] PIXOR: Real-time 3D Object Detection from Point Clouds. [<a href="https://github.com/ankita-kalra/PIXOR" target="_blank" rel="noopener">pytorch</a>] [<strong><code>det.</code></strong> <strong><code>aut.</code></strong>]</li>
+<li>[<a href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Wang_SGPN_Similarity_Group_CVPR_2018_paper.pdf" target="_blank" rel="noopener">CVPR</a>] SGPN: Similarity Group Proposal Network for 3D Point Cloud Instance Segmentation. [<a href="https://github.com/laughtervv/SGPN" target="_blank" rel="noopener">tensorflow</a>] [<strong><code>seg.</code></strong>] :fire:</li>
+<li>[<a href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Landrieu_Large-Scale_Point_Cloud_CVPR_2018_paper.pdf" target="_blank" rel="noopener">CVPR</a>] Large-scale Point Cloud Semantic Segmentation with Superpoint Graphs. [<a href="https://github.com/loicland/superpoint_graph" target="_blank" rel="noopener">pytorch</a>] [<strong><code>seg.</code></strong>] :fire:</li>
+<li>[<a href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Zhou_VoxelNet_End-to-End_Learning_CVPR_2018_paper.pdf" target="_blank" rel="noopener">CVPR</a>] VoxelNet: End-to-End Learning for Point Cloud Based 3D Object Detection. [<a href="https://github.com/tsinghua-rll/VoxelNet-tensorflow" target="_blank" rel="noopener">tensorflow</a>] [<strong><code>det.</code></strong> <strong><code>aut.</code></strong>] :fire: :star:</li>
+<li>[<a href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Yun_Reflection_Removal_for_CVPR_2018_paper.pdf" target="_blank" rel="noopener">CVPR</a>] Reflection Removal for Large-Scale 3D Point Clouds. [<strong><code>oth.</code></strong>]</li>
+<li>[<a href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Ge_Hand_PointNet_3D_CVPR_2018_paper.pdf" target="_blank" rel="noopener">CVPR</a>] Hand PointNet: 3D Hand Pose Estimation using Point Sets. [<a href="https://github.com/3huo/Hand-Pointnet" target="_blank" rel="noopener">pytorch</a>] [<strong><code>pos.</code></strong>]</li>
+<li>[<a href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Uy_PointNetVLAD_Deep_Point_CVPR_2018_paper.pdf" target="_blank" rel="noopener">CVPR</a>] PointNetVLAD: Deep Point Cloud Based Retrieval for Large-Scale Place Recognition. [<a href="https://github.com/mikacuy/pointnetvlad.git" target="_blank" rel="noopener">tensorflow</a>] [<strong><code>rel.</code></strong>] :fire:</li>
+<li>[<a href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Roveri_A_Network_Architecture_CVPR_2018_paper.pdf" target="_blank" rel="noopener">CVPR</a>] A Network Architecture for Point Cloud Classification via Automatic Depth Images Generation. [<strong><code>cls.</code></strong>]</li>
+<li>[<a href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Lawin_Density_Adaptive_Point_CVPR_2018_paper.pdf" target="_blank" rel="noopener">CVPR</a>] Density Adaptive Point Set Registration. [<a href="https://github.com/felja633/DARE" target="_blank" rel="noopener">code</a>] [<strong><code>reg.</code></strong>]</li>
+<li>[<a href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Birdal_A_Minimalist_Approach_CVPR_2018_paper.pdf" target="_blank" rel="noopener">CVPR</a>] A Minimalist Approach to Type-Agnostic Detection of Quadrics in Point Clouds. [<strong><code>seg.</code></strong>]</li>
+<li>[<a href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Vongkulbhisal_Inverse_Composition_Discriminative_CVPR_2018_paper.pdf" target="_blank" rel="noopener">CVPR</a>] Inverse Composition Discriminative Optimization for Point Cloud Registration. [<strong><code>reg.</code></strong>]</li>
+<li>[<a href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Reddy_CarFusion_Combining_Point_CVPR_2018_paper.pdf" target="_blank" rel="noopener">CVPR</a>] CarFusion: Combining Point Tracking and Part Detection for Dynamic 3D Reconstruction of Vehicles. [<strong><code>tra.</code></strong> <strong><code>det.</code></strong> <strong><code>rec.</code></strong>]</li>
+<li>[<a href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Deng_PPFNet_Global_Context_CVPR_2018_paper.pdf" target="_blank" rel="noopener">CVPR</a>] PPFNet: Global Context Aware Local Features for Robust 3D Point Matching. [<strong><code>oth.</code></strong>]</li>
+<li>[<a href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Le_PointGrid_A_Deep_CVPR_2018_paper.pdf" target="_blank" rel="noopener">CVPR</a>] PointGrid: A Deep Network for 3D Shape Understanding. [<a href="https://github.com/trucleduc/PointGrid" target="_blank" rel="noopener">tensorflow</a>] [<strong><code>cls.</code></strong> <strong><code>seg.</code></strong>]</li>
+<li>[<a href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Xu_PointFusion_Deep_Sensor_CVPR_2018_paper.pdf" target="_blank" rel="noopener">CVPR</a>] PointFusion: Deep Sensor Fusion for 3D Bounding Box Estimation. [<a href="https://github.com/malavikabindhi/CS230-PointFusion" target="_blank" rel="noopener">code</a>] [<strong><code>det.</code></strong> <strong><code>aut.</code></strong>]</li>
+<li>[<a href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Qi_Frustum_PointNets_for_CVPR_2018_paper.pdf" target="_blank" rel="noopener">CVPR</a>] Frustum PointNets for 3D Object Detection from RGB-D Data. [<a href="https://github.com/charlesq34/frustum-pointnets" target="_blank" rel="noopener">tensorflow</a>] [<strong><code>det.</code></strong> <strong><code>aut.</code></strong>] :fire: :star:</li>
+<li>[<a href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Tatarchenko_Tangent_Convolutions_for_CVPR_2018_paper.pdf" target="_blank" rel="noopener">CVPR</a>] Tangent Convolutions for Dense Prediction in 3D. [<a href="https://github.com/tatarchm/tangent_conv" target="_blank" rel="noopener">tensorflow</a>] [<strong><code>seg.</code></strong> <strong><code>aut.</code></strong>]</li>
+<li></li>
+<li>[<a href="http://openaccess.thecvf.com/content_ECCV_2018/papers/Matheus_Gadelha_Multiresolution_Tree_Networks_ECCV_2018_paper.pdf" target="_blank" rel="noopener">ECCV</a>] Multiresolution Tree Networks for 3D Point Cloud Processing. [<a href="https://github.com/matheusgadelha/MRTNet" target="_blank" rel="noopener">pytorch</a>] [<strong><code>cls.</code></strong>]</li>
+<li>[<a href="http://openaccess.thecvf.com/content_ECCV_2018/papers/Lequan_Yu_EC-Net_an_Edge-aware_ECCV_2018_paper.pdf" target="_blank" rel="noopener">ECCV</a>] EC-Net: an Edge-aware Point set Consolidation Network. [<a href="https://github.com/yulequan/EC-Net" target="_blank" rel="noopener">tensorflow</a>] [<strong><code>oth.</code></strong>]</li>
+<li>[<a href="http://openaccess.thecvf.com/content_ECCV_2018/papers/Xiaoqing_Ye_3D_Recurrent_Neural_ECCV_2018_paper.pdf" target="_blank" rel="noopener">ECCV</a>] 3D Recurrent Neural Networks with Context Fusion for Point Cloud Semantic Segmentation. [<strong><code>seg.</code></strong>]</li>
+<li>[<a href="http://openaccess.thecvf.com/content_ECCV_2018/papers/Lei_Zhou_Learning_and_Matching_ECCV_2018_paper.pdf" target="_blank" rel="noopener">ECCV</a>] Learning and Matching Multi-View Descriptors for Registration of Point Clouds. [<strong><code>reg.</code></strong>]</li>
+<li>[<a href="http://openaccess.thecvf.com/content_ECCV_2018/papers/Zi_Jian_Yew_3DFeat-Net_Weakly_Supervised_ECCV_2018_paper.pdf" target="_blank" rel="noopener">ECCV</a>] 3DFeat-Net: Weakly Supervised Local 3D Features for Point Cloud Registration. [<a href="https://github.com/yewzijian/3DFeatNet" target="_blank" rel="noopener">tensorflow</a>] [<strong><code>reg.</code></strong>]</li>
+<li>[<a href="http://openaccess.thecvf.com/content_ECCV_2018/papers/Chu_Wang_Local_Spectral_Graph_ECCV_2018_paper.pdf" target="_blank" rel="noopener">ECCV</a>] Local Spectral Graph Convolution for Point Set Feature Learning. [<a href="https://github.com/fate3439/LocalSpecGCN" target="_blank" rel="noopener">tensorflow</a>] [<strong><code>cls.</code></strong> <strong><code>seg.</code></strong>]</li>
+<li>[<a href="http://openaccess.thecvf.com/content_ECCV_2018/papers/Yifan_Xu_SpiderCNN_Deep_Learning_ECCV_2018_paper.pdf" target="_blank" rel="noopener">ECCV</a>] SpiderCNN: Deep Learning on Point Sets with Parameterized Convolutional Filters. [<a href="https://github.com/xyf513/SpiderCNN" target="_blank" rel="noopener">tensorflow</a>] [<strong><code>cls.</code></strong> <strong><code>seg.</code></strong>]</li>
+<li>[<a href="http://openaccess.thecvf.com/content_ECCV_2018/papers/Yinlong_Liu_Efficient_Global_Point_ECCV_2018_paper.pdf" target="_blank" rel="noopener">ECCV</a>] Efficient Global Point Cloud Registration by Matching Rotation Invariant Features Through Translation Search. [<strong><code>reg.</code></strong>]</li>
+<li>[<a href="http://openaccess.thecvf.com/content_ECCV_2018/papers/Kejie_Li_Efficient_Dense_Point_ECCV_2018_paper.pdf" target="_blank" rel="noopener">ECCV</a>] Efficient Dense Point Cloud Object Reconstruction using Deformation Vector Fields. [<strong><code>rec.</code></strong>]</li>
+<li>[<a href="http://openaccess.thecvf.com/content_ECCV_2018/papers/Dario_Rethage_Fully-Convolutional_Point_Networks_ECCV_2018_paper.pdf" target="_blank" rel="noopener">ECCV</a>] Fully-Convolutional Point Networks for Large-Scale Point Clouds. [<a href="https://github.com/drethage/fully-convolutional-point-network" target="_blank" rel="noopener">tensorflow</a>] [<strong><code>seg.</code></strong> <strong><code>oth.</code></strong>]</li>
+<li>[<a href="http://openaccess.thecvf.com/content_ECCV_2018/papers/Ming_Liang_Deep_Continuous_Fusion_ECCV_2018_paper.pdf" target="_blank" rel="noopener">ECCV</a>] Deep Continuous Fusion for Multi-Sensor 3D Object Detection. [<strong><code>det.</code></strong>]</li>
+<li>[<a href="http://openaccess.thecvf.com/content_ECCV_2018/papers/Benjamin_Eckart_Fast_and_Accurate_ECCV_2018_paper.pdf" target="_blank" rel="noopener">ECCV</a>] HGMR: Hierarchical Gaussian Mixtures for Adaptive 3D Registration. [<strong><code>reg.</code></strong>]</li>
+<li>[<a href="http://openaccess.thecvf.com/content_ECCV_2018/papers/Liuhao_Ge_Point-to-Point_Regression_PointNet_ECCV_2018_paper.pdf" target="_blank" rel="noopener">ECCV</a>] Point-to-Point Regression PointNet for 3D Hand Pose Estimation. [<strong><code>pos.</code></strong>]</li>
+<li>[<a href="http://openaccess.thecvf.com/content_ECCV_2018/papers/Tolga_Birdal_PPF-FoldNet_Unsupervised_Learning_ECCV_2018_paper.pdf" target="_blank" rel="noopener">ECCV</a>] PPF-FoldNet: Unsupervised Learning of Rotation Invariant 3D Local Descriptors. [<strong><code>oth.</code></strong>]</li>
+<li>[<a href="http://openaccess.thecvf.com/content_ECCVW_2018/papers/11131/Zeng_3DContextNet_K-d_Tree_Guided_Hierarchical_Learning_of_Point_Clouds_Using_ECCVW_2018_paper.pdf" target="_blank" rel="noopener">ECCVW</a>] 3DContextNet: K-d Tree Guided Hierarchical Learning of Point Clouds Using Local and Global Contextual Cues. [<strong><code>cls.</code></strong> <strong><code>seg.</code></strong>]</li>
+<li>[<a href="http://openaccess.thecvf.com/content_ECCVW_2018/papers/11131/Ali_YOLO3D_End-to-end_real-time_3D_Oriented_Object_Bounding_Box_Detection_from_ECCVW_2018_paper.pdf" target="_blank" rel="noopener">ECCVW</a>] YOLO3D: End-to-end real-time 3D Oriented Object Bounding Box Detection from LiDAR Point Cloud. [<strong><code>det.</code></strong> <strong><code>aut.</code></strong>]</li>
+<li></li>
+<li>[<a href="https://aaai.org/ocs/index.php/AAAI/AAAI18/paper/view/16530/16302" target="_blank" rel="noopener">AAAI</a>] Learning Efficient Point Cloud Generation for Dense 3D Object Reconstruction. [<a href="https://github.com/chenhsuanlin/3D-point-cloud-generation" target="_blank" rel="noopener">tensorflow</a>] [<strong><code>rec.</code></strong>] :fire:</li>
+<li>[<a href="https://ai.tencent.com/ailab/media/publications/aaai/junzhou_-AAAI-Adaptive_Graph_Convolutional_Neural_NetworksI.pdf" target="_blank" rel="noopener">AAAI</a>] Adaptive Graph Convolutional Neural Networks. [<strong><code>cls.</code></strong>]</li>
+<li></li>
+<li>[<a href="https://papers.nips.cc/paper/7545-unsupervised-learning-of-shape-and-pose-with-differentiable-point-clouds" target="_blank" rel="noopener">NeurIPS</a>] Unsupervised Learning of Shape and Pose with Differentiable Point Clouds. [<a href="https://github.com/eldar/differentiable-point-clouds" target="_blank" rel="noopener">tensorflow</a>] [<strong><code>pos.</code></strong>]</li>
+<li>[<a href="https://papers.nips.cc/paper/7362-pointcnn-convolution-on-x-transformed-points" target="_blank" rel="noopener">NeurIPS</a>] PointCNN: Convolution On X-Transformed Points. [<a href="https://github.com/yangyanli/PointCNN" target="_blank" rel="noopener">tensorflow</a>][<a href="https://github.com/hxdengBerkeley/PointCNN.Pytorch" target="_blank" rel="noopener">pytorch</a>] [<strong><code>cls.</code></strong> <strong><code>seg.</code></strong>] :fire:</li>
+<li></li>
+<li>[<a href="https://arxiv.org/abs/1707.02392" target="_blank" rel="noopener">ICML</a>] Learning Representations and Generative Models for 3D Point Clouds. [<a href="https://github.com/optas/latent_3d_points" target="_blank" rel="noopener">code</a>] [<strong><code>oth.</code></strong>] :fire:</li>
+<li></li>
+<li>[<a href="https://dl.acm.org/ft_gateway.cfm?id=3201301&ftid=1991771&dwn=1&CFID=155708095&CFTOKEN=598df826a5b545a7-3E7CE91C-DE12-F588-FAEEF2551115E64E" target="_blank" rel="noopener">TOG</a>] Point Convolutional Neural Networks by Extension Operators. [<a href="https://github.com/matanatz/pcnn" target="_blank" rel="noopener">tensorflow</a>] [<strong><code>cls.</code></strong> <strong><code>seg.</code></strong>]</li>
+<li>[<a href="https://arxiv.org/abs/1803.09263" target="_blank" rel="noopener">SIGGRAPH</a>] P2P-NET: Bidirectional Point Displacement Net for Shape Transform. [<a href="https://github.com/kangxue/P2P-NET" target="_blank" rel="noopener">tensorflow</a>] [<strong><code>oth.</code></strong>]</li>
+<li>[<a href="https://arxiv.org/abs/1806.01759" target="_blank" rel="noopener">SIGGRAPH Asia</a>] Monte Carlo Convolution for Learning on Non-Uniformly Sampled Point Clouds. [<a href="https://github.com/viscom-ulm/MCCNN" target="_blank" rel="noopener">tensorflow</a>] [<strong><code>cls.</code></strong> <strong><code>seg.</code></strong> <strong><code>oth.</code></strong>]</li>
+<li>[<a href="https://arxiv.org/abs/1706.04496" target="_blank" rel="noopener">SIGGRAPH</a>] Learning local shape descriptors from part correspondences with multi-view convolutional networks. [<a href="https://people.cs.umass.edu/~hbhuang/local_mvcnn/index.html" target="_blank" rel="noopener">project</a>] [<strong><code>seg.</code></strong> <strong><code>oth.</code></strong>] </li>
+<li></li>
+<li>[<a href="https://arxiv.org/abs/1808.07659" target="_blank" rel="noopener">MM</a>] PVNet: A Joint Convolutional Network of Point Cloud and Multi-View for 3D Shape Recognition. [<strong><code>cls.</code></strong> <strong><code>rel.</code></strong>]</li>
+<li>[<a href="https://arxiv.org/abs/1806.02952" target="_blank" rel="noopener">MM</a>] RGCNN: Regularized Graph CNN for Point Cloud Segmentation. [<a href="https://github.com/tegusi/RGCNN" target="_blank" rel="noopener">tensorflow</a>] [<strong><code>seg.</code></strong>]</li>
+<li>[<a href="https://arxiv.org/abs/1804.10783" target="_blank" rel="noopener">MM</a>] Hybrid Point Cloud Attribute Compression Using Slice-based Layered Structure and Block-based Intra Prediction. [<strong><code>oth.</code></strong>]</li>
+<li></li>
+<li>[<a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=8462884" target="_blank" rel="noopener">ICRA</a>] End-to-end Learning of Multi-sensor 3D Tracking by Detection. [<strong><code>det.</code></strong> <strong><code>tra.</code></strong> <strong><code>aut.</code></strong>]</li>
+<li>[<a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=8460837" target="_blank" rel="noopener">ICRA</a>] Multi-View 3D Entangled Forest for Semantic Segmentation and Mapping. [<strong><code>seg.</code></strong> <strong><code>oth.</code></strong>]</li>
+<li>[<a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=8462926" target="_blank" rel="noopener">ICRA</a>] SqueezeSeg: Convolutional Neural Nets with Recurrent CRF for Real-Time Road-Object Segmentation from 3D LiDAR Point Cloud. [<a href="https://github.com/priyankanagaraj1494/Squeezseg" target="_blank" rel="noopener">tensorflow</a>] [<strong><code>seg.</code></strong> <strong><code>aut.</code></strong>]</li>
+<li>[<a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=8461257" target="_blank" rel="noopener">ICRA</a>] Robust Real-Time 3D Person Detection for Indoor and Outdoor Applications. [<strong><code>det.</code></strong>]</li>
+<li>[<a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=8461048" target="_blank" rel="noopener">ICRA</a>] High-Precision Depth Estimation with the 3D LiDAR and Stereo Fusion. [<strong><code>dep.</code></strong> <strong><code>aut.</code></strong>]</li>
+<li>[<a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=8461095" target="_blank" rel="noopener">ICRA</a>] Sampled-Point Network for Classification of Deformed Building Element Point Clouds. [<strong><code>cls.</code></strong>]</li>
+<li>[<a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=8460532" target="_blank" rel="noopener">ICRA</a>] Gemsketch: Interactive Image-Guided Geometry Extraction from Point Clouds. [<strong><code>oth.</code></strong>]</li>
+<li>[<a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=8460605" target="_blank" rel="noopener">ICRA</a>] Signature of Topologically Persistent Points for 3D Point Cloud Description. [<strong><code>oth.</code></strong>]</li>
+<li>[<a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=8461232" target="_blank" rel="noopener">ICRA</a>] A General Pipeline for 3D Detection of Vehicles. [<strong><code>det.</code></strong> <strong><code>aut.</code></strong>]</li>
+<li>[<a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=8460716" target="_blank" rel="noopener">ICRA</a>] Robust and Fast 3D Scan Alignment Using Mutual Information. [<strong><code>oth.</code></strong>]</li>
+<li>[<a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=8460940" target="_blank" rel="noopener">ICRA</a>] Delight: An Efficient Descriptor for Global Localisation Using LiDAR Intensities. [<strong><code>oth.</code></strong>]</li>
+<li>[<a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=8460862" target="_blank" rel="noopener">ICRA</a>] Surface-Based Exploration for Autonomous 3D Modeling. [<strong><code>oth.</code></strong> <strong><code>aut.</code></strong>]</li>
+<li>[<a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=8460554" target="_blank" rel="noopener">ICRA</a>] Deep Lidar CNN to Understand the Dynamics of Moving Vehicles. [<strong><code>oth.</code></strong> <strong><code>aut.</code></strong>]</li>
+<li>[<a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=8460887" target="_blank" rel="noopener">ICRA</a>] Dex-Net 3.0: Computing Robust Vacuum Suction Grasp Targets in Point Clouds Using a New Analytic Model and Deep Learning. [<strong><code>oth.</code></strong>]</li>
+<li>[<a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=8460639" target="_blank" rel="noopener">ICRA</a>] Real-Time Object Tracking in Sparse Point Clouds Based on 3D Interpolation. [<strong><code>tra.</code></strong>]</li>
+<li>[<a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=8460825" target="_blank" rel="noopener">ICRA</a>] Robust Generalized Point Cloud Registration Using Hybrid Mixture Model. [<strong><code>reg.</code></strong>]</li>
+<li>[<a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=8461049" target="_blank" rel="noopener">ICRA</a>] A General Framework for Flexible Multi-Cue Photometric Point Cloud Registration. [<strong><code>reg.</code></strong>]</li>
+<li>[<a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=8461000" target="_blank" rel="noopener">ICRA</a>] Efficient Continuous-Time SLAM for 3D Lidar-Based Online Mapping. [<strong><code>oth.</code></strong>]</li>
+<li>[<a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=8461102" target="_blank" rel="noopener">ICRA</a>] Direct Visual SLAM Using Sparse Depth for Camera-LiDAR System. [<strong><code>oth.</code></strong>]</li>
+<li>[<a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=8460910" target="_blank" rel="noopener">ICRA</a>] Spatiotemporal Learning of Dynamic Gestures from 3D Point Cloud Data. [<strong><code>cls.</code></strong>]</li>
+<li>[<a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=8460204" target="_blank" rel="noopener">ICRA</a>] Asynchronous Multi-Sensor Fusion for 3D Mapping and Localization. [<strong><code>oth.</code></strong>]</li>
+<li>[<a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=8460834" target="_blank" rel="noopener">ICRA</a>] Complex Urban LiDAR Data Set. [<a href="https://www.youtube.com/watch?v=IguZjmLf5V0&feature=youtu.be" target="_blank" rel="noopener">video</a>] [<strong><code>dat.</code></strong> <strong><code>oth.</code></strong>]</li>
+<li></li>
+<li>[<a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=8593693" target="_blank" rel="noopener">IROS</a>] CalibNet: Geometrically Supervised Extrinsic Calibration using 3D Spatial Transformer Networks.[<a href="https://github.com/epiception/CalibNet" target="_blank" rel="noopener">tensorflow</a>] [<strong><code>oth.</code></strong> <strong><code>aut.</code></strong>]</li>
+<li>[<a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=8593839" target="_blank" rel="noopener">IROS</a>] Dynamic Scaling Factors of Covariances for Accurate 3D Normal Distributions Transform Registration. [<strong><code>reg.</code></strong>]</li>
+<li>[<a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=8593733" target="_blank" rel="noopener">IROS</a>] A 3D Laparoscopic Imaging System Based on Stereo-Photogrammetry with Random Patterns. [<strong><code>rec.</code></strong> <strong><code>oth.</code></strong>]</li>
+<li>[<a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=8593558" target="_blank" rel="noopener">IROS</a>] Robust Generalized Point Cloud Registration with Expectation Maximization Considering Anisotropic Positional Uncertainties. [<strong><code>reg.</code></strong>]</li>
+<li>[<a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=8594024" target="_blank" rel="noopener">IROS</a>] Octree map based on sparse point cloud and heuristic probability distribution for labeled images. [<strong><code>oth.</code></strong> <strong><code>aut.</code></strong>]</li>
+<li>[<a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=8593854" target="_blank" rel="noopener">IROS</a>] PoseMap: Lifelong, Multi-Environment 3D LiDAR Localization. [<strong><code>oth.</code></strong>]</li>
+<li>[<a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=8593953" target="_blank" rel="noopener">IROS</a>] Scan Context: Egocentric Spatial Descriptor for Place Recognition Within 3D Point Cloud Map. [<strong><code>oth.</code></strong>]</li>
+<li>[<a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=8594299" target="_blank" rel="noopener">IROS</a>] LeGO-LOAM: Lightweight and Ground-Optimized Lidar Odometry and Mapping on Variable Terrain.[<a href="https://github.com/RobustFieldAutonomyLab/LeGO-LOAM" target="_blank" rel="noopener">code</a>] [<strong><code>pos.</code></strong> <strong><code>oth.</code></strong>] :fire:</li>
+<li>[<a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=8593741" target="_blank" rel="noopener">IROS</a>] Classification of Hanging Garments Using Learned Features Extracted from 3D Point Clouds. [<strong><code>cls.</code></strong>]</li>
+<li>[<a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=8594362" target="_blank" rel="noopener">IROS</a>] Stereo Camera Localization in 3D LiDAR Maps. [<strong><code>pos.</code></strong> <strong><code>oth.</code></strong>]</li>
+<li>[<a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=8594362" target="_blank" rel="noopener">IROS</a>] Joint 3D Proposal Generation and Object Detection from View Aggregation. [<strong><code>det.</code></strong>] :star:</li>
+<li>[<a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=8594318" target="_blank" rel="noopener">IROS</a>] Joint Point Cloud and Image Based Localization for Efficient Inspection in Mixed Reality. [<strong><code>oth.</code></strong>]</li>
+<li>[<a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=8593910" target="_blank" rel="noopener">IROS</a>] Edge and Corner Detection for Unorganized 3D Point Clouds with Application to Robotic Welding. [<strong><code>det.</code></strong> <strong><code>oth.</code></strong>]</li>
+<li>[<a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=8594175" target="_blank" rel="noopener">IROS</a>] NDVI Point Cloud Generator Tool Using Low-Cost RGB-D Sensor. [<a href="https://github.com/CTTCGeoLab/VI_ROS" target="_blank" rel="noopener">code</a>][<strong><code>oth.</code></strong>]</li>
+<li>[<a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=8593837" target="_blank" rel="noopener">IROS</a>] A 3D Convolutional Neural Network Towards Real-Time Amodal 3D Object Detection. [<strong><code>det.</code></strong> <strong><code>pos.</code></strong>]</li>
+<li>[<a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=8594356" target="_blank" rel="noopener">IROS</a>] Extracting Phenotypic Characteristics of Corn Crops Through the Use of Reconstructed 3D Models. [<strong><code>seg.</code></strong> <strong><code>rec.</code></strong>]</li>
+<li>[<a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=8594514" target="_blank" rel="noopener">IROS</a>] PCAOT: A Manhattan Point Cloud Registration Method Towards Large Rotation and Small Overlap. [<strong><code>reg.</code></strong>]</li>
+<li>[<a href="https://arxiv.org/abs/1711.08241" target="_blank" rel="noopener">IROS</a>] [<a href="https://github.com/sitzikbs/3DmFV-Net" target="_blank" rel="noopener">Tensorflow</a>]3DmFV: Point Cloud Classification and segmentation for unstructured 3D point clouds. [<strong><code>cls.</code></strong> ]</li>
+<li>[<a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=8594042" target="_blank" rel="noopener">IROS</a>] Seeing the Wood for the Trees: Reliable Localization in Urban and Natural Environments. [<strong><code>oth.</code></strong> ]</li>
+<li></li>
+<li>[<a href="https://www.mdpi.com/1424-8220/18/10/3337" target="_blank" rel="noopener">SENSORS</a>] SECOND: Sparsely Embedded Convolutional Detection. [<a href="https://github.com/traveller59/second.pytorch" target="_blank" rel="noopener">pytorch</a>] [<strong><code>det.</code></strong> <strong><code>aut.</code></strong>] :fire:</li>
+<li></li>
+<li>[<a href="https://arxiv.org/abs/1803.07289" target="_blank" rel="noopener">ACCV</a>] Flex-Convolution (Million-Scale Point-Cloud Learning Beyond Grid-Worlds). [<a href="https://github.com/cgtuebingen/Flex-Convolution" target="_blank" rel="noopener">tensorflow</a>] [<strong><code>seg.</code></strong>]</li>
+<li></li>
+<li>[<a href="https://arxiv.org/abs/1808.00671" target="_blank" rel="noopener">3DV</a>] PCN: Point Completion Network. [<a href="https://github.com/TonythePlaneswalker/pcn" target="_blank" rel="noopener">tensorflow</a>] [<strong><code>reg.</code></strong> <strong><code>oth.</code></strong> <strong><code>aut.</code></strong>] :fire:</li>
+<li></li>
+<li>[<a href="https://arxiv.org/abs/1812.01711" target="_blank" rel="noopener">ICASSP</a>] A Graph-CNN for 3D Point Cloud Classification. [<a href="https://github.com/maggie0106/Graph-CNN-in-3D-Point-Cloud-Classification" target="_blank" rel="noopener">tensorflow</a>] [<strong><code>cls.</code></strong>] :fire:</li>
+<li></li>
+<li>[<a href="https://arxiv.org/pdf/1805.01195.pdf" target="_blank" rel="noopener">ITSC</a>] BirdNet: a 3D Object Detection Framework from LiDAR information. [<strong><code>det.</code></strong> <strong><code>aut.</code></strong>]</li>
+<li></li>
+<li>[<a href="https://arxiv.org/abs/1807.00652" target="_blank" rel="noopener">arXiv</a>] PointSIFT: A SIFT-like Network Module for 3D Point Cloud Semantic Segmentation. [<a href="https://github.com/MVIG-SJTU/pointSIFT" target="_blank" rel="noopener">tensorflow</a>] [<strong><code>seg.</code></strong>] :fire:</li>
+<li>[<a href="https://arxiv.org/abs/1805.07872" target="_blank" rel="noopener">arXiv</a>] Spherical Convolutional Neural Network for 3D Point Clouds. [<strong><code>cls.</code></strong>]</li>
+<li>[<a href="https://arxiv.org/abs/1811.07605" target="_blank" rel="noopener">arXiv</a>] Adversarial Autoencoders for Generating 3D Point Clouds. [<strong><code>oth.</code></strong>]</li>
+<li>[<a href="https://arxiv.org/abs/1811.11209" target="_blank" rel="noopener">arXiv</a>] Iterative Transformer Network for 3D Point Cloud. [<strong><code>cls.</code></strong> <strong><code>seg.</code></strong> <strong><code>pos.</code></strong>]</li>
+<li>[<a href="https://arxiv.org/abs/1811.12543" target="_blank" rel="noopener">arXiv</a>] Topology-Aware Surface Reconstruction for Point Clouds. [<strong><code>rec.</code></strong>]</li>
+<li>[<a href="https://arxiv.org/abs/1812.01402" target="_blank" rel="noopener">arXiv</a>] Inferring Point Clouds from Single Monocular Images by Depth Intermediation. [<strong><code>oth.</code></strong>]</li>
+<li>[<a href="https://arxiv.org/abs/1812.04302" target="_blank" rel="noopener">arXiv</a>] Deep RBFNet: Point Cloud Feature Learning using Radial Basis Functions. [<strong><code>cls.</code></strong>]</li>
+<li>[<a href="https://arxiv.org/abs/1812.05276" target="_blank" rel="noopener">arXiv</a>] IPOD: Intensive Point-based Object Detector for Point Cloud. [<strong><code>det.</code></strong>]</li>
+<li>[<a href="https://arxiv.org/abs/1812.11383" target="_blank" rel="noopener">arXiv</a>] Feature Preserving and Uniformity-controllable Point Cloud Simplification on Graph. [<strong><code>oth.</code></strong>]</li>
+<li>[<a href="https://arxiv.org/abs/1901.01060" target="_blank" rel="noopener">arXiv</a>] POINTCLEANNET: Learning to Denoise and Remove Outliers from Dense Point Clouds. [<a href="https://github.com/mrakotosaon/pointcleannet" target="_blank" rel="noopener">pytorch</a>] [<strong><code>oth.</code></strong>]</li>
+<li>[<a href="https://arxiv.org/abs/1803.06199" target="_blank" rel="noopener">arXiv</a>] Complex-YOLO: Real-time 3D Object Detection on Point Clouds. [<a href="https://github.com/AI-liu/Complex-YOLO" target="_blank" rel="noopener">pytorch</a>] [<strong><code>det.</code></strong> <strong><code>aut.</code></strong>] :fire:</li>
+<li>[<a href="https://arxiv.org/abs/1811.03818" target="_blank" rel="noopener">arxiv</a>] RoarNet: A Robust 3D Object Detection based on RegiOn Approximation Refinement. [<a href="https://github.com/Kiwoo/RoarNet" target="_blank" rel="noopener">tensorflow</a>] [<strong><code>det.</code></strong> <strong><code>aut.</code></strong>]</li>
+<li>[<a href="https://arxiv.org/abs/1812.11029" target="_blank" rel="noopener">arXiv</a>] Multi-column Point-CNN for Sketch Segmentation. [<strong><code>seg.</code></strong>]</li>
+<li>[<a href="https://arxiv.org/abs/1810.05591" target="_blank" rel="noopener">arXiv</a>] PointGrow: Autoregressively Learned Point Cloud Generation with Self-Attention. [<a href="https://liuziwei7.github.io/projects/PointGrow" target="_blank" rel="noopener">project</a>] [<strong><code>oth.</code></strong>]</li>
+<li>[<a href="https://arxiv.org/pdf/1810.05795.pdf" target="_blank" rel="noopener">arXiv</a>] Point Cloud GAN. [<a href="https://github.com/chunliangli/Point-Cloud-GAN" target="_blank" rel="noopener">pytorch</a>] [<strong><code>oth.</code></strong>]</li>
+</ul>
+<hr>
+<h2 id="2019"><a href="#2019" class="headerlink" title="2019"></a>2019</h2><ul>
+<li>[<a href="http://export.arxiv.org/abs/1904.07601" target="_blank" rel="noopener">CVPR</a>] Relation-Shape Convolutional Neural Network for Point Cloud Analysis. [<a href="https://github.com/Yochengliu/Relation-Shape-CNN" target="_blank" rel="noopener">pytorch</a>] [<strong><code>cls.</code></strong> <strong><code>seg.</code></strong> <strong><code>oth.</code></strong>] :fire:</li>
+<li>[<a href="https://raoyongming.github.io/files/SFCNN.pdf" target="_blank" rel="noopener">CVPR</a>] Spherical Fractal Convolutional Neural Networks for Point Cloud Recognition. [<strong><code>cls.</code></strong> <strong><code>seg.</code></strong>]</li>
+<li>[<a href="https://arxiv.org/abs/1811.11397" target="_blank" rel="noopener">CVPR</a>] DeepMapping: Unsupervised Map Estimation From Multiple Point Clouds. [<a href="https://ai4ce.github.io/DeepMapping/" target="_blank" rel="noopener">code</a>] [<strong><code>reg.</code></strong>]</li>
+<li>[<a href="https://arxiv.org/abs/1812.07179" target="_blank" rel="noopener">CVPR</a>] Pseudo-LiDAR from Visual Depth Estimation: Bridging the Gap in 3D Object Detection for Autonomous Driving. [<a href="https://github.com/mileyan/pseudo_lidar" target="_blank" rel="noopener">code</a>] [<strong><code>det.</code></strong> <strong><code>dep.</code></strong> <strong><code>aut.</code></strong>]</li>
+<li>[<a href="https://arxiv.org/abs/1812.04244" target="_blank" rel="noopener">CVPR</a>] PointRCNN: 3D Object Proposal Generation and Detection from Point Cloud. [<a href="https://github.com/sshaoshuai/PointRCNN" target="_blank" rel="noopener">pytorch</a>] [<strong><code>det.</code></strong> <strong><code>aut.</code></strong>] :fire:</li>
+<li>[<a href="https://arxiv.org/abs/1809.07016" target="_blank" rel="noopener">CVPR</a>] Generating 3D Adversarial Point Clouds. [<a href="https://github.com/xiangchong1/3d-adv-pc" target="_blank" rel="noopener">code</a>] [<strong><code>oth.</code></strong>]</li>
+<li>[<a href="https://arxiv.org/abs/1904.03375v1" target="_blank" rel="noopener">CVPR</a>] Modeling Point Clouds with Self-Attention and Gumbel Subset Sampling. [<strong><code>cls.</code></strong> <strong><code>seg.</code></strong>]</li>
+<li>[<a href="http://export.arxiv.org/abs/1904.08017" target="_blank" rel="noopener">CVPR</a>] A-CNN: Annularly Convolutional Neural Networks on Point Clouds. [<a href="https://github.com/artemkomarichev/a-cnn" target="_blank" rel="noopener">tensorflow</a>][<strong><code>cls.</code></strong> <strong><code>seg.</code></strong>]</li>
+<li>[<a href="https://arxiv.org/abs/1811.07246" target="_blank" rel="noopener">CVPR</a>] PointConv: Deep Convolutional Networks on 3D Point Clouds. [<a href="https://github.com/DylanWusee/pointconv" target="_blank" rel="noopener">tensorflow</a>] [<strong><code>cls.</code></strong> <strong><code>seg.</code></strong>] :fire:</li>
+<li>[<a href="https://arxiv.org/abs/1812.11647" target="_blank" rel="noopener">CVPR</a>] Path-Invariant Map Networks. [<a href="https://github.com/zaiweizhang/path_invariance_map_network" target="_blank" rel="noopener">tensorflow</a>] [<strong><code>seg.</code></strong> <strong><code>oth.</code></strong>]</li>
+<li>[<a href="https://arxiv.org/abs/1812.02713" target="_blank" rel="noopener">CVPR</a>] PartNet: A Large-scale Benchmark for Fine-grained and Hierarchical Part-level 3D Object Understanding. [<a href="https://github.com/daerduoCarey/partnet_dataset" target="_blank" rel="noopener">code</a>] [<strong><code>dat.</code></strong> <strong><code>seg.</code></strong>]</li>
+<li>[<a href="http://export.arxiv.org/abs/1901.00680" target="_blank" rel="noopener">CVPR</a>] GeoNet: Deep Geodesic Networks for Point Cloud Analysis. [<strong><code>cls.</code></strong> <strong><code>rec.</code></strong> <strong><code>oth.</code></strong>]</li>
+<li>[<a href="https://arxiv.org/abs/1902.09852" target="_blank" rel="noopener">CVPR</a>] Associatively Segmenting Instances and Semantics in Point Clouds. [<a href="https://github.com/WXinlong/ASIS" target="_blank" rel="noopener">tensorflow</a>] [<strong><code>seg.</code></strong>] :fire:</li>
+<li>[<a href="https://arxiv.org/abs/1811.08988" target="_blank" rel="noopener">CVPR</a>] Supervised Fitting of Geometric Primitives to 3D Point Clouds. [<a href="https://github.com/csimstu2/SPFN" target="_blank" rel="noopener">tensorflow</a>] [<strong><code>oth.</code></strong>]</li>
+<li>[<a href="https://arxiv.org/abs/1903.00343" target="_blank" rel="noopener">CVPR</a>] Octree guided CNN with Spherical Kernels for 3D Point Clouds. [<a href="https://arxiv.org/pdf/1909.09287.pdf" target="_blank" rel="noopener">extension</a>] [<a href="https://github.com/hlei-ziyan/SPH3D-GCN" target="_blank" rel="noopener">code</a>] [<strong><code>cls.</code></strong> <strong><code>seg.</code></strong>]</li>
+<li>[<a href="https://arxiv.org/abs/1903.05711" target="_blank" rel="noopener">CVPR</a>] PointNetLK: Point Cloud Registration using PointNet. [<a href="https://github.com/hmgoforth/PointNetLK" target="_blank" rel="noopener">pytorch</a>] [<strong><code>reg.</code></strong>]</li>
+<li>[<a href="https://arxiv.org/abs/1904.00699v1" target="_blank" rel="noopener">CVPR</a>] JSIS3D: Joint Semantic-Instance Segmentation of 3D Point Clouds with Multi-Task Pointwise Networks and Multi-Value Conditional Random Fields. [<a href="https://github.com/pqhieu/JSIS3D" target="_blank" rel="noopener">pytorch</a>] [<strong><code>seg.</code></strong>]</li>
+<li>[<a href="https://arxiv.org/abs/1904.02113" target="_blank" rel="noopener">CVPR</a>] Point Cloud Oversegmentation with Graph-Structured Deep Metric Learning. [<strong><code>seg.</code></strong>]</li>
+<li>[<a href="https://arxiv.org/abs/1812.05784" target="_blank" rel="noopener">CVPR</a>] PointPillars: Fast Encoders for Object Detection from Point Clouds. [<a href="https://github.com/nutonomy/second.pytorch" target="_blank" rel="noopener">pytorch</a>] [<strong><code>det.</code></strong>] :fire:</li>
+<li>[<a href="https://arxiv.org/abs/1811.11286" target="_blank" rel="noopener">CVPR</a>] Patch-based Progressive 3D Point Set Upsampling. [<a href="https://github.com/yifita/3PU" target="_blank" rel="noopener">tensorflow</a>] [<strong><code>oth.</code></strong>]</li>
+<li>[<a href="https://arxiv.org/abs/1904.09793" target="_blank" rel="noopener">CVPR</a>] PCAN: 3D Attention Map Learning Using Contextual Information for Point Cloud Based Retrieval. [<a href="https://github.com/XLechter/PCAN" target="_blank" rel="noopener">code</a>] [<strong><code>rel.</code></strong>]</li>
+<li>[<a href="https://arxiv.org/abs/1903.00709" target="_blank" rel="noopener">CVPR</a>] PartNet: A Recursive Part Decomposition Network for Fine-grained and Hierarchical Shape Segmentation. [<a href="https://github.com/FoggYu/PartNet" target="_blank" rel="noopener">pytorch</a>] [<strong><code>dat.</code></strong> <strong><code>seg.</code></strong>] </li>
+<li>[<a href="https://arxiv.org/abs/1806.02170" target="_blank" rel="noopener">CVPR</a>] PointFlowNet: Learning Representations for Rigid Motion Estimation from Point Clouds. [<a href="https://github.com/aseembehl/pointflownet" target="_blank" rel="noopener">code</a>] [<strong><code>det.</code></strong> <strong><code>dat.</code></strong> <strong><code>oth.</code></strong>] </li>
+<li>[<a href="https://arxiv.org/abs/1904.03483" target="_blank" rel="noopener">CVPR</a>] SDRSAC: Semidefinite-Based Randomized Approach for Robust Point Cloud Registration without Correspondences. [<a href="https://github.com/intellhave/SDRSAC" target="_blank" rel="noopener">matlab</a>] [<strong><code>reg.</code></strong>]</li>
+<li>[<a href="https://arxiv.org/abs/1903.04019" target="_blank" rel="noopener">CVPR</a>] Deep Reinforcement Learning of Volume-guided Progressive View Inpainting for 3D Point Scene Completion from a Single Depth Image. [<strong><code>rec.</code></strong> <strong><code>oth.</code></strong>]</li>
+<li>[<a href="https://arxiv.org/abs/1904.03461" target="_blank" rel="noopener">CVPR</a>] Embodied Question Answering in Photorealistic Environments with Point Cloud Perception. [<strong><code>oth.</code></strong>]</li>
+<li>[<a href="https://arxiv.org/abs/1812.10775v1" target="_blank" rel="noopener">CVPR</a>] 3D Point-Capsule Networks. [<a href="https://github.com/yongheng1991/3D-point-capsule-networks" target="_blank" rel="noopener">pytorch</a>] [<strong><code>cls.</code></strong> <strong><code>rec.</code></strong> <strong><code>oth.</code></strong>]</li>
+<li>[<a href="http://export.arxiv.org/abs/1904.08755" target="_blank" rel="noopener">CVPR</a>] 4D Spatio-Temporal ConvNets: Minkowski Convolutional Neural Networks. [<a href="https://github.com/StanfordVL/MinkowskiEngine" target="_blank" rel="noopener">pytorch</a>] [<strong><code>seg.</code></strong>] :fire:</li>
+<li>[<a href="https://arxiv.org/abs/1811.06879v2" target="_blank" rel="noopener">CVPR</a>] The Perfect Match: 3D Point Cloud Matching with Smoothed Densities. [<a href="https://github.com/zgojcic/3DSmoothNet" target="_blank" rel="noopener">tensorflow</a>] [<strong><code>oth.</code></strong>]</li>
+<li>[<a href="https://arxiv.org/abs/1811.10136" target="_blank" rel="noopener">CVPR</a>] FilterReg: Robust and Efficient Probabilistic Point-Set Registration using Gaussian Filter and Twist Parameterization. [<a href="https://bitbucket.org/gaowei19951004/poser/src/master/" target="_blank" rel="noopener">code</a>] [<strong><code>reg.</code></strong>]</li>
+<li>[<a href="https://arxiv.org/abs/1806.01411" target="_blank" rel="noopener">CVPR</a>] FlowNet3D: Learning Scene Flow in 3D Point Clouds. [<strong><code>oth.</code></strong>]</li>
+<li>[<a href="https://arxiv.org/abs/1811.07782" target="_blank" rel="noopener">CVPR</a>] Modeling Local Geometric Structure of 3D Point Clouds using Geo-CNN. [<strong><code>cls.</code></strong> <strong><code>det.</code></strong>]</li>
+<li>[<a href="http://www.linliang.net/wp-content/uploads/2019/04/CVPR2019_PointClound.pdf" target="_blank" rel="noopener">CVPR</a>] ClusterNet: Deep Hierarchical Cluster Network with Rigorously Rotation-Invariant Representation for Point Cloud Analysis. [<strong><code>cls.</code></strong>]</li>
+<li>[<a href="http://jiaya.me/papers/pointweb_cvpr19.pdf" target="_blank" rel="noopener">CVPR</a>] PointWeb: Enhancing Local Neighborhood Features for Point Cloud Processing. [<a href="https://github.com/hszhao/PointWeb" target="_blank" rel="noopener">pytorch</a>] [<strong><code>cls.</code></strong> <strong><code>seg.</code></strong>]</li>
+<li>[<a href="https://arxiv.org/abs/1904.12304" target="_blank" rel="noopener">CVPR</a>] RL-GAN-Net: A Reinforcement Learning Agent Controlled GAN Network for Real-Time Point Cloud Shape Completion. [<a href="https://github.com/iSarmad/RL-GAN-Net" target="_blank" rel="noopener">code</a>] [<strong><code>oth.</code></strong>]</li>
+<li>[<a href="https://arxiv.org/abs/1903.05711" target="_blank" rel="noopener">CVPR</a>] PointNetLK: Robust &amp; Efficient Point Cloud Registration using PointNet. [<a href="https://github.com/hmgoforth/PointNetLK" target="_blank" rel="noopener">pytorch</a>] [<strong><code>reg.</code></strong>]</li>
+<li>[<a href="https://www.researchgate.net/publication/332240602_Robust_Point_Cloud_Based_Reconstruction_of_Large-Scale_Outdoor_Scenes" target="_blank" rel="noopener">CVPR</a>] Robust Point Cloud Based Reconstruction of Large-Scale Outdoor Scenes. [<a href="https://github.com/ziquan111/RobustPCLReconstruction" target="_blank" rel="noopener">code</a>] [<strong><code>rec.</code></strong>]</li>
+<li>[<a href="https://arxiv.org/abs/1812.00709" target="_blank" rel="noopener">CVPR</a>] Nesti-Net: Normal Estimation for Unstructured 3D Point Clouds using Convolutional Neural Networks. [<a href="https://github.com/sitzikbs/Nesti-Net" target="_blank" rel="noopener">tensorflow</a>] [<strong><code>oth.</code></strong>]</li>
+<li>[<a href="https://arxiv.org/abs/1812.03320" target="_blank" rel="noopener">CVPR</a>] GSPN: Generative Shape Proposal Network for 3D Instance Segmentation in Point Cloud. [<strong><code>seg.</code></strong>]</li>
+<li>[<a href="http://openaccess.thecvf.com/content_CVPR_2019/papers/Wang_Graph_Attention_Convolution_for_Point_Cloud_Semantic_Segmentation_CVPR_2019_paper.pdf" target="_blank" rel="noopener">CVPR</a>] Graph Attention Convolution for Point Cloud Semantic Segmentation. [<strong><code>seg.</code></strong>]</li>
+<li>[<a href="https://arxiv.org/abs/1812.02050" target="_blank" rel="noopener">CVPR</a>] Point-to-Pose Voting based Hand Pose Estimation using Residual Permutation Equivariant Layer. [<strong><code>pos.</code></strong>]</li>
+<li>[<a href="https://arxiv.org/abs/1903.08701v1" target="_blank" rel="noopener">CVPR</a>] LaserNet: An Efficient Probabilistic 3D Object Detector for Autonomous Driving. [<strong><code>det.</code></strong> <strong><code>aut.</code></strong>]</li>
+<li>[<a href="https://arxiv.org/pdf/1904.03498.pdf" target="_blank" rel="noopener">CVPR</a>] LP-3DCNN: Unveiling Local Phase in 3D Convolutional Neural Networks. [<a href="https://sites.google.com/view/lp-3dcnn/home" target="_blank" rel="noopener">project</a>] [<strong><code>cls.</code></strong> <strong><code>seg.</code></strong>]</li>
+<li>[<a href="http://openaccess.thecvf.com/content_CVPR_2019/papers/Duan_Structural_Relational_Reasoning_of_Point_Clouds_CVPR_2019_paper.pdf" target="_blank" rel="noopener">CVPR</a>] Structural Relational Reasoning of Point Clouds. [<strong><code>cls.</code></strong> <strong><code>seg.</code></strong>]</li>
+<li>[<a href="https://arxiv.org/abs/1903.03322" target="_blank" rel="noopener">CVPR</a>] 3DN: 3D Deformation Network. [<a href="https://github.com/laughtervv/3DN" target="_blank" rel="noopener">tensorflow</a>] [<strong><code>rec.</code></strong> <strong><code>oth.</code></strong>]</li>
+<li>[<a href="http://openaccess.thecvf.com/content_CVPR_2019/papers/Speciale_Privacy_Preserving_Image-Based_Localization_CVPR_2019_paper.pdf" target="_blank" rel="noopener">CVPR</a>] Privacy Preserving Image-Based Localization. [<strong><code>pos.</code></strong> <strong><code>oth.</code></strong>]</li>
+<li>[<a href="http://openaccess.thecvf.com/content_CVPR_2019/html/Chang_Argoverse_3D_Tracking_and_Forecasting_With_Rich_Maps_CVPR_2019_paper.html" target="_blank" rel="noopener">CVPR</a>] Argoverse: 3D Tracking and Forecasting With Rich Maps.[<strong><code>tra.</code></strong> <strong><code>aut.</code></strong>]</li>
+<li>[<a href="http://openaccess.thecvf.com/content_CVPR_2019/papers/Giancola_Leveraging_Shape_Completion_for_3D_Siamese_Tracking_CVPR_2019_paper.pdf" target="_blank" rel="noopener">CVPR</a>] Leveraging Shape Completion for 3D Siamese Tracking. [<a href="https://github.com/SilvioGiancola/ShapeCompletion3DTracking" target="_blank" rel="noopener">pytorch</a>] [<strong><code>tra.</code></strong> ]</li>
+<li>[<a href="http://openaccess.thecvf.com/content_CVPRW_2019/papers/WAD/Paigwar_Attentional_PointNet_for_3D-Object_Detection_in_Point_Clouds_CVPRW_2019_paper.pdf" target="_blank" rel="noopener">CVPRW</a>] Attentional PointNet for 3D-Object Detection in Point Clouds. [<a href="https://github.com/anshulpaigwar/Attentional-PointNet" target="_blank" rel="noopener">pytorch</a>] [<strong><code>cls.</code></strong> <strong><code>det.</code></strong> <strong><code>aut.</code></strong>]</li>
+<li>[<a href="http://openaccess.thecvf.com/content_CVPR_2019/papers/Deng_3D_Local_Features_for_Direct_Pairwise_Registration_CVPR_2019_paper.pdf" target="_blank" rel="noopener">CVPR</a>] 3D Local Features for Direct Pairwise Registration. [<strong><code>reg.</code></strong>]</li>
+<li>[<a href="http://openaccess.thecvf.com/content_CVPR_2019/papers/Dovrat_Learning_to_Sample_CVPR_2019_paper.pdf" target="_blank" rel="noopener">CVPR</a>] Learning to Sample. [<a href="https://github.com/orendv/learning_to_sample" target="_blank" rel="noopener">tensorflow</a>] [<strong><code>cls.</code></strong> <strong><code>rec.</code></strong>]</li>
+<li>[<a href="http://openaccess.thecvf.com/content_CVPR_2019/papers/Pittaluga_Revealing_Scenes_by_Inverting_Structure_From_Motion_Reconstructions_CVPR_2019_paper.pdf" target="_blank" rel="noopener">CVPR</a>] Revealing Scenes by Inverting Structure from Motion Reconstructions. [<a href="https://github.com/francescopittaluga/invsfm" target="_blank" rel="noopener">code</a>] [<strong><code>rec.</code></strong>]</li>
+<li>[<a href="http://openaccess.thecvf.com/content_CVPR_2019/papers/Qiu_DeepLiDAR_Deep_Surface_Normal_Guided_Depth_Prediction_for_Outdoor_Scene_CVPR_2019_paper.pdf" target="_blank" rel="noopener">CVPR</a>] DeepLiDAR: Deep Surface Normal Guided Depth Prediction for Outdoor Scene from Sparse LiDAR Data and Single Color Image. [<a href="https://github.com/JiaxiongQ/DeepLiDAR" target="_blank" rel="noopener">pytorch</a>] [<strong><code>dep.</code></strong>]</li>
+<li>[<a href="http://openaccess.thecvf.com/content_CVPR_2019/papers/Gu_HPLFlowNet_Hierarchical_Permutohedral_Lattice_FlowNet_for_Scene_Flow_Estimation_on_CVPR_2019_paper.pdf" target="_blank" rel="noopener">CVPR</a>] HPLFlowNet: Hierarchical Permutohedral Lattice FlowNet for Scene Flow Estimation on Large-scale Point Clouds. [<a href="https://github.com/laoreja/HPLFlowNet" target="_blank" rel="noopener">pytorch</a>] [<strong><code>oth.</code></strong>]</li>
+<li></li>
+<li>[<a href="https://arxiv.org/abs/1904.09664v1" target="_blank" rel="noopener">ICCV</a>] Deep Hough Voting for 3D Object Detection in Point Clouds. [<a href="https://github.com/facebookresearch/votenet" target="_blank" rel="noopener">pytorch</a>] [<a href="https://github.com/qq456cvb/VoteNet" target="_blank" rel="noopener">tensorflow</a>] [<strong><code>det.</code></strong>] :fire:</li>
+<li>[<a href="https://arxiv.org/abs/1904.03751" target="_blank" rel="noopener">ICCV</a>] DeepGCNs: Can GCNs Go as Deep as CNNs? [<a href="https://github.com/lightaime/deep_gcns" target="_blank" rel="noopener">tensorflow</a>] <a href="https://github.com/lightaime/deep_gcns_torch" target="_blank" rel="noopener">[pytorch]</a> [<strong><code>seg.</code></strong>] :fire:</li>
+<li>[<a href="https://arxiv.org/pdf/1907.10844.pdf" target="_blank" rel="noopener">ICCV</a>] PU-GAN: a Point Cloud Upsampling Adversarial Network. [<a href="https://github.com/liruihui/PU-GAN" target="_blank" rel="noopener">tensorflow</a>] [<strong><code>oth.</code></strong>]</li>
+<li>[<a href="https://arxiv.org/pdf/1812.07050.pdf" target="_blank" rel="noopener">ICCV</a>] 3D Point Cloud Learning for Large-scale Environment Analysis and Place Recognition. [<strong><code>rel.</code></strong> <strong><code>oth.</code></strong>]</li>
+<li>[<a href="https://arxiv.org/pdf/1906.12320.pdf" target="_blank" rel="noopener">ICCV</a>] PointFlow: 3D Point Cloud Generation with Continuous Normalizing Flows. [<a href="https://github.com/stevenygd/PointFlow" target="_blank" rel="noopener">pytorch</a>] [<strong><code>oth.</code></strong>]</li>
+<li>[<a href="https://arxiv.org/pdf/1907.12704.pdf" target="_blank" rel="noopener">ICCV</a>] Multi-Angle Point Cloud-VAE: Unsupervised Feature Learning for 3D Point Clouds from Multiple Angles by Joint Self-Reconstruction and Half-to-Half Prediction. [<strong><code>oth.</code></strong>]</li>
+<li>[<a href="https://drive.google.com/file/d/11GJzouV6jt_aOpvrJ8l3J5x_R_-m-Lg8/view" target="_blank" rel="noopener">ICCV</a>] SO-HandNet: Self-Organizing Network for 3D Hand Pose Estimation with Semi-supervised Learning. [<a href="https://github.com/TerenceCYJ/SO-HandNet" target="_blank" rel="noopener">code</a>] [<strong><code>pos.</code></strong>]</li>
+<li>[<a href="https://arxiv.org/abs/1812.11017" target="_blank" rel="noopener">ICCV</a>] DUP-Net: Denoiser and Upsampler Network for 3D Adversarial Point Clouds Defense. [<strong><code>oth.</code></strong>]</li>
+<li>[<a href="https://arxiv.org/abs/1908.04616" target="_blank" rel="noopener">ICCV</a>] Revisiting Point Cloud Classification: A New Benchmark Dataset and Classification Model on Real-World Data. [<strong><code>cls.</code></strong> <strong><code>dat.</code></strong>] [<a href="https://github.com/hkust-vgd/scanobjectnn" target="_blank" rel="noopener">code</a>] [<a href="https://hkust-vgd.github.io/scanobjectnn/" target="_blank" rel="noopener">dataset</a>]</li>
+<li>[<a href="https://arxiv.org/abs/1904.08889" target="_blank" rel="noopener">ICCV</a>] KPConv: Flexible and Deformable Convolution for Point Clouds. [<a href="https://github.com/HuguesTHOMAS/KPConv" target="_blank" rel="noopener">tensorflow</a>] [<strong><code>cls.</code></strong> <strong><code>seg.</code></strong>] :fire:</li>
+<li>[<a href="https://arxiv.org/pdf/1908.06295.pdf" target="_blank" rel="noopener">ICCV</a>] ShellNet: Efficient Point Cloud Convolutional Neural Networks using Concentric Shells Statistics. [<a href="https://hkust-vgd.github.io/shellnet/" target="_blank" rel="noopener">project</a>] [<strong><code>seg.</code></strong>]</li>
+<li>[<a href="https://arxiv.org/pdf/1908.04422.pdf" target="_blank" rel="noopener">ICCV</a>] Point-Based Multi-View Stereo Network. [<a href="https://github.com/callmeray/PointMVSNet" target="_blank" rel="noopener">pytorch</a>] [<strong><code>rec.</code></strong>]</li>
+<li>[<a href="https://arxiv.org/abs/1909.03669" target="_blank" rel="noopener">ICCV</a>] DensePoint: Learning Densely Contextual Representation for Efficient Point Cloud Processing. [<a href="https://github.com/Yochengliu/DensePoint" target="_blank" rel="noopener">pytorch</a>] [<strong><code>cls.</code></strong> <strong><code>seg.</code></strong> <strong><code>oth.</code></strong>]</li>
+<li>[<a href="https://arxiv.org/abs/1905.04153v2" target="_blank" rel="noopener">ICCV</a>] DeepICP: An End-to-End Deep Neural Network for 3D Point Cloud Registration. [<strong><code>reg.</code></strong>]</li>
+<li>[<a href="https://arxiv.org/pdf/1905.06292.pdf" target="_blank" rel="noopener">ICCV</a>] 3D Point Cloud Generative Adversarial Network Based on Tree Structured Graph Convolutions. [<a href="https://github.com/seowok/TreeGAN" target="_blank" rel="noopener">pytorch</a>] [<strong><code>oth.</code></strong>]</li>
+<li>[<a href="https://arxiv.org/pdf/1909.10469.pdf" target="_blank" rel="noopener">ICCV</a>] Hierarchical Point-Edge Interaction Network for Point Cloud Semantic Segmentation. [<strong><code>seg.</code></strong>]</li>
+<li>[<a href="http://openaccess.thecvf.com/content_ICCV_2019/papers/Spezialetti_Learning_an_Effective_Equivariant_3D_Descriptor_Without_Supervision_ICCV_2019_paper.pdf" target="_blank" rel="noopener">ICCV</a>] Learning an Effective Equivariant 3D Descriptor Without Supervision. [<strong><code>oth.</code></strong>]</li>
+<li>[<a href="http://openaccess.thecvf.com/content_ICCV_2019/html/Choy_Fully_Convolutional_Geometric_Features_ICCV_2019_paper.html" target="_blank" rel="noopener">ICCV</a>] Fully Convolutional Geometric Features. [<a href="https://github.com/chrischoy/FCGF" target="_blank" rel="noopener">pytorch</a>] [<strong><code>reg.</code></strong>]</li>
+<li>[<a href="https://arxiv.org/pdf/1812.07050.pdf" target="_blank" rel="noopener">ICCV</a>] LPD-Net: 3D Point Cloud Learning for Large-Scale Place Recognition and Environment Analysis. [<strong><code>oth.</code></strong> <strong><code>aut.</code></strong>]</li>
+<li>[<a href="http://openaccess.thecvf.com/content_ICCV_2019/papers/Hermosilla_Total_Denoising_Unsupervised_Learning_of_3D_Point_Cloud_Cleaning_ICCV_2019_paper.pdf" target="_blank" rel="noopener">ICCV</a>] Total Denoising: Unsupervised Learning of 3D Point Cloud Cleaning. [<a href="https://github.com/phermosilla/TotalDenoising" target="_blank" rel="noopener">tensorflow</a>] [<strong><code>oth.</code></strong>]</li>
+<li>[<a href="https://arxiv.org/abs/1904.00229" target="_blank" rel="noopener">ICCV</a>] USIP: Unsupervised Stable Interest Point Detection from 3D Point Clouds. [<a href="https://github.com/lijx10/USIP" target="_blank" rel="noopener">pytorch</a>] [<strong><code>oth.</code></strong>]</li>
+<li>[<a href="http://openaccess.thecvf.com/content_ICCV_2019/papers/Mao_Interpolated_Convolutional_Networks_for_3D_Point_Cloud_Understanding_ICCV_2019_paper.pdf" target="_blank" rel="noopener">ICCV</a>] Interpolated Convolutional Networks for 3D Point Cloud Understanding. [<strong><code>cls.</code></strong> <strong><code>seg.</code></strong>]</li>
+<li>[<a href="http://openaccess.thecvf.com/content_ICCV_2019/papers/Zheng_PointCloud_Saliency_Maps_ICCV_2019_paper.pdf" target="_blank" rel="noopener">ICCV</a>] PointCloud Saliency Maps. [<a href="https://github.com/tianzheng4/PointCloud-Saliency-Maps" target="_blank" rel="noopener">code</a>] [<strong><code>oth.</code></strong>]</li>
+<li>[<a href="https://arxiv.org/pdf/1907.10471.pdf" target="_blank" rel="noopener">ICCV</a>] STD: Sparse-to-Dense 3D Object Detector for Point Cloud. [<strong><code>det.</code></strong> <strong><code>oth.</code></strong>]</li>
+<li>[<a href="http://openaccess.thecvf.com/content_ICCV_2019/papers/Golyanik_Accelerated_Gravitational_Point_Set_Alignment_With_Altered_Physical_Laws_ICCV_2019_paper.pdf" target="_blank" rel="noopener">ICCV</a>] Accelerated Gravitational Point Set Alignment with Altered Physical Laws. [<strong><code>reg.</code></strong>]</li>
+<li>[<a href="http://openaccess.thecvf.com/content_ICCV_2019/papers/Wang_Deep_Closest_Point_Learning_Representations_for_Point_Cloud_Registration_ICCV_2019_paper.pdf" target="_blank" rel="noopener">ICCV</a>] Deep Closest Point: Learning Representations for Point Cloud Registration. [<strong><code>reg.</code></strong>]</li>
+<li>[<a href="http://openaccess.thecvf.com/content_ICCV_2019/papers/Prokudin_Efficient_Learning_on_Point_Clouds_With_Basis_Point_Sets_ICCV_2019_paper.pdf" target="_blank" rel="noopener">ICCV</a>] Efficient Learning on Point Clouds with Basis Point Sets. [<a href="https://github.com/sergeyprokudin/bps" target="_blank" rel="noopener">code</a>] [<strong><code>cls.</code></strong> <strong><code>reg.</code></strong>]</li>
+<li>[<a href="http://openaccess.thecvf.com/content_ICCV_2019/papers/Dai_PointAE_Point_Auto-Encoder_for_3D_Statistical_Shape_and_Texture_Modelling_ICCV_2019_paper.pdf" target="_blank" rel="noopener">ICCV</a>] PointAE: Point Auto-encoder for 3D Statistical Shape and Texture Modelling. [<strong><code>rec.</code></strong>]</li>
+<li>[<a href="http://openaccess.thecvf.com/content_ICCV_2019/papers/Jiang_Skeleton-Aware_3D_Human_Shape_Reconstruction_From_Point_Clouds_ICCV_2019_paper.pdf" target="_blank" rel="noopener">ICCV</a>] Skeleton-Aware 3D Human Shape Reconstruction From Point Clouds. [<strong><code>rec.</code></strong>]</li>
+<li>[<a href="http://openaccess.thecvf.com/content_ICCV_2019/papers/Liu_Dynamic_Points_Agglomeration_for_Hierarchical_Point_Sets_Learning_ICCV_2019_paper.pdf" target="_blank" rel="noopener">ICCV</a>] Dynamic Points Agglomeration for Hierarchical Point Sets Learning. [<a href="https://github.com/yuyi1005/DPAM" target="_blank" rel="noopener">pytorch</a>] [<strong><code>cls.</code></strong> <strong><code>seg.</code></strong>]</li>
+<li>[<a href="http://openaccess.thecvf.com/content_ICCV_2019/papers/Hassani_Unsupervised_Multi-Task_Feature_Learning_on_Point_Clouds_ICCV_2019_paper.pdf" target="_blank" rel="noopener">ICCV</a>] Unsupervised Multi-Task Feature Learning on Point Clouds. [<strong><code>cls.</code></strong> <strong><code>seg.</code></strong>]</li>
+<li>[<a href="http://openaccess.thecvf.com/content_ICCV_2019/papers/Meng_VV-Net_Voxel_VAE_Net_With_Group_Convolutions_for_Point_Cloud_ICCV_2019_paper.pdf" target="_blank" rel="noopener">ICCV</a>] VV-NET: Voxel VAE Net with Group Convolutions for Point Cloud Segmentation. [<a href="https://github.com/xianyuMeng/VV-Net-Voxel-VAE-Net-with-Group-Convolutions-for-Point-Cloud-Segmentation" target="_blank" rel="noopener">tensorflow</a>] [<strong><code>seg.</code></strong>]</li>
+<li>[<a href="http://openaccess.thecvf.com/content_ICCV_2019/papers/Nguyen_GraphX-Convolution_for_Point_Cloud_Deformation_in_2D-to-3D_Conversion_ICCV_2019_paper.pdf" target="_blank" rel="noopener">ICCV</a>] GraphX-Convolution for Point Cloud Deformation in 2D-to-3D Conversion. [<a href="https://github.com/justanhduc/graphx-conv" target="_blank" rel="noopener">pytorch</a>] [<strong><code>rec.</code></strong>]</li>
+<li>[<a href="http://openaccess.thecvf.com/content_ICCV_2019/papers/Liu_MeteorNet_Deep_Learning_on_Dynamic_3D_Point_Cloud_Sequences_ICCV_2019_paper.pdf" target="_blank" rel="noopener">ICCV</a>] MeteorNet: Deep Learning on Dynamic 3D Point Cloud Sequences. [<a href="https://github.com/xingyul/meteornet" target="_blank" rel="noopener">code</a>] [<strong><code>cls.</code></strong> <strong><code>seg.</code></strong> <strong><code>oth.</code></strong>]</li>
+<li>[<a href="https://arxiv.org/abs/1908.02990" target="_blank" rel="noopener">ICCV</a>] Fast Point R-CNN. [<strong><code>det.</code></strong> <strong><code>aut.</code></strong>]</li>
+<li>[<a href="http://openaccess.thecvf.com/content_ICCV_2019/papers/Zhou_Robust_Variational_Bayesian_Point_Set_Registration_ICCV_2019_paper.pdf" target="_blank" rel="noopener">ICCV</a>] Robust Variational Bayesian Point Set Registration. [<strong><code>reg.</code></strong>]</li>
+<li>[<a href="http://openaccess.thecvf.com/content_ICCV_2019/papers/Mehr_DiscoNet_Shapes_Learning_on_Disconnected_Manifolds_for_3D_Editing_ICCV_2019_paper.pdf" target="_blank" rel="noopener">ICCV</a>] DiscoNet: Shapes Learning on Disconnected Manifolds for 3D Editing. [<strong><code>rec.</code></strong> <strong><code>oth.</code></strong>]</li>
+<li>[<a href="http://openaccess.thecvf.com/content_ICCV_2019/papers/Spezialetti_Learning_an_Effective_Equivariant_3D_Descriptor_Without_Supervision_ICCV_2019_paper.pdf" target="_blank" rel="noopener">ICCV</a>] Learning an Effective Equivariant 3D Descriptor Without Supervision. [<strong><code>oth.</code></strong>]</li>
+<li>[<a href="http://openaccess.thecvf.com/content_ICCV_2019/papers/Lahoud_3D_Instance_Segmentation_via_Multi-Task_Metric_Learning_ICCV_2019_paper.pdf" target="_blank" rel="noopener">ICCV</a>] 3D Instance Segmentation via Multi-Task Metric Learning. [<a href="https://sites.google.com/view/3d-instance-mtml" target="_blank" rel="noopener">code</a>] [<strong><code>seg.</code></strong>]</li>
+<li>[<a href="http://openaccess.thecvf.com/content_ICCV_2019/papers/Liu_3D_Face_Modeling_From_Diverse_Raw_Scan_Data_ICCV_2019_paper.pdf" target="_blank" rel="noopener">ICCV</a>] 3D Face Modeling From Diverse Raw Scan Data. [<strong><code>rec.</code></strong>]</li>
+<li>[<a href="https://arxiv.org/abs/1909.12249" target="_blank" rel="noopener">ICCVW</a>] Range Adaptation for 3D Object Detection in LiDAR. [<strong><code>det.</code></strong> <strong><code>aut.</code></strong>]</li>
+<li></li>
+<li>[<a href="https://arxiv.org/pdf/1901.08396.pdf" target="_blank" rel="noopener">NeurIPS</a>] Self-Supervised Deep Learning on Point Clouds by Reconstructing Space. [<strong><code>cls.</code></strong> <strong><code>oth.</code></strong>]</li>
+<li>[<a href="https://arxiv.org/abs/1906.01140" target="_blank" rel="noopener">NeurIPS</a>] Learning Object Bounding Boxes for 3D Instance Segmentation on Point Clouds. [<a href="https://github.com/Yang7879/3D-BoNet" target="_blank" rel="noopener">tensorflow</a>] [<strong><code>det.</code></strong> <strong><code>seg.</code></strong>]</li>
+<li>[<a href="http://papers.nips.cc/paper/8706-exploiting-local-and-global-structure-for-point-cloud-semantic-segmentation-with-contextual-point-representations.pdf" target="_blank" rel="noopener">NeurIPS</a>] Exploiting Local and Global Structure for Point Cloud Semantic Segmentation with Contextual Point Representations. [<a href="https://github.com/fly519/ELGS" target="_blank" rel="noopener">tensorflow</a>] [<strong><code>seg.</code></strong>]</li>
+<li>[<a href="https://arxiv.org/pdf/1907.03739.pdf" target="_blank" rel="noopener">NeurIPS</a>] Point-Voxel CNN for Efficient 3D Deep Learning. [<strong><code>det.</code></strong> <strong><code>seg.</code></strong> <strong><code>aut.</code></strong>]</li>
+<li>[<a href="http://papers.nips.cc/paper/8940-pointdan-a-multi-scale-3d-domain-adaption-network-for-point-cloud-representation.pdf" target="_blank" rel="noopener">NeurIPS</a>] PointDAN: A Multi-Scale 3D Domain Adaption Network for Point Cloud Representation. [<a href="https://github.com/canqin001/PointDAN" target="_blank" rel="noopener">code</a>] [<strong><code>cls.</code></strong> <strong><code>oth.</code></strong>]</li>
+<li></li>
+<li>[<a href="https://openreview.net/forum?id=SJeXSo09FQ" target="_blank" rel="noopener">ICLR</a>] Learning Localized Generative Models for 3D Point Clouds via Graph Convolution. [<strong><code>oth.</code></strong>]</li>
+<li></li>
+<li>[<a href="https://arxiv.org/abs/1905.07290" target="_blank" rel="noopener">ICMLW</a>] LiDAR Sensor modeling and Data augmentation with GANs for Autonomous driving. [<strong><code>det.</code></strong> <strong><code>oth.</code></strong> <strong><code>aut.</code></strong>]</li>
+<li></li>
+<li>[<a href="https://arxiv.org/abs/1811.11731" target="_blank" rel="noopener">AAAI</a>] CAPNet: Continuous Approximation Projection For 3D Point Cloud Reconstruction Using 2D Supervision. [<a href="https://github.com/val-iisc/capnet" target="_blank" rel="noopener">code</a>] [<strong><code>rec.</code></strong>] </li>
+<li>[<a href="https://arxiv.org/abs/1811.02565" target="_blank" rel="noopener">AAAI</a>] Point2Sequence: Learning the Shape Representation of 3D Point Clouds with an Attention-based Sequence to Sequence Network. [<a href="https://github.com/liuxinhai/Point2Sequence" target="_blank" rel="noopener">tensorflow</a>] [<strong><code>cls.</code></strong> <strong><code>seg.</code></strong>]</li>
+<li>[<a href="https://par.nsf.gov/biblio/10086163" target="_blank" rel="noopener">AAAI</a>] Point Cloud Processing via Recurrent Set Encoding. [<strong><code>cls.</code></strong>]</li>
+<li>[<a href="https://arxiv.org/abs/1812.00333" target="_blank" rel="noopener">AAAI</a>] PVRNet: Point-View Relation Neural Network for 3D Shape Recognition. [<a href="https://github.com/Hxyou/PVRNet" target="_blank" rel="noopener">pytorch</a>] [<strong><code>cls.</code></strong> <strong><code>rel.</code></strong>]</li>
+<li>[<a href="http://gaoyue.org/paper/HGNN.pdf" target="_blank" rel="noopener">AAAI</a>] Hypergraph Neural Networks. [<a href="https://github.com/iMoonLab/HGNN" target="_blank" rel="noopener">pytorch</a>] [<strong><code>cls.</code></strong>]</li>
+<li></li>
+<li>[<a href="https://arxiv.org/abs/1801.07829" target="_blank" rel="noopener">TOG</a>] Dynamic Graph CNN for Learning on Point Clouds. [<a href="https://github.com/WangYueFt/dgcnn" target="_blank" rel="noopener">tensorflow</a>][<a href="https://github.com/WangYueFt/dgcnn" target="_blank" rel="noopener">pytorch</a>] [<strong><code>cls.</code></strong> <strong><code>seg.</code></strong>] :fire: :star:</li>
+<li>[<a href="https://arxiv.org/pdf/1903.10170.pdf" target="_blank" rel="noopener">TOG</a>] LOGAN: Unpaired Shape Transform in Latent Overcomplete Space. [<a href="https://github.com/kangxue/LOGAN" target="_blank" rel="noopener">tensorflow</a>] [<strong><code>oth.</code></strong>]</li>
+<li>[<a href="https://arxiv.org/abs/1908.00575v1" target="_blank" rel="noopener">SIGGRAPH Asia</a>] StructureNet: Hierarchical Graph Networks for 3D Shape Generation. [<strong><code>seg.</code></strong> <strong><code>oth.</code></strong>]</li>
+<li></li>
+<li>[<a href="https://dl.acm.org/citation.cfm?id=3343031.3351009" target="_blank" rel="noopener">MM</a>] MMJN: Multi-Modal Joint Networks for 3D Shape Recognition. [<strong><code>cls.</code></strong> <strong><code>rel.</code></strong>]</li>
+<li>[<a href="https://dl.acm.org/citation.cfm?id=3351061" target="_blank" rel="noopener">MM</a>] 3D Point Cloud Geometry Compression on Deep Learning. [<strong><code>oth.</code></strong>]</li>
+<li>[<a href="https://dl.acm.org/citation.cfm?id=3351042" target="_blank" rel="noopener">MM</a>] SRINet: Learning Strictly Rotation-Invariant Representations for Point Cloud Classification and Segmentation. [<a href="https://github.com/tasx0823/SRINet" target="_blank" rel="noopener">tensorflow</a>] [<strong><code>cls.</code></strong> <strong><code>seg.</code></strong>]</li>
+<li>[<a href="https://dl.acm.org/citation.cfm?id=3350960" target="_blank" rel="noopener">MM</a>] L2G Auto-encoder: Understanding Point Clouds by Local-to-Global Reconstruction with Hierarchical Self-Attention. [<strong><code>cls.</code></strong> <strong><code>rel.</code></strong>]</li>
+<li>[<a href="https://dl.acm.org/citation.cfm?id=3351076" target="_blank" rel="noopener">MM</a>] Ground-Aware Point Cloud Semantic Segmentation for Autonomous Driving. [<a href="https://github.com/Jaiy/Ground-aware-Seg" target="_blank" rel="noopener">code</a>] [<strong><code>seg.</code></strong> <strong><code>aut.</code></strong>]</li>
+<li></li>
+<li>[<a href="https://arxiv.org/abs/1908.08996" target="_blank" rel="noopener">ICME</a>] Justlookup: One Millisecond Deep Feature Extraction for Point Clouds By Lookup Tables. [<strong><code>cls.</code></strong> <strong><code>rel.</code></strong>]</li>
+<li></li>
+<li>[<a href="https://arxiv.org/abs/1904.04427" target="_blank" rel="noopener">ICASSP</a>] 3D Point Cloud Denoising via Deep Neural Network based Local Surface Estimation. [<a href="https://github.com/chaojingduan/Neural-Projection" target="_blank" rel="noopener">code</a>] [<strong><code>oth.</code></strong>]</li>
+<li></li>
+<li>[<a href="https://arxiv.org/abs/1907.06371" target="_blank" rel="noopener">BMVC</a>] Mitigating the Hubness Problem for Zero-Shot Learning of 3D Objects. [<strong><code>cls.</code></strong>]</li>
+<li></li>
+<li>[<a href="https://arxiv.org/abs/1904.00319" target="_blank" rel="noopener">ICRA</a>] Discrete Rotation Equivariance for Point Cloud Recognition. [<a href="https://github.com/lijx10/rot-equ-net" target="_blank" rel="noopener">pytorch</a>] [<strong><code>cls.</code></strong>]</li>
+<li>[<a href="https://arxiv.org/abs/1809.08495" target="_blank" rel="noopener">ICRA</a>] SqueezeSegV2: Improved Model Structure and Unsupervised Domain Adaptation for Road-Object Segmentation from a LiDAR Point Cloud. [<a href="https://github.com/xuanyuzhou98/SqueezeSegV2" target="_blank" rel="noopener">tensorflow</a>] [<strong><code>seg.</code></strong> <strong><code>aut.</code></strong>]</li>
+<li>[<a href="https://www.ais.uni-bonn.de/papers/ICRA_2019_Razlaw.pdf" target="_blank" rel="noopener">ICRA</a>] Detection and Tracking of Small Objects in Sparse 3D Laser Range Data. [<strong><code>det.</code></strong> <strong><code>tra.</code></strong> <strong><code>aut.</code></strong>]</li>
+<li>[<a href="https://arxiv.org/abs/1905.02553" target="_blank" rel="noopener">ICRA</a>] Oriented Point Sampling for Plane Detection in Unorganized Point Clouds. [<strong><code>det.</code></strong> <strong><code>seg.</code></strong>]</li>
+<li>[<a href="https://ras.papercept.net/conferences/conferences/ICRA19/program/ICRA19_ContentListWeb_1.html" target="_blank" rel="noopener">ICRA</a>] Point Cloud Compression for 3D LiDAR Sensor Using Recurrent Neural Network with Residual Blocks. [<a href="https://github.com/ChenxiTU/Point-cloud-compression-by-RNN" target="_blank" rel="noopener">pytorch</a>] [<strong><code>oth.</code></strong>]</li>
+<li>[<a href="https://arxiv.org/abs/1809.06065" target="_blank" rel="noopener">ICRA</a>] Focal Loss in 3D Object Detection. [<a href="https://github.com/pyun-ram/FL3D" target="_blank" rel="noopener">code</a>] [<strong><code>det.</code></strong> <strong><code>aut.</code></strong>]</li>
+<li>[<a href="https://arxiv.org/abs/1809.06267" target="_blank" rel="noopener">ICRA</a>] PointNetGPD: Detecting Grasp Configurations from Point Sets. [<a href="https://github.com/lianghongzhuo/PointNetGPD" target="_blank" rel="noopener">pytorch</a>] [<strong><code>det.</code></strong> <strong><code>seg.</code></strong>]</li>
+<li>[<a href="https://arxiv.org/abs/1904.09742" target="_blank" rel="noopener">ICRA</a>] 2D3D-MatchNet: Learning to Match Keypoints across 2D Image and 3D Point Cloud. [<strong><code>oth.</code></strong>]</li>
+<li>[<a href="https://ras.papercept.net/conferences/conferences/ICRA19/program/ICRA19_ContentListWeb_2.html" target="_blank" rel="noopener">ICRA</a>] Speeding up Iterative Closest Point Using Stochastic Gradient Descent. [<strong><code>oth.</code></strong>]</li>
+<li>[<a href="https://ras.papercept.net/conferences/conferences/ICRA19/program/ICRA19_ContentListWeb_2.html" target="_blank" rel="noopener">ICRA</a>] Uncertainty Estimation for Projecting Lidar Points Onto Camera Images for Moving Platforms. [<strong><code>oth.</code></strong>]</li>
+<li>[<a href="https://ras.papercept.net/conferences/conferences/ICRA19/program/ICRA19_ContentListWeb_2.html" target="_blank" rel="noopener">ICRA</a>] SEG-VoxelNet for 3D Vehicle Detection from RGB and LiDAR Data. [<strong><code>det.</code></strong> <strong><code>aut.</code></strong>]</li>
+<li>[<a href="https://arxiv.org/abs/1903.06405v1" target="_blank" rel="noopener">ICRA</a>] BLVD: Building A Large-scale 5D Semantics Benchmark for Autonomous Driving. [<a href="https://github.com/VCCIV/BLVD" target="_blank" rel="noopener">project</a>] [<strong><code>dat.</code></strong> <strong><code>det.</code></strong> <strong><code>tra.</code></strong> <strong><code>aut.</code></strong> <strong><code>oth.</code></strong>]</li>
+<li>[<a href="https://ras.papercept.net/conferences/conferences/ICRA19/program/ICRA19_ContentListWeb_2.html" target="_blank" rel="noopener">ICRA</a>] A Fast and Robust 3D Person Detector and Posture Estimator for Mobile Robotic Applications. [<strong><code>det.</code></strong>]</li>
+<li>[<a href="https://arpg.colorado.edu/papers/hmrf_icp.pdf" target="_blank" rel="noopener">ICRA</a>] Robust low-overlap 3-D point cloud registration for outlier rejection. [<a href="https://github.com/JStech/ICP" target="_blank" rel="noopener">matlab</a>] [<strong><code>reg.</code></strong>]</li>
+<li>[<a href="https://ras.papercept.net/conferences/conferences/ICRA19/program/ICRA19_ContentListWeb_3.html" target="_blank" rel="noopener">ICRA</a>] Robust 3D Object Classification by Combining Point Pair Features and Graph Convolution. [<strong><code>cls.</code></strong> <strong><code>seg.</code></strong>]</li>
+<li>[<a href="https://ras.papercept.net/conferences/conferences/ICRA19/program/ICRA19_ContentListWeb_3.html" target="_blank" rel="noopener">ICRA</a>] Hierarchical Depthwise Graph Convolutional Neural Network for 3D Semantic Segmentation of Point Clouds. [<strong><code>seg.</code></strong>]</li>
+<li>[<a href="https://ras.papercept.net/conferences/conferences/ICRA19/program/ICRA19_ContentListWeb_3.html" target="_blank" rel="noopener">ICRA</a>] Robust Generalized Point Set Registration Using Inhomogeneous Hybrid Mixture Models Via Expectation. [<strong><code>reg.</code></strong>]</li>
+<li>[<a href="https://arxiv.org/abs/1902.07511" target="_blank" rel="noopener">ICRA</a>] Dense 3D Visual Mapping via Semantic Simplification. [<strong><code>oth.</code></strong>]</li>
+<li>[<a href="https://arxiv.org/abs/1904.01649" target="_blank" rel="noopener">ICRA</a>] MVX-Net: Multimodal VoxelNet for 3D Object Detection. [<strong><code>det.</code></strong> <strong><code>aut.</code></strong>]</li>
+<li>[<a href="https://export.arxiv.org/abs/1810.01470" target="_blank" rel="noopener">ICRA</a>] CELLO-3D: Estimating the Covariance of ICP in the Real World. [<strong><code>reg.</code></strong>]</li>
+<li></li>
+<li>[<a href="https://www.researchgate.net/publication/334720713_EPN_Edge-Aware_PointNet_for_Object_Recognition_from_Multi-View_25D_Point_Clouds" target="_blank" rel="noopener">IROS</a>] EPN: Edge-Aware PointNet for Object Recognition from Multi-View 2.5D Point Clouds. [<a href="https://github.com/Merium88/Edge-Aware-PointNet" target="_blank" rel="noopener">tensorflow</a>] [<strong><code>cls.</code></strong> <strong><code>det.</code></strong>]</li>
+<li>[<a href="https://arxiv.org/pdf/1904.13030.pdf" target="_blank" rel="noopener">IROS</a>] SeqLPD: Sequence Matching Enhanced Loop-Closure Detection Based on Large-Scale Point Cloud Description for Self-Driving Vehicles. [<strong><code>oth.</code></strong>] [<strong><code>aut.</code></strong>]</li>
+<li>[<a href="https://arxiv.org/pdf/1909.01643v1.pdf" target="_blank" rel="noopener">IROS</a>] PASS3D: Precise and Accelerated Semantic Segmentation for 3D Point Cloud. [<strong><code>seg.</code></strong> <strong><code>aut.</code></strong>]</li>
+<li></li>
+<li>[<a href="https://arxiv.org/abs/1906.10964" target="_blank" rel="noopener">IV</a>] End-to-End 3D-PointCloud Semantic Segmentation for Autonomous Driving. [<strong><code>seg.</code></strong>] [<strong><code>aut.</code></strong>]</li>
+<li></li>
+<li>[<a href="https://arxiv.org/abs/1904.02375" target="_blank" rel="noopener">Eurographics Workshop</a>] Generalizing Discrete Convolutions for Unstructured Point Clouds. [<a href="https://github.com/aboulch/ConvPoint" target="_blank" rel="noopener">pytorch</a>] [<strong><code>cls.</code></strong> <strong><code>seg.</code></strong>]</li>
+<li></li>
+<li>[<a href="https://arxiv.org/abs/1811.02191" target="_blank" rel="noopener">WACV</a>] 3DCapsule: Extending the Capsule Architecture to Classify 3D Point Clouds. [<strong><code>cls.</code></strong>]</li>
+<li></li>
+<li>[<a href="https://arxiv.org/pdf/1908.06297.pdf" target="_blank" rel="noopener">3DV</a>] Rotation Invariant Convolutions for 3D Point Clouds Deep Learning. [<a href="https://hkust-vgd.github.io/riconv/" target="_blank" rel="noopener">project</a>] [<strong><code>cls.</code></strong> <strong><code>seg.</code></strong>]</li>
+<li>[<a href="https://arxiv.org/abs/1906.11555" target="_blank" rel="noopener">3DV</a>] Effective Rotation-invariant Point CNN with Spherical Harmonics kernels. [<a href="https://github.com/adrienPoulenard/SPHnet" target="_blank" rel="noopener">tensorflow</a>] [<strong><code>cls.</code></strong> <strong><code>seg.</code></strong> <strong><code>oth.</code></strong>]</li>
+<li></li>
+<li>[<a href="https://arxiv.org/pdf/1907.13538.pdf" target="_blank" rel="noopener">TVCG</a>] LassoNet: Deep Lasso-Selection of 3D Point Clouds. [<a href="https://lassonet.github.io/" target="_blank" rel="noopener">project</a>] [<strong><code>oth.</code></strong>]</li>
+<li></li>
+<li>[<a href="https://arxiv.org/abs/1901.02532" target="_blank" rel="noopener">arXiv</a>] Fast 3D Line Segment Detection From Unorganized Point Cloud. [<strong><code>det.</code></strong>]</li>
+<li>[<a href="https://arxiv.org/abs/1812.01687" target="_blank" rel="noopener">arXiv</a>] Point-Cloud Saliency Maps. [<a href="https://github.com/tianzheng4/PointCloud-Saliency-Maps" target="_blank" rel="noopener">tensorflow</a>] [<strong><code>cls.</code></strong> <strong><code>oth.</code></strong>]</li>
+<li>[<a href="https://export.arxiv.org/abs/1901.03006" target="_blank" rel="noopener">arXiv</a>] Extending Adversarial Attacks and Defenses to Deep 3D Point Cloud Classifiers. [<a href="https://github.com/Daniel-Liu-c0deb0t/3D-Neural-Network-Adversarial-Attacks" target="_blank" rel="noopener">code</a>] [<strong><code>oth.</code></strong>]</li>
+<li>[<a href="https://arxiv.org/abs/1901.08396" target="_blank" rel="noopener">arxiv</a>] Context Prediction for Unsupervised Deep Learning on Point Clouds. [<strong><code>cls.</code></strong> <strong><code>seg.</code></strong>]</li>
+<li>[<a href="http://export.arxiv.org/abs/1901.09280" target="_blank" rel="noopener">arXiv</a>] Points2Pix: 3D Point-Cloud to Image Translation using conditional Generative Adversarial Networks. [<strong><code>oth.</code></strong>]</li>
+<li>[<a href="http://export.arxiv.org/abs/1901.09394" target="_blank" rel="noopener">arXiv</a>] NeuralSampler: Euclidean Point Cloud Auto-Encoder and Sampler. [<strong><code>cls.</code></strong> <strong><code>oth.</code></strong>]</li>
+<li>[<a href="https://arxiv.org/abs/1902.05247" target="_blank" rel="noopener">arXiv</a>] 3D Graph Embedding Learning with a Structure-aware Loss Function for Point Cloud Semantic Instance Segmentation. [<strong><code>seg.</code></strong>]</li>
+<li>[<a href="https://arxiv.org/abs/1902.10272" target="_blank" rel="noopener">arXiv</a>] Zero-shot Learning of 3D Point Cloud Objects. [<a href="https://github.com/alichr/Zero-shot-Learning-of-3D-Point-Cloud-Objects" target="_blank" rel="noopener">code</a>] [<strong><code>cls.</code></strong>]</li>
+<li>[<a href="https://arxiv.org/abs/1903.09847" target="_blank" rel="noopener">arXiv</a>] Monocular 3D Object Detection with Pseudo-LiDAR Point Cloud. [<strong><code>det.</code></strong> <strong><code>aut.</code></strong>]</li>
+<li>[<a href="https://arxiv.org/abs/1903.01695" target="_blank" rel="noopener">arXiv</a>] Real-time Multiple People Hand Localization in 4D Point Clouds. [<strong><code>det.</code></strong> <strong><code>oth.</code></strong>]</li>
+<li>[<a href="https://arxiv.org/abs/1903.02858" target="_blank" rel="noopener">arXiv</a>] Variational Graph Methods for Efficient Point Cloud Sparsification. [<strong><code>oth.</code></strong>]</li>
+<li>[<a href="https://arxiv.org/abs/1903.05807" target="_blank" rel="noopener">arXiv</a>] Neural Style Transfer for Point Clouds. [<strong><code>oth.</code></strong>]</li>
+<li>[<a href="https://arxiv.org/abs/1903.07918" target="_blank" rel="noopener">arXiv</a>] OREOS: Oriented Recognition of 3D Point Clouds in Outdoor Scenarios. [<strong><code>pos.</code></strong> <strong><code>oth.</code></strong>]</li>
+<li>[<a href="https://arxiv.org/abs/1903.10750" target="_blank" rel="noopener">arXiv</a>] FVNet: 3D Front-View Proposal Generation for Real-Time Object Detection from Point Clouds. [<a href="https://github.com/LordLiang/FVNet" target="_blank" rel="noopener">code</a>] [<strong><code>det.</code></strong> <strong><code>aut.</code></strong>]</li>
+<li>[<a href="https://arxiv.org/abs/1904.00069" target="_blank" rel="noopener">arXiv</a>] Unpaired Point Cloud Completion on Real Scans using Adversarial Training. [<strong><code>oth.</code></strong>]</li>
+<li>[<a href="https://arxiv.org/abs/1904.00230" target="_blank" rel="noopener">arXiv</a>] MortonNet: Self-Supervised Learning of Local Features in 3D Point Clouds. [<strong><code>cls.</code></strong> <strong><code>seg.</code></strong>]</li>
+<li>[<a href="https://arxiv.org/abs/1904.00817" target="_blank" rel="noopener">arXiv</a>] DeepPoint3D: Learning Discriminative Local Descriptors using Deep Metric Learning on 3D Point Clouds. [<strong><code>cls.</code></strong> <strong><code>rel.</code></strong> <strong><code>oth.</code></strong>]</li>
+<li>[<a href="https://arxiv.org/abs/1904.07537" target="_blank" rel="noopener">arXiv</a>] Complexer-YOLO: Real-Time 3D Object Detection and Tracking on Semantic Point Clouds. [<a href="https://github.com/AI-liu/Complex-YOLO" target="_blank" rel="noopener">pytorch</a>] [<strong><code>det.</code></strong> <strong><code>tra.</code></strong> <strong><code>aut.</code></strong>] :fire:</li>
+<li>[<a href="https://arxiv.org/abs/1904.10795" target="_blank" rel="noopener">arXiv</a>] Graph-based Inpainting for 3D Dynamic Point Clouds. [<strong><code>oth.</code></strong>]</li>
+<li>[<a href="https://arxiv.org/abs/1903.11027" target="_blank" rel="noopener">arXiv</a>] nuScenes: A multimodal dataset for autonomous driving. [<a href="https://www.nuscenes.org/overview" target="_blank" rel="noopener">link</a>] [<strong><code>dat.</code></strong> <strong><code>det.</code></strong> <strong><code>tra.</code></strong> <strong><code>aut.</code></strong>]</li>
+<li>[<a href="https://arxiv.org/abs/1901.08373" target="_blank" rel="noopener">arXiv</a>] 3D Backbone Network for 3D Object Detection. [<a href="https://github.com/Benzlxs/tDBN" target="_blank" rel="noopener">code</a>] [<strong><code>det.</code></strong> <strong><code>aut.</code></strong>]</li>
+<li>[<a href="https://arxiv.org/abs/1811.07605v3" target="_blank" rel="noopener">arXiv</a>] Adversarial Autoencoders for Compact Representations of 3D Point Clouds. [<a href="https://github.com/MaciejZamorski/3d-AAE" target="_blank" rel="noopener">pytorch</a>] [<strong><code>rel.</code></strong> <strong><code>oth.</code></strong>]</li>
+<li>[<a href="https://arxiv.org/pdf/1904.10014.pdf" target="_blank" rel="noopener">arXiv</a>] Linked Dynamic Graph CNN: Learning on Point Cloud via Linking Hierarchical Features. [<strong><code>cls.</code></strong> <strong><code>seg.</code></strong>]</li>
+<li>[<a href="https://arxiv.org/abs/1905.08705" target="_blank" rel="noopener">arXiv</a>] GAPNet: Graph Attention based Point Neural Network for Exploiting Local Feature of Point Cloud. [<a href="https://github.com/FrankCAN/GAPNet" target="_blank" rel="noopener">tensorflow</a>] [<strong><code>cls.</code></strong> <strong><code>seg.</code></strong>]</li>
+<li>[<a href="https://arxiv.org/abs/1906.01140" target="_blank" rel="noopener">arXiv</a>] Learning Object Bounding Boxes for 3D Instance Segmentation on Point Clouds. [<a href="https://github.com/Yang7879/3D-BoNet" target="_blank" rel="noopener">tensorflow</a>] [<strong><code>det.</code></strong> <strong><code>seg.</code></strong>]</li>
+<li>[<a href="https://export.arxiv.org/abs/1906.04173" target="_blank" rel="noopener">arXiv</a>] Differentiable Surface Splatting for Point-based Geometry Processing. [<a href="https://github.com/yifita/DSS" target="_blank" rel="noopener">pytorch</a>] [<strong><code>oth.</code></strong>]</li>
+<li>[<a href="https://arxiv.org/abs/1906.10887" target="_blank" rel="noopener">arXiv</a>] Spatial Transformer for 3D Points. [<strong><code>seg.</code></strong>]</li>
+<li>[<a href="https://arxiv.org/abs/1907.03739" target="_blank" rel="noopener">arXiv</a>] Point-Voxel CNN for Efficient 3D Deep Learning. [<strong><code>seg.</code></strong> <strong><code>det.</code></strong> <strong><code>aut.</code></strong>]</li>
+<li>[<a href="https://arxiv.org/pdf/1907.02545.pdf" target="_blank" rel="noopener">arXiv</a>] Attentive Context Normalization for Robust Permutation-Equivariant Learning. [<strong><code>cls.</code></strong>]</li>
+<li>[<a href="https://arxiv.org/abs/1906.08240" target="_blank" rel="noopener">arXiv</a>] Neural Point-Based Graphics. [<a href="https://dmitryulyanov.github.io/neural_point_based_graphics" target="_blank" rel="noopener">project</a>] [<strong><code>oth.</code></strong>] </li>
+<li>[<a href="https://arxiv.org/pdf/1908.02111.pdf" target="_blank" rel="noopener">arXiv</a>] Point Cloud Super Resolution with Adversarial Residual Graph Networks. [<strong><code>oth.</code></strong>] [<a href="https://github.com/wuhuikai/PointCloudSuperResolution" target="_blank" rel="noopener">tensorflow</a>]</li>
+<li>[<a href="https://arxiv.org/pdf/1908.10209.pdf" target="_blank" rel="noopener">arXiv</a>] Blended Convolution and Synthesis for Efficient Discrimination of 3D Shapes. [<strong><code>cls.</code></strong> <strong><code>rel.</code></strong>]</li>
+<li>[<a href="https://arxiv.org/pdf/1908.11069v1.pdf" target="_blank" rel="noopener">arXiv</a>] StarNet: Targeted Computation for Object Detection in Point Clouds. [<a href="https://github.com/tensorflow/lingvo" target="_blank" rel="noopener">tensorflow</a>] [<strong><code>det.</code></strong>]</li>
+<li>[<a href="https://arxiv.org/pdf/1903.10168.pdf" target="_blank" rel="noopener">arXiv</a>] Efficient Tracking Proposals using 2D-3D Siamese Networks on LIDAR. [<strong><code>tra.</code></strong>]</li>
+<li>[<a href="https://arxiv.org/pdf/1905.07650v1.pdf" target="_blank" rel="noopener">arXiv</a>] SAWNet: A Spatially Aware Deep Neural Network for 3D Point Cloud Processing. [<a href="https://github.com/balwantraikekutte/SAWNet" target="_blank" rel="noopener">tensorflow</a>] [<strong><code>cls.</code></strong> <strong><code>seg.</code></strong>]</li>
+<li>[<a href="https://arxiv.org/abs/1907.03670" target="_blank" rel="noopener">arXiv</a>] Part-A^2 Net: 3D Part-Aware and Aggregation Neural Network for Object Detection from Point Cloud. [<strong><code>det.</code></strong> <strong><code>aut.</code></strong>]</li>
+<li>[<a href="https://arxiv.org/pdf/1906.03299.pdf" target="_blank" rel="noopener">arXiv</a>] PyramNet: Point Cloud Pyramid Attention Network and Graph Embedding Module for Classification and Segmentation. [<strong><code>cls.</code></strong> <strong><code>seg.</code></strong>]</li>
+<li>[<a href="https://arxiv.org/pdf/1910.08287.pdf" target="_blank" rel="noopener">arXiv</a>] PointRNN: Point Recurrent Neural Network for Moving Point Cloud Processing. [<a href="https://github.com/hehefan/PointRNN" target="_blank" rel="noopener">tensorflow</a>] [<strong><code>tra.</code></strong> <strong><code>oth.</code></strong> <strong><code>aut.</code></strong>]</li>
+<li>[<a href="https://arxiv.org/abs/1907.09798" target="_blank" rel="noopener">arXiv</a>] PointAtrousGraph: Deep Hierarchical Encoder-Decoder with Point Atrous Convolution for Unorganized 3D Points. [<a href="https://github.com/paul007pl/PointAtrousGraph" target="_blank" rel="noopener">tensorflow</a>] [<strong><code>cls.</code></strong> <strong><code>seg.</code></strong>]</li>
+<li>[<a href="https://arxiv.org/pdf/1907.05279.pdf" target="_blank" rel="noopener">arXiv</a>] Tranquil Clouds: Neural Networks for Learning Temporally Coherent Features in Point Clouds. [<strong><code>oth.</code></strong>]</li>
+<li>[<a href="https://arxiv.org/pdf/1911.09040.pdf" target="_blank" rel="noopener">arXiv</a>] 3D-Rotation-Equivariant Quaternion Neural Networks. [<strong><code>cls.</code></strong> <strong><code>rec.</code></strong>]</li>
+<li>[<a href="https://arxiv.org/pdf/1908.11026.pdf" target="_blank" rel="noopener">arXiv</a>] Point2SpatialCapsule: Aggregating Features and Spatial Relationships of Local Regions on Point Clouds using Spatial-aware Capsules. [<strong><code>cls.</code></strong> <strong><code>rel.</code></strong> <strong><code>seg.</code></strong>]</li>
+<li>[<a href="https://arxiv.org/pdf/1911.11236.pdf" target="_blank" rel="noopener">arXiv</a>] RandLA-Net: Efficient Semantic Segmentation of Large-Scale Point Clouds. [<a href="https://github.com/QingyongHu/RandLA-Net" target="_blank" rel="noopener">tensorflow</a>] [<strong><code>seg.</code></strong>]</li>
+<li>[<a href="https://arxiv.org/abs/1911.12885" target="_blank" rel="noopener">arXiv</a>] Geometric Feedback Network for Point Cloud Classification. [<strong><code>cls.</code></strong>]</li>
+<li>[<a href="https://arxiv.org/abs/1912.00195v1" target="_blank" rel="noopener">arXiv</a>] SGAS: Sequential Greedy Architecture Search. [<a href="https://sites.google.com/kaust.edu.sa/sgas" target="_blank" rel="noopener">project</a>] [<a href="https://github.com/lightaime/sgas" target="_blank" rel="noopener">code</a>] [<strong><code>cls.</code></strong>]</li>
+<li>[<a href="https://arxiv.org/abs/1912.00202" target="_blank" rel="noopener">arXiv</a>] Relation Graph Network for 3D Object Detection in Point Clouds. [<strong><code>det.</code></strong>]</li>
+<li>[<a href="https://arxiv.org/pdf/1907.13079.pdf" target="_blank" rel="noopener">arXiv</a>] Deformable Filter Convolution for Point Cloud Reasoning. [<strong><code>seg.</code></strong> <strong><code>det.</code></strong> <strong><code>aut.</code></strong>]</li>
+<li>[<a href="https://arxiv.org/pdf/1912.03264.pdf" target="_blank" rel="noopener">arXiv</a>] PU-GCN: Point Cloud Upsampling via Graph Convolutional Network. [<a href="https://sites.google.com/kaust.edu.sa/pugcn" target="_blank" rel="noopener">project</a>] [<strong><code>oth.</code></strong>]</li>
+<li>[<a href="https://arxiv.org/pdf/1911.11098.pdf" target="_blank" rel="noopener">arXiv</a>] StructEdit: Learning Structural Shape Variations. [<a href="https://github.com/daerduoCarey/structedit" target="_blank" rel="noopener">project</a>] [<strong><code>rec.</code></strong>]</li>
+<li>[<a href="https://arxiv.org/pdf/1912.02984v1.pdf" target="_blank" rel="noopener">arXiv</a>] Grid-GCN for Fast and Scalable Point Cloud Learning. [<strong><code>seg.</code></strong> <strong><code>cls.</code></strong>]</li>
+<li>[<a href="https://arxiv.org/pdf/1911.10150.pdf" target="_blank" rel="noopener">arXiv</a>] PointPainting: Sequential Fusion for 3D Object Detection. [<strong><code>seg.</code></strong> <strong><code>det.</code></strong>]</li>
+<li>[<a href="https://arxiv.org/pdf/1912.07161.pdf" target="_blank" rel="noopener">arXiv</a>] Transductive Zero-Shot Learning for 3D Point Cloud Classification. [<strong><code>cls.</code></strong>]</li>
+<li>[<a href="https://arxiv.org/pdf/1912.10644.pdf" target="_blank" rel="noopener">arXiv</a>] Geometry Sharing Network for 3D Point Cloud Classification and Segmentation. [<a href="https://github.com/MingyeXu/GS-Net" target="_blank" rel="noopener">pytorch</a>] [<strong><code>cls.</code></strong> <strong><code>seg.</code></strong>]</li>
+<li>[<a href="https://arxiv.org/abs/1912.12033" target="_blank" rel="noopener">arvix</a>] Deep Learning for 3D Point Clouds: A Survey. [<a href="https://github.com/QingyongHu/SoTA-Point-Cloud" target="_blank" rel="noopener">code</a>] [<strong><code>cls.</code></strong> <strong><code>det.</code></strong> <strong><code>tra.</code></strong> <strong><code>seg.</code></strong>]</li>
+<li>[<a href="https://arxiv.org/pdf/1912.01800v1.pdf" target="_blank" rel="noopener">arXiv</a>] Spectral-GANs for High-Resolution 3D Point-cloud Generation. [<strong><code>rec.</code></strong> <strong><code>oth.</code></strong>]</li>
+<li>[<a href="https://arxiv.org/pdf/1909.12663.pdf" target="_blank" rel="noopener">arXiv</a>] Point Attention Network for Semantic Segmentation of 3D Point Clouds. [<strong><code>seg.</code></strong>]</li>
+<li>[<a href="https://arxiv.org/pdf/1909.07137v1.pdf" target="_blank" rel="noopener">arXiv</a>] PLIN: A Network for Pseudo-LiDAR Point Cloud Interpolation. [<strong><code>oth.</code></strong>]</li>
+</ul>
+<hr>
+<h2 id="2020"><a href="#2020" class="headerlink" title="2020"></a>2020</h2><ul>
+<li>[<a href="https://arxiv.org/abs/1912.00280" target="_blank" rel="noopener">AAAI</a>] Morphing and Sampling Network for Dense Point Cloud Completion. [<a href="https://github.com/Colin97/MSN-Point-Cloud-Completion" target="_blank" rel="noopener">pytorch</a>] [<strong><code>oth.</code></strong>]</li>
+<li>[<a href="https://arxiv.org/pdf/1912.05163.pdf" target="_blank" rel="noopener">AAAI</a>] TANet: Robust 3D Object Detection from Point Clouds with Triple Attention. [<a href="https://github.com/happinesslz/TANet" target="_blank" rel="noopener">code</a>] [<strong><code>det.</code></strong> <strong><code>aut.</code></strong>]</li>
+<li>[<a href="https://arxiv.org/abs/1912.10775" target="_blank" rel="noopener">AAAI</a>] Point2Node: Correlation Learning of Dynamic-Node for Point Cloud Feature Modeling. [<strong><code>seg.</code></strong> <strong><code>cls.</code></strong>]</li>
+<li>[<a href="https://arxiv.org/abs/1811.09361" target="_blank" rel="noopener">AAAI</a>] PRIN: Pointwise Rotation-Invariant Network. [<strong><code>seg.</code></strong> <strong><code>cls.</code></strong>]</li>
+<li>[<a href="https://arxiv.org/pdf/1912.08487.pdf" target="_blank" rel="noopener">WACV</a>] FuseSeg: LiDAR Point Cloud Segmentation Fusing Multi-Modal Data. [<strong><code>seg.</code></strong> <strong><code>aut.</code></strong>]</li>
+</ul>
+<h1> 
+
+<figure class="highlight diff"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Datasets</span><br></pre></td></tr></table></figure>
+
+</h1>
 
-    
 
-    
-
-  </div>
-  <div class="article-info article-info-index">
-    
-    
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">3DSeg</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-    
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/CV//" class="article-tag-list-link color3">CV</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-    
-    <p class="article-more-link">
-      <a class="article-more-a" href="/2020/01/10/Point%20cloud%20analysis%20/">Readmore >></a>
-    </p>
-    
-
-    
-    <div class="clearfix"></div>
-  </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-PointNet++" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-  
-  
-    <h1 itemprop="name">
-	
-	  <a class="article-title" href="/2019/12/23/PointNet++/">PointNet++ Learning</a>
-	
-    </h1>
-  
-
-
-  
-  
-<a href="/2019/12/23/PointNet++/" class="archive-article-date">
-        <time datetime="2019-12-22T21:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-12-23</time>
-</a>
-
-  
-  
-    
-
-  
-  </header>
-  
-  <div class="article-entry" itemprop="articleBody">
-    
-    <blockquote>
-<p>Few prior works study deep learning on point sets. PointNet by Qi et al. is a pioneer in this direction. However, by design PointNet does not capture local structures induced by the metric space points live in, limiting its ability to recognize fine-grained patterns and generalizability to complex scenes. In this work, they introduce a hierarchical neural network that applies PointNet recursively on a nested partitioning of the input point set. By exploiting metric space distances, our network is able to learn local features with increasing contextual scales. With further observation that point sets are usually sampled with varying densities, which results in greatly decreased performance for networks trained on uniform densities, we propose novel set learning layers to adaptively combine features from multiple scales. Experiments show that our network called PointNet++ is able to learn deep point set features efficiently and robustly. In particular, results significantly better than state-of-the-art have been obtained on challenging benchmarks of 3D point clouds.
-    
-    
-
-    
-
-    
-
-  </div>
-  <div class="article-info article-info-index">
-    
-    
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">3DSeg</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-    
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/CV//" class="article-tag-list-link color3">CV</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-    
-    <p class="article-more-link">
-      <a class="article-more-a" href="/2019/12/23/PointNet++/">Readmore >></a>
-    </p>
-    
-
-    
-    <div class="clearfix"></div>
-  </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-PointNet" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-  
-  
-    <h1 itemprop="name">
-	
-	  <a class="article-title" href="/2019/12/20/PointNet/">Understanding of PointNet network architecture</a>
-	
-    </h1>
-  
-
-
-  
-  
-<a href="/2019/12/20/PointNet/" class="archive-article-date">
-        <time datetime="2019-12-19T21:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-12-20</time>
-</a>
-
-  
-  
-    
-
-  
-  </header>
-  
-  <div class="article-entry" itemprop="articleBody">
-    
-    <h2 id="1-Architecture"><a href="#1-Architecture" class="headerlink" title="1. Architecture"></a>1. Architecture</h2><p><img src="/images/pointnet.jpg" alt="Pointnet">
-    
-    
-
-    
-
-    
-
-  </div>
-  <div class="article-info article-info-index">
-    
-    
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">3DSeg</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-    
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/CV//" class="article-tag-list-link color3">CV</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-    
-    <p class="article-more-link">
-      <a class="article-more-a" href="/2019/12/20/PointNet/">Readmore >></a>
-    </p>
-    
-
-    
-    <div class="clearfix"></div>
-  </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-数据科学家技能地铁图" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-  
-  
-    <h1 itemprop="name">
-	
-	  <a class="article-title" href="/2019/06/11/%E6%95%B0%E6%8D%AE%E7%A7%91%E5%AD%A6%E5%AE%B6%E6%8A%80%E8%83%BD%E5%9C%B0%E9%93%81%E5%9B%BE/">数据科学家技能地铁图</a>
-	
-    </h1>
-  
-
-
-  
-  
-<a href="/2019/06/11/%E6%95%B0%E6%8D%AE%E7%A7%91%E5%AD%A6%E5%AE%B6%E6%8A%80%E8%83%BD%E5%9C%B0%E9%93%81%E5%9B%BE/" class="archive-article-date">
-        <time datetime="2019-06-10T21:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-06-11</time>
-</a>
-
-  
-  
-    
-
-  
-  </header>
-  
-  <div class="article-entry" itemprop="articleBody">
-    
-    <h1 id="数据科学家技能地铁图"><a href="#数据科学家技能地铁图" class="headerlink" title="数据科学家技能地铁图"></a>数据科学家技能地铁图</h1><p><img src="/images/metro.jpg" alt=""></p>
-
-    
-
-    
-
-    
-
-  </div>
-  <div class="article-info article-info-index">
-    
-    
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Technical route</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-    
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/Data-science//" class="article-tag-list-link color3">Data_science</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-    
-    <p class="article-more-link">
-      <a class="article-more-a" href="/2019/06/11/%E6%95%B0%E6%8D%AE%E7%A7%91%E5%AD%A6%E5%AE%B6%E6%8A%80%E8%83%BD%E5%9C%B0%E9%93%81%E5%9B%BE/">Readmore >></a>
-    </p>
-    
-
-    
-    <div class="clearfix"></div>
-  </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-Logistic损失函数推导" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-  
-  
-    <h1 itemprop="name">
-	
-	  <a class="article-title" href="/2019/05/20/Logistic%E6%8D%9F%E5%A4%B1%E5%87%BD%E6%95%B0%E6%8E%A8%E5%AF%BC/">Logistic的代价函数的求导详细推理过程</a>
-	
-    </h1>
-  
-
-
-  
-  
-<a href="/2019/05/20/Logistic%E6%8D%9F%E5%A4%B1%E5%87%BD%E6%95%B0%E6%8E%A8%E5%AF%BC/" class="archive-article-date">
-        <time datetime="2019-05-19T21:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-05-20</time>
-</a>
-
-  
-  
-    
-
-  
-  </header>
-  
-  <div class="article-entry" itemprop="articleBody">
-    
-    <h1 id="逻辑回归代价函数的求导详细推理过程"><a href="#逻辑回归代价函数的求导详细推理过程" class="headerlink" title="逻辑回归代价函数的求导详细推理过程"></a>逻辑回归代价函数的求导详细推理过程</h1>
-    
-    
-
-    
-
-    
-
-  </div>
-  <div class="article-info article-info-index">
-    
-    
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Algorithm</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-    
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/ML//" class="article-tag-list-link color3">ML</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-    
-    <p class="article-more-link">
-      <a class="article-more-a" href="/2019/05/20/Logistic%E6%8D%9F%E5%A4%B1%E5%87%BD%E6%95%B0%E6%8E%A8%E5%AF%BC/">Readmore >></a>
-    </p>
-    
-
-    
-    <div class="clearfix"></div>
-  </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-3D PointVisual" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-  
-  
-    <h1 itemprop="name">
-	
-	  <a class="article-title" href="/2019/05/11/3D%20PointVisual/">3D Point Cloud Visual</a>
-	
-    </h1>
-  
-
-
-  
-  
-<a href="/2019/05/11/3D%20PointVisual/" class="archive-article-date">
-        <time datetime="2019-05-10T21:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-05-11</time>
-</a>
-
-  
-  
-    
-
-  
-  </header>
-  
-  <div class="article-entry" itemprop="articleBody">
-    
-    <h1 id="Point-cloud-viewer"><a href="#Point-cloud-viewer" class="headerlink" title="Point cloud viewer"></a>Point cloud viewer</h1><p><strong>Dependencies</strong></p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">pip install numpy --user</span><br><span class="line">pip install mayavi --user</span><br><span class="line">pip install PyQt5 --user</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="keyword">import</span> mayavi.mlab <span class="comment">#Python for 3D plotting</span></span><br><span class="line"><span class="string">"""</span></span><br><span class="line"><span class="string">3D point cloud visualization</span></span><br><span class="line"><span class="string">"""</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">viz_mayavi</span><span class="params">(points, vals=<span class="string">"distance"</span>)</span>:</span></span><br><span class="line">    x = points[:, <span class="number">0</span>]  <span class="comment"># x </span></span><br><span class="line">    y = points[:, <span class="number">1</span>]  <span class="comment"># y </span></span><br><span class="line">    z = points[:, <span class="number">2</span>]  <span class="comment"># z </span></span><br><span class="line">    <span class="comment"># r = lidar[:, 3]  # Confidence value</span></span><br><span class="line">    d = np.sqrt(x ** <span class="number">2</span> + y ** <span class="number">2</span>)  <span class="comment"># Distance from image to touch sensor</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> vals == <span class="string">"height"</span>:</span><br><span class="line">        col = z</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        col = d</span><br><span class="line"></span><br><span class="line">    fig = mayavi.mlab.figure(bgcolor=(<span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>), size=(<span class="number">640</span>, <span class="number">360</span>))</span><br><span class="line">    mayavi.mlab.points3d(x, y, z,</span><br><span class="line">                         col,  <span class="comment"># Color value</span></span><br><span class="line">                         mode=<span class="string">"point"</span>,</span><br><span class="line">                         colormap=<span class="string">'spectral'</span>,  <span class="comment"># 'bone', 'copper', 'gnuplot'</span></span><br><span class="line">                         <span class="comment"># color=(0, 1, 0),   # Use fixed colors</span></span><br><span class="line">                         figure=fig,</span><br><span class="line">                         )</span><br><span class="line">    mayavi.mlab.show()</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">points = np.loadtxt(<span class="string">'data/6.xyz'</span>)<span class="comment"># Select data</span></span><br><span class="line">viz_mayavi(points)</span><br></pre></td></tr></table></figure>
-
-<h1 id="Demo-screenshot"><a href="#Demo-screenshot" class="headerlink" title="Demo screenshot"></a>Demo screenshot</h1><p><img src="/images/vi_test1.png" alt=""></p>
-<p><img src="/images/vi_test2.png" alt=""></p>
-
-    
-
-    
-
-    
-
-  </div>
-  <div class="article-info article-info-index">
-    
-    
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">visual</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-    
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/Point-cloud//" class="article-tag-list-link color2">Point cloud</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-    
-    <p class="article-more-link">
-      <a class="article-more-a" href="/2019/05/11/3D%20PointVisual/">Readmore >></a>
-    </p>
-    
-
-    
-    <div class="clearfix"></div>
-  </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-机器学习之支持向量机SVM" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-  
-  
-    <h1 itemprop="name">
-	
-	  <a class="article-title" href="/2019/03/18/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E4%B9%8B%E6%94%AF%E6%8C%81%E5%90%91%E9%87%8F%E6%9C%BASVM/">机器学习之SVM(一)</a>
-	
-    </h1>
-  
-
-
-  
-  
-<a href="/2019/03/18/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E4%B9%8B%E6%94%AF%E6%8C%81%E5%90%91%E9%87%8F%E6%9C%BASVM/" class="archive-article-date">
-        <time datetime="2019-03-17T21:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-03-18</time>
-</a>
-
-  
-  
-    
-
-  
-  </header>
-  
-  <div class="article-entry" itemprop="articleBody">
-    
-    <h1 id="零基础学SVM—Support-Vector-Machine-一"><a href="#零基础学SVM—Support-Vector-Machine-一" class="headerlink" title="零基础学SVM—Support Vector Machine(一)"></a>零基础学SVM—Support Vector Machine(一)</h1><p>如果你是一名模式识别专业的研究生，又或者你是机器学习爱好者，SVM是一个你避不开的问题。如果你只是有一堆数据需要SVM帮你处理一下，那么无论是Matlab的SVM工具箱，LIBSVM还是python框架下的SciKit Learn都可以提供方便快捷的解决方案。但如果你要追求的不仅仅是会用，还希望挑战一下“理解”这个层次，那么你就需要面对一大堆你可能从来没听过的名词，比如：非线性约束条件下的最优化、KKT条件、拉格朗日对偶、最大间隔、最优下界、核函数等等。这些名词往往会跟随一大堆天书一般的公式。如果你稍微有一点数学基础，那么单个公式你可能看得明白，但是怎么从一个公式跳到另一个公式就让人十分费解了，而最让人糊涂的其实并不是公式推导，而是如果把这些公式和你脑子里空间构想联系起来。
-    
-    
-
-    
-
-    
-
-  </div>
-  <div class="article-info article-info-index">
-    
-    
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Algorithm</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-    
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/ML//" class="article-tag-list-link color3">ML</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-    
-    <p class="article-more-link">
-      <a class="article-more-a" href="/2019/03/18/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E4%B9%8B%E6%94%AF%E6%8C%81%E5%90%91%E9%87%8F%E6%9C%BASVM/">Readmore >></a>
-    </p>
-    
-
-    
-    <div class="clearfix"></div>
-  </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-sk-learn,Boston房价预测" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-  
-  
-    <h1 itemprop="name">
-	
-	  <a class="article-title" href="/2019/03/15/sk-learn,Boston%E6%88%BF%E4%BB%B7%E9%A2%84%E6%B5%8B/">sk-learn,Boston房价预测</a>
-	
-    </h1>
-  
-
-
-  
-  
-<a href="/2019/03/15/sk-learn,Boston%E6%88%BF%E4%BB%B7%E9%A2%84%E6%B5%8B/" class="archive-article-date">
-        <time datetime="2019-03-14T21:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-03-15</time>
-</a>
-
-  
-  
-    
-
-  
-  </header>
-  
-  <div class="article-entry" itemprop="articleBody">
-    
-    <h1 id="基于sk-learn-多种模型对Boston房价预测对比"><a href="#基于sk-learn-多种模型对Boston房价预测对比" class="headerlink" title="基于sk-learn_多种模型对Boston房价预测对比"></a>基于sk-learn_多种模型对Boston房价预测对比</h1><p>使用sk-learn进行房价预测的完整过程。
-    
-    
-
-    
-
-    
-
-  </div>
-  <div class="article-info article-info-index">
-    
-    
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">sklearn</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-    
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/ML//" class="article-tag-list-link color3">ML</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-    
-    <p class="article-more-link">
-      <a class="article-more-a" href="/2019/03/15/sk-learn,Boston%E6%88%BF%E4%BB%B7%E9%A2%84%E6%B5%8B/">Readmore >></a>
-    </p>
-    
-
-    
-    <div class="clearfix"></div>
-  </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-BERT简要介绍" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-  
-  
-    <h1 itemprop="name">
-	
-	  <a class="article-title" href="/2019/02/11/BERT%E7%AE%80%E8%A6%81%E4%BB%8B%E7%BB%8D/">Transformer</a>
-	
-    </h1>
-  
-
-
-  
-  
-<a href="/2019/02/11/BERT%E7%AE%80%E8%A6%81%E4%BB%8B%E7%BB%8D/" class="archive-article-date">
-        <time datetime="2019-02-10T21:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-02-11</time>
-</a>
-
-  
-  
-    
-
-  
-  </header>
-  
-  <div class="article-entry" itemprop="articleBody">
-    
-    <blockquote>
-<p>BERT(Bidirectional Encoder Representation from Transformers) 网络架构由 Jacob Devlin 等人提出<strong>用于预训练</strong>，学习在给定上下文下给出词的 Embedding 表示。BERT 采用了 Transformer 架构的编码器部分用于学习词在给定上下文下词的 Embedding 表示。考虑到语言模型任务为从左往右或从右往左预测下一个词的自回归任务，因此若采用该模式每个词无法依赖于当前上下文下后续词进行词向量表示。为了解决该问题，BERT 提出了两类预训练任务：</p>
 <ul>
-<li><p>掩码语言模型任务</p>
-</li>
-<li><p>下一句预测任务</p>
-<p>下面我们分别来看这两类任务。
-    
-    
+<li>[<a href="http://www.cvlibs.net/datasets/kitti/" target="_blank" rel="noopener">KITTI</a>] The KITTI Vision Benchmark Suite. [<strong><code>det.</code></strong>]</li>
+<li>[<a href="http://modelnet.cs.princeton.edu/" target="_blank" rel="noopener">ModelNet</a>] The Princeton ModelNet . [<strong><code>cls.</code></strong>]</li>
+<li>[<a href="https://www.shapenet.org/" target="_blank" rel="noopener">ShapeNet</a>]  A collaborative dataset between researchers at Princeton, Stanford and TTIC. [<strong><code>seg.</code></strong>]</li>
+<li>[<a href="https://shapenet.org/download/parts" target="_blank" rel="noopener">PartNet</a>] The PartNet dataset provides fine grained part annotation of objects in ShapeNetCore. [<strong><code>seg.</code></strong>]</li>
+<li>[<a href="http://kevinkaixu.net/projects/partnet.html" target="_blank" rel="noopener">PartNet</a>] PartNet benchmark from Nanjing University and National University of Defense Technology. [<strong><code>seg.</code></strong>]</li>
+<li>[<a href="http://buildingparser.stanford.edu/dataset.html#Download" target="_blank" rel="noopener">S3DIS</a>] The Stanford Large-Scale 3D Indoor Spaces Dataset. [<strong><code>seg.</code></strong>]</li>
+<li>[<a href="http://www.scan-net.org/" target="_blank" rel="noopener">ScanNet</a>] Richly-annotated 3D Reconstructions of Indoor Scenes. [<strong><code>cls.</code></strong> <strong><code>seg.</code></strong>]</li>
+<li>[<a href="https://graphics.stanford.edu/data/3Dscanrep/" target="_blank" rel="noopener">Stanford 3D</a>] The Stanford 3D Scanning Repository. [<strong><code>reg.</code></strong>]</li>
+<li>[<a href="http://staffhome.ecm.uwa.edu.au/~00053650/databases.html" target="_blank" rel="noopener">UWA Dataset</a>] . [<strong><code>cls.</code></strong> <strong><code>seg.</code></strong> <strong><code>reg.</code></strong>]</li>
+<li>[<a href="http://shape.cs.princeton.edu/benchmark/" target="_blank" rel="noopener">Princeton Shape Benchmark</a>] The Princeton Shape Benchmark.</li>
+<li>[<a href="http://www.acfr.usyd.edu.au/papers/SydneyUrbanObjectsDataset.shtml" target="_blank" rel="noopener">SYDNEY URBAN OBJECTS DATASET</a>] This dataset contains a variety of common urban road objects scanned with a Velodyne HDL-64E LIDAR, collected in the CBD of Sydney, Australia. There are 631 individual scans of objects across classes of vehicles, pedestrians, signs and trees. [<strong><code>cls.</code></strong> <strong><code>match.</code></strong>]</li>
+<li>[<a href="https://projects.asl.ethz.ch/datasets/doku.php?id=home" target="_blank" rel="noopener">ASL Datasets Repository(ETH)</a>] This site is dedicated to provide datasets for the Robotics community with the aim to facilitate result evaluations and comparisons. [<strong><code>cls.</code></strong> <strong><code>match.</code></strong> <strong><code>reg.</code></strong> <strong><code>det</code></strong>]</li>
+<li>[<a href="http://www.semantic3d.net/" target="_blank" rel="noopener">Large-Scale Point Cloud Classification Benchmark(ETH)</a>] This benchmark closes the gap and provides a large labelled 3D point cloud data set of natural scenes with over 4 billion points in total. [<strong><code>cls.</code></strong>]</li>
+<li>[<a href="http://asrl.utias.utoronto.ca/datasets/3dmap/" target="_blank" rel="noopener">Robotic 3D Scan Repository</a>] The Canadian Planetary Emulation Terrain 3D Mapping Dataset is a collection of three-dimensional laser scans gathered at two unique planetary analogue rover test facilities in Canada.  </li>
+<li>[<a href="http://radish.sourceforge.net/" target="_blank" rel="noopener">Radish</a>] The Robotics Data Set Repository (Radish for short) provides a collection of standard robotics data sets.</li>
+<li>[<a href="http://data.ign.fr/benchmarks/UrbanAnalysis/#" target="_blank" rel="noopener">IQmulus &amp; TerraMobilita Contest</a>] The database contains 3D MLS data from a dense urban environment in Paris (France), composed of 300 million points. The acquisition was made in January 2013. [<strong><code>cls.</code></strong> <strong><code>seg.</code></strong> <strong><code>det.</code></strong>]</li>
+<li>[<a href="http://www.cs.cmu.edu/~vmr/datasets/oakland_3d/cvpr09/doc/" target="_blank" rel="noopener">Oakland 3-D Point Cloud Dataset</a>] This repository contains labeled 3-D point cloud laser data collected from a moving platform in a urban environment.</li>
+<li>[<a href="http://kos.informatik.uni-osnabrueck.de/3Dscans/" target="_blank" rel="noopener">Robotic 3D Scan Repository</a>] This repository provides 3D point clouds from robotic experiments，log files of robot runs and standard 3D data sets for the robotics community.</li>
+<li>[<a href="http://robots.engin.umich.edu/SoftwareData/Ford" target="_blank" rel="noopener">Ford Campus Vision and Lidar Data Set</a>] The dataset is collected by an autonomous ground vehicle testbed, based upon a modified Ford F-250 pickup truck. </li>
+<li>[<a href="https://cs.stanford.edu/people/teichman/stc/" target="_blank" rel="noopener">The Stanford Track Collection</a>] This dataset contains about 14,000 labeled tracks of objects as observed in natural street scenes by a Velodyne HDL-64E S2 LIDAR.</li>
+<li>[<a href="http://cvgl.stanford.edu/projects/pascal3d.html" target="_blank" rel="noopener">PASCAL3D+</a>] Beyond PASCAL: A Benchmark for 3D Object Detection in the Wild. [<strong><code>pos.</code></strong> <strong><code>det.</code></strong>]</li>
+<li>[<a href="https://www.kaggle.com/daavoo/3d-mnist" target="_blank" rel="noopener">3D MNIST</a>] The aim of this dataset is to provide a simple way to get started with 3D computer vision problems such as 3D shape recognition. [<strong><code>cls.</code></strong>]</li>
+<li>[<a href="http://wad.ai/2019/challenge.html" target="_blank" rel="noopener">WAD</a>] [<a href="http://apolloscape.auto/tracking.html" target="_blank" rel="noopener">ApolloScape</a>] The datasets are provided by Baidu Inc. [<strong><code>tra.</code></strong> <strong><code>seg.</code></strong> <strong><code>det.</code></strong>]</li>
+<li>[<a href="https://d3u7q4379vrm7e.cloudfront.net/object-detection" target="_blank" rel="noopener">nuScenes</a>] The nuScenes dataset is a large-scale autonomous driving dataset.</li>
+<li>[<a href="https://uwaterloo.ca/waterloo-intelligent-systems-engineering-lab/projects/precise-synthetic-image-and-lidar-presil-dataset-autonomous" target="_blank" rel="noopener">PreSIL</a>] Depth information, semantic segmentation (images), point-wise segmentation (point clouds), ground point labels (point clouds), and detailed annotations for all vehicles and people. [<a href="https://arxiv.org/abs/1905.00160" target="_blank" rel="noopener">paper</a>] [<strong><code>det.</code></strong> <strong><code>aut.</code></strong>]</li>
+<li>[<a href="http://3dmatch.cs.princeton.edu/" target="_blank" rel="noopener">3D Match</a>] Keypoint Matching Benchmark, Geometric Registration Benchmark, RGB-D Reconstruction Datasets. [<strong><code>reg.</code></strong> <strong><code>rec.</code></strong> <strong><code>oth.</code></strong>]</li>
+<li>[<a href="https://github.com/VCCIV/BLVD" target="_blank" rel="noopener">BLVD</a>] (a) 3D detection, (b) 4D tracking, (c) 5D interactive event recognition and (d) 5D intention prediction. [<a href="https://arxiv.org/abs/1903.06405v1" target="_blank" rel="noopener">ICRA 2019 paper</a>] [<strong><code>det.</code></strong> <strong><code>tra.</code></strong> <strong><code>aut.</code></strong> <strong><code>oth.</code></strong>]</li>
+<li>[<a href="https://arxiv.org/abs/1809.03605" target="_blank" rel="noopener">PedX</a>] 3D Pose Estimation of Pedestrians, more than 5,000 pairs of high-resolution (12MP) stereo images and LiDAR data along with providing 2D and 3D labels of pedestrians. [<a href="https://arxiv.org/abs/1809.03605" target="_blank" rel="noopener">ICRA 2019 paper</a>] [<strong><code>pos.</code></strong> <strong><code>aut.</code></strong>]</li>
+<li>[<a href="https://usa.honda-ri.com/H3D" target="_blank" rel="noopener">H3D</a>] Full-surround 3D multi-object detection and tracking dataset. [<a href="https://arxiv.org/abs/1903.01568" target="_blank" rel="noopener">ICRA 2019 paper</a>] [<strong><code>det.</code></strong> <strong><code>tra.</code></strong> <strong><code>aut.</code></strong>]</li>
+<li><a href="https://www.argoverse.org/" target="_blank" rel="noopener">[Argoverse BY ARGO AI]</a> Two public datasets (3D Tracking and Motion Forecasting) supported by highly detailed maps to test, experiment, and teach self-driving vehicles how to understand the world around them.[<a href="http://openaccess.thecvf.com/content_CVPR_2019/html/Chang_Argoverse_3D_Tracking_and_Forecasting_With_Rich_Maps_CVPR_2019_paper.html" target="_blank" rel="noopener">CVPR 2019 paper</a>][<strong><code>tra.</code></strong> <strong><code>aut.</code></strong>]</li>
+<li>[<a href="https://niessner.github.io/Matterport/" target="_blank" rel="noopener">Matterport3D</a>] RGB-D: 10,800 panoramic views from 194,400 RGB-D images. Annotations: surface reconstructions, camera poses, and 2D and 3D semantic segmentations. Keypoint matching, view overlap prediction, normal prediction from color, semantic segmentation, and scene classification. [<a href="https://arxiv.org/abs/1709.06158" target="_blank" rel="noopener">3DV 2017 paper</a>] [<a href="https://github.com/niessner/Matterport" target="_blank" rel="noopener">code</a>] [<a href="https://matterport.com/blog/2017/09/20/announcing-matterport3d-research-dataset/" target="_blank" rel="noopener">blog</a>]</li>
+<li>[<a href="https://arxiv.org/abs/1907.04758" target="_blank" rel="noopener">SynthCity</a>] SynthCity is a 367.9M point synthetic full colour Mobile Laser Scanning point cloud. Nine categories. [<strong><code>seg.</code></strong> <strong><code>aut.</code></strong>]</li>
+<li>[<a href="https://level5.lyft.com/dataset/?source=post_page" target="_blank" rel="noopener">Lyft Level 5</a>] Include high quality, human-labelled 3D bounding boxes of traffic agents, an underlying HD spatial semantic map. [<strong><code>det.</code></strong> <strong><code>seg.</code></strong> <strong><code>aut.</code></strong>]</li>
+<li>[<a href="http://semantic-kitti.org" target="_blank" rel="noopener">SemanticKITTI</a>] Sequential Semantic Segmentation, 28 classes, for autonomous driving. All sequences of KITTI odometry labeled. [<a href="https://arxiv.org/abs/1904.01416" target="_blank" rel="noopener">ICCV 2019 paper</a>] [<strong><code>seg.</code></strong> <strong><code>oth.</code></strong> <strong><code>aut.</code></strong>]</li>
+<li>[<a href="http://npm3d.fr/paris-lille-3d" target="_blank" rel="noopener">NPM3D</a>] The Paris-Lille-3D  has been produced by a Mobile Laser System (MLS) in two different cities in France (Paris and Lille). [<strong><code>seg.</code></strong>] </li>
+<li>[<a href="https://waymo.com/open/" target="_blank" rel="noopener">The Waymo Open Dataset</a>] The Waymo Open Dataset is comprised of high resolution sensor data collected by Waymo self-driving cars in a wide variety of conditions. [<strong><code>det.</code></strong>]</li>
+<li>[<a href="https://github.com/I2RDL2/ASTAR-3D" target="_blank" rel="noopener">A*3D: An Autonomous Driving Dataset in Challeging Environments</a>] A*3D: An Autonomous Driving Dataset in Challeging Environments. [<strong><code>det.</code></strong>]</li>
+<li>[<a href="https://github.com/canqin001/PointDAN" target="_blank" rel="noopener">PointDA-10 Dataset</a>] Domain Adaptation for point clouds.</li>
+<li>[<a href="https://robotcar-dataset.robots.ox.ac.uk/" target="_blank" rel="noopener">Oxford Robotcar</a>] The dataset captures many different combinations of weather, traffic and pedestrians. [<strong><code>cls.</code></strong> <strong><code>det.</code></strong> <strong><code>rec.</code></strong>]</li>
+</ul>
 
     
 
+    
+
+    
+    <div class="declare"> 
+      <ul class="post-copyright">
+        <li>
+          <strong>作者：</strong>
+          Chris Yan
+        </li>
+        <li>
+          <strong>链接：</strong>
+          <a href="https:/Yansz.github.io/2020/01/10/Point cloud analysis /" title="About point cloud analysis" target="_blank">https:/Yansz.github.io/2020/01/10/Point cloud analysis /</a>
+        </li>
+        
+        <li>
+          <strong>版权声明： </strong>
+          
+          本博客所有文章除特别声明外，均采用 <a href="https://github.com/JoeyBling/hexo-theme-yilia-plus/blob/master/LICENSE" rel="external nofollow" target="_blank">MIT</a> 许可协议。转载请注明出处！
+        </li>
+        
+      </ul>
+    </div>
     
 
   </div>
@@ -1007,7 +723,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">BERT</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">3DSeg</a>
         		</li>
       		
 		</ul>
@@ -1019,7 +735,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="/categories/NLP//" class="article-tag-list-link color4">NLP</a>
+        			<a href="/categories/CV//" class="article-tag-list-link color3">CV</a>
         		</li>
       		
 		</ul>
@@ -1027,16 +743,76 @@
 
 
     
-    <p class="article-more-link">
-      <a class="article-more-a" href="/2019/02/11/BERT%E7%AE%80%E8%A6%81%E4%BB%8B%E7%BB%8D/">Readmore >></a>
-    </p>
+
     
+    
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <!-- <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a> -->
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+     <!-- <img src="//pan.baidu.com/share/qrcode?url=https://yansz.github.io/2020/01/10/Point%20cloud%20analysis%20/" alt="微信分享二维码"> -->
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
 
     
     <div class="clearfix"></div>
   </div>
   </div>
 </article>
+
+
+<nav id="article-nav">
+  
+  
+    <a href="/2019/12/23/PointNet++/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">PointNet++ Learning</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -1051,116 +827,62 @@
         </div>
         
         
-    </div>
-</aside>
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Since-2017"><span class="toc-number">1.</span> <span class="toc-text">Since 2017</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#null"><span class="toc-number">1.0.1.</span> <span class="toc-text"> Keywords </span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2017"><span class="toc-number">1.1.</span> <span class="toc-text">2017</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2018"><span class="toc-number">1.2.</span> <span class="toc-text">2018</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2019"><span class="toc-number">1.3.</span> <span class="toc-text">2019</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2020"><span class="toc-number">1.4.</span> <span class="toc-text">2020</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#null"><span class="toc-number">2.</span> <span class="toc-text"> 
+
+1
+Datasets
 
 
-
-
-  
-    <article id="post-Transformer详细讲解" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-  
-  
-    <h1 itemprop="name">
-	
-	  <a class="article-title" href="/2019/02/10/Transformer%E8%AF%A6%E7%BB%86%E8%AE%B2%E8%A7%A3/">Transformer</a>
-	
-    </h1>
-  
-
-
-  
-  
-<a href="/2019/02/10/Transformer%E8%AF%A6%E7%BB%86%E8%AE%B2%E8%A7%A3/" class="archive-article-date">
-        <time datetime="2019-02-09T21:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-02-10</time>
-</a>
-
-  
-  
-    
-
-  
-  </header>
-  
-  <div class="article-entry" itemprop="articleBody">
-    
-    <blockquote>
-<p>本篇整理 Transformer 架构，及在 Transformer 基础上衍生出来的 BERT 模型，最后给出<br>相应的应用案例。
-    
-    
-
-    
-
-    
-
-  </div>
-  <div class="article-info article-info-index">
-    
-    
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Transformer</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-    
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/NLP//" class="article-tag-list-link color4">NLP</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-    
-    <p class="article-more-link">
-      <a class="article-more-a" href="/2019/02/10/Transformer%E8%AF%A6%E7%BB%86%E8%AE%B2%E8%A7%A3/">Readmore >></a>
-    </p>
-    
-
-    
-    <div class="clearfix"></div>
-  </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
+</span></a></li></ol>
+                    </div>
+                </span>
             </div>
         </div>
         
-        
     </div>
 </aside>
 
 
 
 
+
+
+
+
+
+
+
   
+  <div id="gitment-ctn"></div>
   
-    <nav id="page-nav">
-      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">Next</a>
-    </nav>
+    <!-- 中文 -->
+    <link rel="stylesheet" href="/lib/gitment.css">
+    <script src="/lib/gitment.js"></script>
   
+  <script>
+    <!-- id: "About point cloud analysis" -->
+    var gitment = new Gitment({
+      id: "20200110000000",
+      owner: 'Yansz',
+      repo: 'Yansz.github.io',
+      oauth: {
+        client_id: '7bd19647dacd63488f5d',
+        client_secret: 'a5dab7c0a20148b56723764217e284e45a430dd0',
+      },
+    })
+    gitment.render('gitment-ctn')
+  </script>
+
+
+  
+
 
 
           </div>
@@ -1200,8 +922,8 @@
     <script>
 	var yiliaConfig = {
 		mathjax: true,
-		isHome: true,
-		isPost: false,
+		isHome: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
