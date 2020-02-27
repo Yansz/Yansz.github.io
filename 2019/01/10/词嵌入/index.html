@@ -6,17 +6,21 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://Yansz.github.io">
-  <title>Category: ML | TechNotes</title>
+  <title>词嵌入方法 | TechNotes</title>
   <meta name="generator" content="hexo-theme-yilia-plus">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
-  <meta property="og:type" content="website">
-<meta property="og:title" content="TechNotes">
-<meta property="og:url" content="https://Yansz.github.io/categories/ML/index.html">
+  <meta name="description" content="引言对于自然语言处理任务，我们不能直接使用纯文本字符串作为输出，而是需要将文本字符转化为连续值的向量。 词嵌入的主要思想是将文本转换为较低维度空间的矢量表示。对于这种转化后的向量有两个重要的要求：  较低维度空间：尽量降低编码词向量产生的稀疏性。  保证上下文相似性：为了使语言模型更好的预测文本的含义。   总的来说，词嵌入就是一种从文本语料库构建低维向量表示的方法，可以保留单词的上下文相似性。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="词嵌入方法">
+<meta property="og:url" content="https://Yansz.github.io/2019/01/10/词嵌入/index.html">
 <meta property="og:site_name" content="TechNotes">
+<meta property="og:description" content="引言对于自然语言处理任务，我们不能直接使用纯文本字符串作为输出，而是需要将文本字符转化为连续值的向量。 词嵌入的主要思想是将文本转换为较低维度空间的矢量表示。对于这种转化后的向量有两个重要的要求：  较低维度空间：尽量降低编码词向量产生的稀疏性。  保证上下文相似性：为了使语言模型更好的预测文本的含义。   总的来说，词嵌入就是一种从文本语料库构建低维向量表示的方法，可以保留单词的上下文相似性。">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2020-02-27T11:13:35.998Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="TechNotes">
+<meta name="twitter:title" content="词嵌入方法">
+<meta name="twitter:description" content="引言对于自然语言处理任务，我们不能直接使用纯文本字符串作为输出，而是需要将文本字符转化为连续值的向量。 词嵌入的主要思想是将文本转换为较低维度空间的矢量表示。对于这种转化后的向量有两个重要的要求：  较低维度空间：尽量降低编码词向量产生的稀疏性。  保证上下文相似性：为了使语言模型更好的预测文本的含义。   总的来说，词嵌入就是一种从文本语料库构建低维向量表示的方法，可以保留单词的上下文相似性。">
   
   
     <link rel="icon" href="/favicon.ico">
@@ -166,184 +170,264 @@
               class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
+            <article id="post-词嵌入" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
   
   
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2019" class="archive-year">2019</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2019/05/20/Logistic损失函数推导/" class="archive-article-date">
-        <time datetime="2019-05-19T21:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-05-20</time>
-</a>
-
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2019/05/20/Logistic损失函数推导/">Logistic的代价函数的求导详细推理过程</a>
-	
+    <h1 class="article-title" itemprop="name">
+      词嵌入方法
     </h1>
   
 
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Algorithm</a>
-        		</li>
-      		
-		</ul>
-	</div>
+  
+  
+        
+        <span id="busuanzi_container_page_pv" style='display:none' class="archive-article-date">
+              <i class="icon-smile icon"></i> 阅读数：<span id="busuanzi_value_page_pv"></span>次
+        </span>
 
+<a href="/2019/01/10/词嵌入/" class="archive-article-date">
+        <time datetime="2019-01-09T21:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-01-10</time>
+</a>
+
+  
+  
+    
+<div style="margin-top:10px;">
+  <span class="post-time">
+    <span class="post-meta-item-icon">
+      <!-- fonts.scss -->
+      <!-- 百度字体平台:http://fontstore.baidu.com/static/editor/index.html -->
+      <i class="icon-statistics"></i>
+      <span class="post-meta-item-text"> Words=</span>
+      <span class="post-count">873</span>
+    </span>
+  </span>
+
+  <span class="post-time">
+    &nbsp; | &nbsp;
+    <span class="post-meta-item-icon">
+      <i class="icon-book icon"></i>
+      <span class="post-meta-item-text"> Time≈</span>
+      <span class="post-count">2min</span>
+    </span>
+  </span>
+</div>
+
+
+  
+  </header>
+  
+  <div class="article-entry" itemprop="articleBody">
+    
+    <h2 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h2><p>对于自然语言处理任务，我们不能直接使用纯文本字符串作为输出，而是需要将文本字符转化为连续值的向量。</p>
+<p>词嵌入的主要思想是将文本转换为较低维度空间的矢量表示。对于这种转化后的向量有两个重要的要求：</p>
+<ul>
+<li><p>较低维度空间：尽量降低编码词向量产生的稀疏性。</p>
+</li>
+<li><p>保证上下文相似性：为了使语言模型更好的预测文本的含义。</p>
+</li>
+</ul>
+<p>总的来说，词嵌入就是一种<strong>从文本语料库构建低维向量表示的方法，可以保留单词的上下文相似性。</strong></p>
+<h2 id="介绍Word2Vec"><a href="#介绍Word2Vec" class="headerlink" title="介绍Word2Vec"></a>介绍Word2Vec</h2><p>现在我们知道它是什么，接下来讨论词嵌入如何工作。如果您曾遇到降维，那么您通常会使用无监督学习算法来实现降维。这是最著名的算法之一用于生成单词嵌入的方法：<a href="https://www.quora.com/What-are-some-good-resources-to-learn-word2vec" target="_blank" rel="noopener">word2vec</a>。</p>
+<p>实际上，有两种实现word2vec的方式，即CBOW（连续词袋）和Skip-gram。</p>
+<ul>
+<li>CBOW：以上下文单词作为输入，预测目标单词（中心词）</li>
+<li>Skip-gram: 以目标单词作为输入，预测单词周围的上下文。</li>
+</ul>
+<p>输入的单词使用one-hot编码。这将进入具有线性单元的隐藏层，然后进入softmax层进行预测。这里的想法是训练隐藏层权重矩阵，以找到我们单词的有效表示形式。该权重矩阵通常称为<strong>嵌入</strong>矩阵，可以作为查询表进行查询。</p>
+<p>嵌入矩阵的大小为单词数乘以隐藏层中神经元的数量（嵌入大小）。嵌入的大小（即隐藏层神经元的个数，因此表示单词之间相似度的特征的数量）往往比词汇表中唯一单词的总数小得多。因此，如果您有10,000个单词和300个隐藏层神经元，则矩阵的大小将为10,000×300（因为输入编码为独热编码向量）。一旦计算出字向量，就可以对结果矩阵的相应行进行快速O（1）查找。最终每个单词都会产生一个与之关联的一个向量。</p>
+<p>注意：所使用的嵌入大小设计是一个折衷：更多功能意味着额外的计算复杂性，因此运行时间更长，但是还允许更多的精细表示和可能更好的模型。</p>
+<p>词嵌入的一个有趣特征是，由于它们是单词之间上下文相似性的数字表示，因此可以进行算术操作。经典示例是从“男人”中减去“国王”的“概念”，并添加“女人”的概念。答案将取决于您的训练方式，但您可能会看到其中一项最佳成绩是“女王”一词。这篇<a href="http://p.migdal.pl/2017/01/06/king-man-woman-queen-why.html" target="_blank" rel="noopener">帖子</a>解释了原因。</p>
+<h2 id="补充"><a href="#补充" class="headerlink" title="补充"></a>补充</h2><p>另一个值得了解的单词嵌入算法是GloVe，它通过累加共现次数来工作略有不同（请参阅<a href="https://www.quora.com/How-is-GloVe-different-from-word2vec" target="_blank" rel="noopener">GloVe与word2vec有何不同？</a>）</p>
+<p>那么和深度学习有什么关系呢？</p>
+<p>请记住，Word2vec只是两层浅层神经网络，因此<a href="https://www.quora.com/Can-word2vec-be-considered-deep-learning" target="_blank" rel="noopener">它本身并不是深度学习的示例</a>。但是，诸如Word2vec和GloVe之类的技术可以将原始文本转换成深层网络可以理解的数字形式，例如，使用<a href="http://deeplearning.net/tutorial/rnnslu.html" target="_blank" rel="noopener">带有词嵌入的递归神经网络</a>。</p>
+
+    
+
+    
+
+    
+    <div class="declare"> 
+      <ul class="post-copyright">
+        <li>
+          <strong>作者：</strong>
+          Chris Yan
+        </li>
+        <li>
+          <strong>链接：</strong>
+          <a href="https:/Yansz.github.io/2019/01/10/词嵌入/" title="词嵌入方法" target="_blank">https:/Yansz.github.io/2019/01/10/词嵌入/</a>
+        </li>
+        
+        <li>
+          <strong>版权声明： </strong>
           
+          本博客所有文章除特别声明外，均采用 <a href="https://github.com/JoeyBling/hexo-theme-yilia-plus/blob/master/LICENSE" rel="external nofollow" target="_blank">MIT</a> 许可协议。转载请注明出处！
+        </li>
+        
+      </ul>
+    </div>
+    
+
+  </div>
+  <div class="article-info article-info-index">
+    
+    
+    
 	<div class="article-category tagcloud">
 		<i class="icon-book icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="/categories/ML//" class="article-tag-list-link color3">ML</a>
+        			<a href="/categories/NLP//" class="article-tag-list-link color4">NLP</a>
         		</li>
       		
 		</ul>
 	</div>
 
 
+    
+
+    
+    
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <!-- <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a> -->
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+     <!-- <img src="//pan.baidu.com/share/qrcode?url=https://Yansz.github.io/2019/01/10/词嵌入/" alt="微信分享二维码"> -->
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+
+    
+    <div class="clearfix"></div>
+  </div>
   </div>
 </article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2019/03/18/机器学习之支持向量机SVM/" class="archive-article-date">
-        <time datetime="2019-03-17T21:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-03-18</time>
-</a>
 
+
+<nav id="article-nav">
+  
+    <a href="/2019/01/10/NER的概念/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          NER的概念
+        
+      </div>
+    </a>
+  
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2019/03/18/机器学习之支持向量机SVM/">机器学习之SVM(一)</a>
-	
-    </h1>
-  
-
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Algorithm</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/ML//" class="article-tag-list-link color3">ML</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
+        
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#引言"><span class="toc-number">1.</span> <span class="toc-text">引言</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#介绍Word2Vec"><span class="toc-number">2.</span> <span class="toc-text">介绍Word2Vec</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#补充"><span class="toc-number">3.</span> <span class="toc-text">补充</span></a></li></ol>
+                    </div>
+                </span>
+            </div>
         </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
+        
+    </div>
+</aside>
+
+
+
+
+
+
+
+
+
+
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2019/03/15/sk-learn,Boston房价预测/" class="archive-article-date">
-        <time datetime="2019-03-14T21:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-03-15</time>
-</a>
-
-        </div>
-    	 
+  <div id="gitment-ctn"></div>
   
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2019/03/15/sk-learn,Boston房价预测/">sk-learn,Boston房价预测</a>
-	
-    </h1>
+    <!-- 中文 -->
+    <link rel="stylesheet" href="/lib/gitment.css">
+    <script src="/lib/gitment.js"></script>
   
+  <script>
+    <!-- id: "词嵌入方法" -->
+    var gitment = new Gitment({
+      id: "20190110000000",
+      owner: 'Yansz',
+      repo: 'Yansz.github.io',
+      oauth: {
+        client_id: '7bd19647dacd63488f5d',
+        client_secret: 'a5dab7c0a20148b56723764217e284e45a430dd0',
+      },
+    })
+    gitment.render('gitment-ctn')
+  </script>
 
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">sklearn</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/ML//" class="article-tag-list-link color3">ML</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
   
 
-    
 
 
           </div>
@@ -406,10 +490,10 @@ $(document).ready(function() {
 	var yiliaConfig = {
 		mathjax: true,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
-		isCategory: true,
+		isCategory: false,
 		open_in_new: false,
 		toc_hide_index: true,
 		root: "/",
