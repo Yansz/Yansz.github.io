@@ -101,7 +101,7 @@
 				
 					<a class="github" href="https://github.com/Yansz" title="GitHub" target="_blank"><i class="icon-github"></i></a>
 				
-					<a class="mail" href="/823972409@qq.com" title="NULL" target="_blank"><i class="icon-mail"></i></a>
+					<a class="mail" href="/yansz34@qq.com" title="NULL" target="_blank"><i class="icon-mail"></i></a>
 				
 			</div>
 		
@@ -146,7 +146,7 @@
 					
 						<a class="github" target="_blank" href="https://github.com/Yansz" title="GitHub"><i class="icon-github"></i></a>
 			        
-						<a class="mail" target="_blank" href="/823972409@qq.com" title="NULL"><i class="icon-mail"></i></a>
+						<a class="mail" target="_blank" href="/yansz34@qq.com" title="NULL"><i class="icon-mail"></i></a>
 			        
 				</div>
 			</nav>
@@ -254,12 +254,12 @@
 <p><strong>2 ID-CNN+CRF</strong></p>
 <p>对于膨胀卷积先做一个简单的介绍。</p>
 <p>Dilated/Atrous Convolution（中文叫做空洞卷积或者膨胀卷积)）或者是Convolution with holes。从字面上就很好理解，就是在标准的卷积里注入空洞，以此来增加<strong>感受野</strong>。</p>
-<p><img src="/images/ID-CNN.png" alt=""></p>
+<p><img src="/images/ID-CNN.png" alt></p>
 <p>如上图所示，相比原来的正常卷积，膨胀卷积多了一个超参数，称之为膨胀率（dilation rate），指的是kernel的间隔数量(例如，正常的卷积是膨胀率是1)。</p>
 <p><strong>“膨胀”的好处是，不做池化，不损失信息的情况下，增大了感受野，让每个卷积输出都包含较大范围的信息。</strong></p>
 <p>《Fast and Accurate Entity Recognition with Iterated Dilated Convolutions》一文中提出在NER任务中，引入膨胀卷积，一方面可以引入CNN并行计算的优势，提高训练和预测时的速度；另一方面，可以减轻CNN在长序列输入上特征提取能力弱的劣势。</p>
 <p>具体使用时，dilated width会随着层数的增加而指数增加。这样随着层数的增加，参数数量是线性增加的，而感受野却是指数增加的，这样就可以很快覆盖到全部的输入数据。</p>
-<p><img src="/images/IDCNN.jpg" alt=""></p>
+<p><img src="/images/IDCNN.jpg" alt></p>
 <p>LSTM+CRF和ID-CNN+CRF两种模型其实都是同一个架构：深度学习特征提取+CRF解码。现在绝大部分的NER任务都是采用这样的一套框架。</p>
 
     
@@ -627,11 +627,19 @@ $(document).ready(function() {
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">visual</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">BERT</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">Algorithm</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Git</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -643,7 +651,7 @@ $(document).ready(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">visual</a>
+                <a href="javascript:void(0)" class="js-tag color4">Vec</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -651,15 +659,7 @@ $(document).ready(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Vec</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">sklearn</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Technical route</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -667,7 +667,7 @@ $(document).ready(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Git</a>
+                <a href="javascript:void(0)" class="js-tag color1">Technical route</a>
               </li>
             
             <div class="clearfix"></div>
@@ -719,7 +719,7 @@ $(document).ready(function() {
     	<section class="tools-section tools-section-me" q-show="aboutme">
         
           
-  	  		<div class="aboutme-wrap" id="aboutme">研究方向：<br>Python后端开发、NLP<br>计算机视觉，自动驾驶<br>邮箱：823972409@qq.com<br>期待分享和交流！</div>
+  	  		<div class="aboutme-wrap" id="aboutme">研究方向：<br>计算机视觉，图像深度学习<br>邮箱：yansz34@qq.com<br>期待讨论！</div>
   	  	
     	</section>
     

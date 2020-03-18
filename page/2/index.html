@@ -96,7 +96,7 @@
 				
 					<a class="github" href="https://github.com/Yansz" title="GitHub" target="_blank"><i class="icon-github"></i></a>
 				
-					<a class="mail" href="/823972409@qq.com" title="NULL" target="_blank"><i class="icon-mail"></i></a>
+					<a class="mail" href="/yansz34@qq.com" title="NULL" target="_blank"><i class="icon-mail"></i></a>
 				
 			</div>
 		
@@ -141,7 +141,7 @@
 					
 						<a class="github" target="_blank" href="https://github.com/Yansz" title="GitHub"><i class="icon-github"></i></a>
 			        
-						<a class="mail" target="_blank" href="/823972409@qq.com" title="NULL"><i class="icon-mail"></i></a>
+						<a class="mail" target="_blank" href="/yansz34@qq.com" title="NULL"><i class="icon-mail"></i></a>
 			        
 				</div>
 			</nav>
@@ -171,6 +171,104 @@
           </div>
           <div id="js-content" class="content-ll">
             
+
+  
+    <article id="post-Transformer详细讲解" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+  
+  
+    <h1 itemprop="name">
+	
+	  <a class="article-title" href="/2019/02/10/Transformer详细讲解/">Transformer</a>
+	
+    </h1>
+  
+
+
+  
+  
+<a href="/2019/02/10/Transformer详细讲解/" class="archive-article-date">
+        <time datetime="2019-02-09T21:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-02-10</time>
+</a>
+
+  
+  
+    
+
+  
+  </header>
+  
+  <div class="article-entry" itemprop="articleBody">
+    
+    <blockquote>
+<p>本篇整理 Transformer 架构，及在 Transformer 基础上衍生出来的 BERT 模型，最后给出<br>相应的应用案例。
+    
+    
+
+    
+
+    
+
+  </div>
+  <div class="article-info article-info-index">
+    
+    
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Transformer</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+    
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/NLP//" class="article-tag-list-link color4">NLP</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+    
+    <p class="article-more-link">
+      <a class="article-more-a" href="/2019/02/10/Transformer详细讲解/">Readmore >></a>
+    </p>
+    
+
+    
+    <div class="clearfix"></div>
+  </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
 
   
     <article id="post-GitHub历史版本回退" class="article article-type-post  article-index" itemscope itemprop="blogPost">
@@ -681,21 +779,8 @@
 <li><p>保证上下文相似性：为了使语言模型更好的预测文本的含义。</p>
 </li>
 </ul>
-<p>总的来说，词嵌入就是一种<strong>从文本语料库构建低维向量表示的方法，可以保留单词的上下文相似性。</strong></p>
-<h2 id="介绍Word2Vec"><a href="#介绍Word2Vec" class="headerlink" title="介绍Word2Vec"></a>介绍Word2Vec</h2><p>现在我们知道它是什么，接下来讨论词嵌入如何工作。如果您曾遇到降维，那么您通常会使用无监督学习算法来实现降维。这是最著名的算法之一用于生成单词嵌入的方法：<a href="https://www.quora.com/What-are-some-good-resources-to-learn-word2vec" target="_blank" rel="noopener">word2vec</a>。</p>
-<p>实际上，有两种实现word2vec的方式，即CBOW（连续词袋）和Skip-gram。</p>
-<ul>
-<li>CBOW：以上下文单词作为输入，预测目标单词（中心词）</li>
-<li>Skip-gram: 以目标单词作为输入，预测单词周围的上下文。</li>
-</ul>
-<p>输入的单词使用one-hot编码。这将进入具有线性单元的隐藏层，然后进入softmax层进行预测。这里的想法是训练隐藏层权重矩阵，以找到我们单词的有效表示形式。该权重矩阵通常称为<strong>嵌入</strong>矩阵，可以作为查询表进行查询。</p>
-<p>嵌入矩阵的大小为单词数乘以隐藏层中神经元的数量（嵌入大小）。嵌入的大小（即隐藏层神经元的个数，因此表示单词之间相似度的特征的数量）往往比词汇表中唯一单词的总数小得多。因此，如果您有10,000个单词和300个隐藏层神经元，则矩阵的大小将为10,000×300（因为输入编码为独热编码向量）。一旦计算出字向量，就可以对结果矩阵的相应行进行快速O（1）查找。最终每个单词都会产生一个与之关联的一个向量。</p>
-<p>注意：所使用的嵌入大小设计是一个折衷：更多功能意味着额外的计算复杂性，因此运行时间更长，但是还允许更多的精细表示和可能更好的模型。</p>
-<p>词嵌入的一个有趣特征是，由于它们是单词之间上下文相似性的数字表示，因此可以进行算术操作。经典示例是从“男人”中减去“国王”的“概念”，并添加“女人”的概念。答案将取决于您的训练方式，但您可能会看到其中一项最佳成绩是“女王”一词。这篇<a href="http://p.migdal.pl/2017/01/06/king-man-woman-queen-why.html" target="_blank" rel="noopener">帖子</a>解释了原因。</p>
-<h2 id="补充"><a href="#补充" class="headerlink" title="补充"></a>补充</h2><p>另一个值得了解的单词嵌入算法是GloVe，它通过累加共现次数来工作略有不同（请参阅<a href="https://www.quora.com/How-is-GloVe-different-from-word2vec" target="_blank" rel="noopener">GloVe与word2vec有何不同？</a>）</p>
-<p>那么和深度学习有什么关系呢？</p>
-<p>请记住，Word2vec只是两层浅层神经网络，因此<a href="https://www.quora.com/Can-word2vec-be-considered-deep-learning" target="_blank" rel="noopener">它本身并不是深度学习的示例</a>。但是，诸如Word2vec和GloVe之类的技术可以将原始文本转换成深层网络可以理解的数字形式，例如，使用<a href="http://deeplearning.net/tutorial/rnnslu.html" target="_blank" rel="noopener">带有词嵌入的递归神经网络</a>。</p>
-
+<p>总的来说，词嵌入就是一种<strong>从文本语料库构建低维向量表示的方法，可以保留单词的上下文相似性。</strong>
+    
     
 
     
@@ -923,11 +1008,19 @@ $(document).ready(function() {
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">visual</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">BERT</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">Algorithm</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Git</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -939,7 +1032,7 @@ $(document).ready(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">visual</a>
+                <a href="javascript:void(0)" class="js-tag color4">Vec</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -947,15 +1040,7 @@ $(document).ready(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Vec</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">sklearn</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Technical route</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -963,7 +1048,7 @@ $(document).ready(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Git</a>
+                <a href="javascript:void(0)" class="js-tag color1">Technical route</a>
               </li>
             
             <div class="clearfix"></div>
@@ -1015,7 +1100,7 @@ $(document).ready(function() {
     	<section class="tools-section tools-section-me" q-show="aboutme">
         
           
-  	  		<div class="aboutme-wrap" id="aboutme">研究方向：<br>Python后端开发、NLP<br>计算机视觉，自动驾驶<br>邮箱：823972409@qq.com<br>期待分享和交流！</div>
+  	  		<div class="aboutme-wrap" id="aboutme">研究方向：<br>计算机视觉，图像深度学习<br>邮箱：yansz34@qq.com<br>期待讨论！</div>
   	  	
     	</section>
     
