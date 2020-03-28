@@ -20,7 +20,7 @@
 <meta property="og:image" content="https://yansz.github.io/images/T-net.png">
 <meta property="og:image" content="https://yansz.github.io/images/PointNet(tf).png">
 <meta property="og:image" content="https://yansz.github.io/images/part_seg.png">
-<meta property="og:updated_time" content="2020-03-18T21:39:12.054Z">
+<meta property="og:updated_time" content="2020-03-28T11:03:15.474Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Pointnet网络个人笔记">
 <meta name="twitter:description" content="前言Pointnet开创性地将深度学习直接用于三维点云任务。由于点云数据的无序性，无法直接对原始点云使用卷积等操作。Pointnet提出对称函数来解决点的无序性问题，设计了能够进行分类和分割任务的网络结构，本文结合源码与个人的理解对于T-net网络和对称函数进行分析。">
@@ -207,7 +207,7 @@
       <!-- 百度字体平台:http://fontstore.baidu.com/static/editor/index.html -->
       <i class="icon-statistics"></i>
       <span class="post-meta-item-text"> Words=</span>
-      <span class="post-count">2.9k</span>
+      <span class="post-count">3k</span>
     </span>
   </span>
 
@@ -227,7 +227,7 @@
   
   <div class="article-entry" itemprop="articleBody">
     
-    <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>Pointnet开创性地将深度学习直接用于三维点云任务。由于点云数据的无序性，无法直接对原始点云使用卷积等操作。Pointnet提出对称函数来解决点的无序性问题，设计了能够进行分类和分割任务的网络结构，本文结合源码与个人的理解对于T-net网络和对称函数进行分析。<a id="more"></a></p>
+    <h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>Pointnet开创性地将深度学习直接用于三维点云任务。由于点云数据的无序性，无法直接对原始点云使用卷积等操作。Pointnet提出对称函数来解决点的无序性问题，设计了能够进行分类和分割任务的网络结构，本文结合源码与个人的理解对于T-net网络和对称函数进行分析。<a id="more"></a></p>
 <h4 id="点的无序性"><a href="#点的无序性" class="headerlink" title="点的无序性"></a><strong>点的无序性</strong></h4><p>针对点的无序性问题实际上是文章提出了三个方案：</p>
 <ul>
 <li>对于无序点集进行排序（Pointcnn）。</li>
@@ -269,10 +269,11 @@
 <p><img src="/images/PointNet(tf).png" alt="PointNet源码"></p>
 <p>分割部分的代码实现主要在part_seg/（部件分割）和sem_seg/（场景分割）下。其中part_seg中底层局部特征与高层全局特征的连接<strong>（concat）使用到了各层特征</strong>。</p>
 <p><img src="/images/part_seg.png" alt="part_seg"></p>
-<p>sem_seg/model.py场景分割中需要注意论文使用的S3DIS数据维度不再是3维而是更高的9维度（XYZ+RGB+相对于房间的标准化后的位置信息），特征连接部分使用<strong>高层全局特征的降维然后与高维特征本身concat</strong>，并不是论文中提到的方式。</p>
+<p>sem_seg/model.py场景分割中需要注意论文使用的S3DIS数据维度不再是3维而是更高的9维度（XYZ+RGB+相对于房间的标准化后的位置信息），针对特征连接部分使用<strong>高层全局特征（B*1024）接全连接降维到128，然后与高维特征自身做concat</strong>，不是采用论文中提到的方式。</p>
 <p>而论文中提到的分割结构实际是在models/pointnet_seg.py中实现，即max pooling后的1D特征向量，使用tf.tile()复制n份（n个特征点），与之前网络得到的 n * 64特征矩阵分别concat。得到一个n(64+D)的特征矩阵，再经一系列的特征变换操作，得到每个点的分类结果。</p>
 <h3 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h3><p>本文主要结合代码层面总结了pointnet网络的分类和分割任务的实现。主要是理解pointnet是如何做到直接从原始点云数据中提取高维特征，并且解决好点云的特性。实际上基于pointnet结构可以进行很多任务，比如点云配准，物体检测，3D重建，法向量估计等，只需要根据具体任务合理修改网络后几层的结构，利用好网络提取的高维特征。</p>
 <p>针对pointnet存在的点与点之间相关性的缺失，在pointnet++中使用局部采样+分组+pointnet的结构进行解决，并考虑到了点云的稀疏性解决方案，之后很多深度学习的研究在此基础上展开，习惯上称为pointnet家族（point-wise MLP），比如Frustum,flowNet 3D,LSAnet,PAT等等。个人认为更高的准确度需要点云等3D数据与图像结合进行深度学习训练，将图像的高分辨率优势借鉴进来会有更好的效果。</p>
+<p>源码地址：<br>1.原论文实现代码<br><a href="https://github.com/charlesq34/pointnet" target="_blank" rel="noopener">https://github.com/charlesq34/pointnet</a><br>2.基于pytorch实现：<br><a href="https://github.com/fxia22/pointnet.pytorch" target="_blank" rel="noopener">https://github.com/fxia22/pointnet.pytorch</a><br><a href="https://github.com/yanx27/Pointnet_Pointnet2_pytorch" target="_blank" rel="noopener">https://github.com/yanx27/Pointnet_Pointnet2_pytorch</a></p>
 
     
 
@@ -380,6 +381,15 @@
 
 <nav id="article-nav">
   
+    <a href="/2020/03/16/pointne2学习笔记/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          Pointnet++ 网络个人笔记
+        
+      </div>
+    </a>
+  
   
     <a href="/2020/01/10/Point cloud analysis /" id="article-nav-older" class="article-nav-link-wrap">
       <div class="article-nav-title">About point cloud analysis</div>
@@ -409,7 +419,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#前言"><span class="toc-number">1.</span> <span class="toc-text">前言</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#点的无序性"><span class="toc-number">1.0.0.1.</span> <span class="toc-text">点的无序性</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#点云的旋转不变性"><span class="toc-number">1.0.0.2.</span> <span class="toc-text">点云的旋转不变性</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-T-Net网络结构"><span class="toc-number">1.0.1.</span> <span class="toc-text">1. T-Net网络结构</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-点云分类部分"><span class="toc-number">1.0.2.</span> <span class="toc-text">2. 点云分类部分</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-点云分割部分"><span class="toc-number">1.0.3.</span> <span class="toc-text">3. 点云分割部分</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#结语"><span class="toc-number">1.0.4.</span> <span class="toc-text">结语</span></a></li></ol></li></ol></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#前言"><span class="toc-number">1.</span> <span class="toc-text">前言</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#点的无序性"><span class="toc-number">1.1.</span> <span class="toc-text">点的无序性</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#点云的旋转不变性"><span class="toc-number">1.2.</span> <span class="toc-text">点云的旋转不变性</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-T-Net网络结构"><span class="toc-number">2.</span> <span class="toc-text">1. T-Net网络结构</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-点云分类部分"><span class="toc-number">3.</span> <span class="toc-text">2. 点云分类部分</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-点云分割部分"><span class="toc-number">4.</span> <span class="toc-text">3. 点云分割部分</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#结语"><span class="toc-number">5.</span> <span class="toc-text">结语</span></a></li></ol>
                     </div>
                 </span>
             </div>
@@ -619,18 +629,6 @@ $(document).ready(function() {
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">visual</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">BERT</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Algorithm</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">Git</a>
               </li>
              
@@ -639,7 +637,23 @@ $(document).ready(function() {
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">visual</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">3DSeg</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Transformer</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Algorithm</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Technical route</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -647,7 +661,7 @@ $(document).ready(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Transformer</a>
+                <a href="javascript:void(0)" class="js-tag color5">BERT</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -656,10 +670,6 @@ $(document).ready(function() {
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">NLP</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Technical route</a>
               </li>
             
             <div class="clearfix"></div>

@@ -6,17 +6,30 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://Yansz.github.io">
-  <title>Archives: 2019 | TechNotes</title>
+  <title>Pointnet++ 网络个人笔记 | TechNotes</title>
   <meta name="generator" content="hexo-theme-yilia-plus">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
-  <meta property="og:type" content="website">
-<meta property="og:title" content="TechNotes">
-<meta property="og:url" content="https://Yansz.github.io/archives/2019/page/2/index.html">
+  <meta name="description" content="Pointnet++个人笔记前言Pointnet提取的全局特征能够很好地完成分类任务，由于网络将所有的点最大池化为了一个全局特征，因此局部点与点之间的联系并没有被网络学习到，导致网络的输出缺乏点云的局部结构特征，因此PointNet对于场景的分割效果十分一般。在点云分类和物体的Part Segmentation中，这样的问题可以通过中心化物体的坐标轴部分地解决，但在场景分割中很难去解决。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Pointnet++ 网络个人笔记">
+<meta property="og:url" content="https://Yansz.github.io/2020/03/16/pointne2学习笔记/index.html">
 <meta property="og:site_name" content="TechNotes">
+<meta property="og:description" content="Pointnet++个人笔记前言Pointnet提取的全局特征能够很好地完成分类任务，由于网络将所有的点最大池化为了一个全局特征，因此局部点与点之间的联系并没有被网络学习到，导致网络的输出缺乏点云的局部结构特征，因此PointNet对于场景的分割效果十分一般。在点云分类和物体的Part Segmentation中，这样的问题可以通过中心化物体的坐标轴部分地解决，但在场景分割中很难去解决。">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="https://yansz.github.io/images/pointnet++.jpg">
+<meta property="og:image" content="https://yansz.github.io/images/set_abstraction.png">
+<meta property="og:image" content="c:%5CUsers%5CAdministrator%5CDesktop%5Cpointnet%E7%BB%93%E5%90%88%E4%BB%A3%E7%A0%81%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%5Cimages%5Cset_abstraction2.png">
+<meta property="og:image" content="https://yansz.github.io/images/msg_mrg.png">
+<meta property="og:image" content="https://yansz.github.io/images/DP.png">
+<meta property="og:image" content="https://yansz.github.io/images/p2%E5%88%86%E7%B1%BB%E6%95%88%E6%9E%9C.png">
+<meta property="og:image" content="https://yansz.github.io/images/p2_seg.png">
+<meta property="og:image" content="https://yansz.github.io/images/PointNet2(tf).jpg">
+<meta property="og:updated_time" content="2020-03-28T10:55:53.990Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="TechNotes">
+<meta name="twitter:title" content="Pointnet++ 网络个人笔记">
+<meta name="twitter:description" content="Pointnet++个人笔记前言Pointnet提取的全局特征能够很好地完成分类任务，由于网络将所有的点最大池化为了一个全局特征，因此局部点与点之间的联系并没有被网络学习到，导致网络的输出缺乏点云的局部结构特征，因此PointNet对于场景的分割效果十分一般。在点云分类和物体的Part Segmentation中，这样的问题可以通过中心化物体的坐标轴部分地解决，但在场景分割中很难去解决。">
+<meta name="twitter:image" content="https://yansz.github.io/images/pointnet++.jpg">
   
   
     <link rel="icon" href="/favicon.ico">
@@ -166,274 +179,290 @@
               class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
+            <article id="post-pointne2学习笔记" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
   
   
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2019" class="archive-year">2019</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2019/01/15/序列标注三大模型HMM、MEMM、CRF/" class="archive-article-date">
-        <time datetime="2019-01-15T09:02:55.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-01-15</time>
-</a>
-
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2019/01/15/序列标注三大模型HMM、MEMM、CRF/">CRF</a>
-	
+    <h1 class="article-title" itemprop="name">
+      Pointnet++ 网络个人笔记
     </h1>
   
 
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">NLP</a>
-        		</li>
-      		
-		</ul>
-	</div>
+  
+  
+        
+        <span id="busuanzi_container_page_pv" style='display:none' class="archive-article-date">
+              <i class="icon-smile icon"></i> 阅读数：<span id="busuanzi_value_page_pv"></span>次
+        </span>
 
-          
+<a href="/2020/03/16/pointne2学习笔记/" class="archive-article-date">
+        <time datetime="2020-03-15T21:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-03-16</time>
+</a>
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
+  
+  
+    
+<div style="margin-top:10px;">
+  <span class="post-time">
+    <span class="post-meta-item-icon">
+      <!-- fonts.scss -->
+      <!-- 百度字体平台:http://fontstore.baidu.com/static/editor/index.html -->
+      <i class="icon-statistics"></i>
+      <span class="post-meta-item-text"> Words=</span>
+      <span class="post-count">3.3k</span>
+    </span>
+  </span>
+
+  <span class="post-time">
+    &nbsp; | &nbsp;
+    <span class="post-meta-item-icon">
+      <i class="icon-book icon"></i>
+      <span class="post-meta-item-text"> Time≈</span>
+      <span class="post-count">15min</span>
+    </span>
+  </span>
+</div>
+
+
+  
+  </header>
+  
+  <div class="article-entry" itemprop="articleBody">
+    
+    <h1 id="Pointnet-个人笔记"><a href="#Pointnet-个人笔记" class="headerlink" title="Pointnet++个人笔记"></a>Pointnet++个人笔记</h1><h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>Pointnet提取的全局特征能够很好地完成分类任务，由于网络将所有的点最大池化为了一个全局特征，因此局部点与点之间的联系并没有被网络学习到，导致网络的输出缺乏<strong>点云的局部结构特征</strong>，因此PointNet对于场景的分割效果十分一般。在点云分类和物体的Part Segmentation中，这样的问题可以通过中心化物体的坐标轴部分地解决，但在场景分割中很难去解决。<a id="more"></a></p>
+<p>因此作者在此基础上又提出了能够实现点云作多层特征提取的Pointnet++网络，网络结构如下：</p>
+<p><img src="/images/pointnet++.jpg" alt="1584696411399"></p>
+<p>​            Qi et al. PointNet++: Deep Hierarchical Feature Learning on Point Sets in a Metric Space. NIPS 2017.</p>
+<h4 id="网络的基本组成"><a href="#网络的基本组成" class="headerlink" title="网络的基本组成"></a>网络的基本组成</h4><p>下面介绍上图中的网络设计，传统的CNN在进行特征学习时，使用卷积核作为局部感受野，每层的卷积核共享权值，进过多层的特征学习，最后的输出会包含图像的局部特征信息。通过改变中借鉴CNN的采样思路，采取分层特征学习，即在小区域中使用<strong>点采样+成组+提取局部特征（S+G+P）</strong>的方式，包含这三部分的机构称为<strong>Set Abstraction</strong>。</p>
+<ul>
+<li>Sampling：利用FPS（最远点采样）随机采样点；</li>
+<li>Grouping：利用Ball Query划一个R为半径的圈，将每个圈里面的点云作为一簇；</li>
+<li>Pointnet:  对Sampling+Grouping以后的点云进行局部的全局特征提取。</li>
+</ul>
+<p>以2D点图为例，整个<strong>SA</strong>(Set Abstraction)三步的实现过程表示如下：</p>
+<p><img src="/images/set_abstraction.png" alt></p>
+<p><img src="C:%5CUsers%5CAdministrator%5CDesktop%5Cpointnet%E7%BB%93%E5%90%88%E4%BB%A3%E7%A0%81%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%5Cimages%5Cset_abstraction2.png" alt></p>
+<p>每层新的中心点都是从上一层抽取的特征子集，中心点的个数就是成组的点集数，随着层数增加，中心点的个数也会逐渐降低，抽取到点云的局部结构特征。</p>
+<h3 id="针对非均匀点云情况"><a href="#针对非均匀点云情况" class="headerlink" title="## 针对非均匀点云情况"></a>## 针对非均匀点云情况</h3><p>当点云不均匀时，每个子区域中如果在分区的时候使用相同的球半径，会导致部分稀疏区域采样点过小。</p>
+<p>文中提出<strong>多尺度成组 (MSG)</strong>和<strong>多分辨率成组 (MRG)</strong>两种解决办法。</p>
+<p><img src="/images/msg_mrg.png" alt></p>
+<p>简单概括这两种采样方法：</p>
+<ul>
+<li><strong>多尺度成组（MSG）：</strong>对于选取的一个中心点设置多个半径进行成组，并将经过PointNet对每个区域抽取后的特征进行拼接（concat）来当做该中心点的特征，个人认为这种做法会产生很多特征重叠，结果会可以保留和突出（边际叠加）更多局部关键的特征，但是这种方式不同范围内计算的权值却很难共享，计算量会变大很多。</li>
+<li><strong>多分辨率成组（MRG）：</strong>对不同特征层上（分辨率）提取的特征再进行concat，以上图右图为例，最后的concat包含左右两个部分特征，分别来自底层和高层的特征抽取，对于low level点云成组后经过一个pointnet和high level的进行concat，思想是特征的抽取中的跳层连接。当局部点云区域较稀疏时，上层提取到的特征可靠性可能比底层更差，因此考虑对底层特征提升权重。当然，点云密度较高时能够提取到的特征也会更多。这种方法优化了直接在稀疏点云上进行特征抽取产生的问题，且相对于MSG的效率也较高。</li>
+</ul>
+<p>在该网络中作者使用了对输入点云进行随机采样(丢弃)random input dropout(DP)方法。Dropout的设计本身是为了降低过拟合，增强模型的鲁棒性，结果显示对于分类任务的效果也有不错的提升，作者给了一个对比图：</p>
+<p><img src="/images/DP.png" alt></p>
+<p>本文中使用的缩写说明：</p>
+<ul>
+<li><font color="#1E90FF"><strong>SA：set abstraction 点集抽取模块</strong></font></li>
+<li><font color="#1E90FF"><strong>FC：fully connected layers 全连接层</strong></font></li>
+<li><font color="#1E90FF"><strong>FP：feature<br>propagation 特征传播模块（跨层连接，多个全连接）</strong> </font></li>
+</ul>
+<h2 id="SA模块的代码实现"><a href="#SA模块的代码实现" class="headerlink" title="SA模块的代码实现"></a>SA模块的代码实现</h2><ul>
+<li><strong>utils/pointnet_util.py/</strong> 中采样成组的代码具体实现。</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br><span class="line">166</span><br><span class="line">167</span><br><span class="line">168</span><br><span class="line">169</span><br><span class="line">170</span><br><span class="line">171</span><br><span class="line">172</span><br><span class="line">173</span><br><span class="line">174</span><br><span class="line">175</span><br><span class="line">176</span><br><span class="line">177</span><br><span class="line">178</span><br><span class="line">179</span><br><span class="line">180</span><br><span class="line">181</span><br><span class="line">182</span><br><span class="line">183</span><br><span class="line">184</span><br><span class="line">185</span><br><span class="line">186</span><br><span class="line">187</span><br><span class="line">188</span><br><span class="line">189</span><br><span class="line">190</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">sample_and_group</span><span class="params">(npoint, radius, nsample, xyz, points, knn=False, use_xyz=True)</span>:</span></span><br><span class="line">    <span class="string">'''</span></span><br><span class="line"><span class="string">    输入参数说明：</span></span><br><span class="line"><span class="string">    Input:</span></span><br><span class="line"><span class="string">        npoint: int32，中心点的数量（分组数）</span></span><br><span class="line"><span class="string">        radius: float32，ball quary的球半径大小</span></span><br><span class="line"><span class="string">        nsample: int32，区域内采样到的点数</span></span><br><span class="line"><span class="string">        xyz: (batch_size, ndataset, 3) TF tensor，例如：分类任务起始值（32，1024，3）</span></span><br><span class="line"><span class="string">        points: (batch_size, ndataset, channel) TF tensor, 如果为None则等于xyz</span></span><br><span class="line"><span class="string">        knn: bool, True表示使用KNN方法采样，否则使用球半径搜索</span></span><br><span class="line"><span class="string">        use_xyz: bool, True 表示抽取的局部点的特征与xyz进行concat, 否则不进行，默认为True</span></span><br><span class="line"><span class="string">        </span></span><br><span class="line"><span class="string">    输出参数说明：</span></span><br><span class="line"><span class="string">    Output:</span></span><br><span class="line"><span class="string">        new_xyz: (batch_size, npoint, 3) TF tensor</span></span><br><span class="line"><span class="string">        new_points: (batch_size, npoint, nsample, 3+channel) TF tensor,点的特征进行了concat</span></span><br><span class="line"><span class="string">        idx: (batch_size, npoint, nsample) TF tensor, 采样的局部区域内点的索引值</span></span><br><span class="line"><span class="string">        grouped_xyz: (batch_size, npoint, nsample, 3) TF tensor, 通过减去xyz对点进行区域归一化</span></span><br><span class="line"><span class="string">        注：源码中没有tf_ops/grouping和sampling/下没有放编译生成对应的链接库.so文件，可能要重新编译才能执行相应的py脚本</span></span><br><span class="line"><span class="string">    '''</span></span><br><span class="line">	<span class="comment">#1.对原始点云输入进行采样和分组</span></span><br><span class="line">    new_xyz = gather_point(xyz, farthest_point_sample(npoint, xyz)) <span class="comment"># (batch_size, npoint, 3)</span></span><br><span class="line">    <span class="keyword">if</span> knn:</span><br><span class="line">        _,idx = knn_point(nsample, xyz, new_xyz)</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        idx, pts_cnt = query_ball_point(radius, nsample, xyz, new_xyz)</span><br><span class="line">    grouped_xyz = group_point(xyz, idx) <span class="comment"># (batch_size, npoint, nsample, 3)</span></span><br><span class="line">    grouped_xyz -= tf.tile(tf.expand_dims(new_xyz, <span class="number">2</span>), [<span class="number">1</span>,<span class="number">1</span>,nsample,<span class="number">1</span>]) <span class="comment"># translation normalization，减去中心点坐标进行区域坐标归一化</span></span><br><span class="line">    </span><br><span class="line">    <span class="comment">#2.对高层次特征进行分组</span></span><br><span class="line">    <span class="keyword">if</span> points <span class="keyword">is</span> <span class="keyword">not</span> <span class="literal">None</span>:</span><br><span class="line">        grouped_points = group_point(points, idx) <span class="comment"># (batch_size, npoint, nsample, channel)</span></span><br><span class="line">        <span class="keyword">if</span> use_xyz:</span><br><span class="line">            new_points = tf.concat([grouped_xyz, grouped_points], axis=<span class="number">-1</span>) <span class="comment"># (batch_size, npoint, nample, 3+channel)</span></span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            new_points = grouped_points</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        new_points = grouped_xyz</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> new_xyz, new_points, idx, grouped_xyz</span><br><span class="line"></span><br><span class="line"><span class="comment">#在最后一次SA操作中，需要对全部特征进行采样分组</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">sample_and_group_all</span><span class="params">(xyz, points, use_xyz=True)</span>:</span></span><br><span class="line">    <span class="string">'''</span></span><br><span class="line"><span class="string">    #输出变为三个参数，功能同上</span></span><br><span class="line"><span class="string">    Inputs:</span></span><br><span class="line"><span class="string">        xyz: (batch_size, ndataset, 3) TF tensor</span></span><br><span class="line"><span class="string">        points: (batch_size, ndataset, channel) TF tensor</span></span><br><span class="line"><span class="string">        use_xyz: bool</span></span><br><span class="line"><span class="string">    输出：</span></span><br><span class="line"><span class="string">    Outputs:</span></span><br><span class="line"><span class="string">        new_xyz: (batch_size, 1, 3) as (0,0,0)</span></span><br><span class="line"><span class="string">        new_points: (batch_size, 1, ndataset, 3+channel) TF tensor</span></span><br><span class="line"><span class="string">    Note:</span></span><br><span class="line"><span class="string">       等价于sample_and_group（npoint=1, radius=inf）以(0,0,0)为重心</span></span><br><span class="line"><span class="string">    '''</span></span><br><span class="line">    batch_size = xyz.get_shape()[<span class="number">0</span>].value</span><br><span class="line">    nsample = xyz.get_shape()[<span class="number">1</span>].value</span><br><span class="line">    new_xyz = tf.constant(np.tile(np.array([<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>]).reshape((<span class="number">1</span>,<span class="number">1</span>,<span class="number">3</span>)), (batch_size,<span class="number">1</span>,<span class="number">1</span>)),dtype=tf.float32) <span class="comment"># (batch_size, 1, 3)</span></span><br><span class="line">    idx = tf.constant(np.tile(np.array(range(nsample)).reshape((<span class="number">1</span>,<span class="number">1</span>,nsample)), (batch_size,<span class="number">1</span>,<span class="number">1</span>)))</span><br><span class="line">    grouped_xyz = tf.reshape(xyz, (batch_size, <span class="number">1</span>, nsample, <span class="number">3</span>)) <span class="comment"># (batch_size, npoint=1, nsample, 3)</span></span><br><span class="line">    <span class="keyword">if</span> points <span class="keyword">is</span> <span class="keyword">not</span> <span class="literal">None</span>:</span><br><span class="line">        <span class="keyword">if</span> use_xyz:</span><br><span class="line">            new_points = tf.concat([xyz, points], axis=<span class="number">2</span>) <span class="comment"># (batch_size, 16, 259)</span></span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            new_points = points</span><br><span class="line">        new_points = tf.expand_dims(new_points, <span class="number">1</span>) <span class="comment"># (batch_size, 1, 16, 259)</span></span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        new_points = grouped_xyz</span><br><span class="line">    <span class="keyword">return</span> new_xyz, new_points, idx, grouped_xyz</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">pointnet_sa_module</span><span class="params">(xyz, points, npoint, radius, nsample, mlp, mlp2, group_all, is_training, bn_decay, scope, bn=True, pooling=<span class="string">'max'</span>, knn=False, use_xyz=True, use_nchw=False)</span>:</span></span><br><span class="line">    <span class="string">''' PointNet Set Abstraction (SA) Module</span></span><br><span class="line"><span class="string">        Input:</span></span><br><span class="line"><span class="string">            xyz: (batch_size, ndataset, 3) TF tensor</span></span><br><span class="line"><span class="string">            points: (batch_size, ndataset, channel) TF tensor</span></span><br><span class="line"><span class="string">            npoint: int32 -- 最远点采样点数（中心点数/成组数）</span></span><br><span class="line"><span class="string">            radius: float32 -- 局部区域的搜索半径</span></span><br><span class="line"><span class="string">            nsample: int32 -- 每个区域内的采样点数</span></span><br><span class="line"><span class="string">            mlp: list of int32 -- 对每个点进行MLP的网络（输出）大小</span></span><br><span class="line"><span class="string">            mlp2: list of int32 -- 对每个区域进行MLP的网络（输出）大小</span></span><br><span class="line"><span class="string">            group_all: bool -- 如果为True,则重写npoint, radius and nsample为None</span></span><br><span class="line"><span class="string">            use_xyz: bool, True 表示抽取的局部点的特征与xyz进行concat, 否则不进行</span></span><br><span class="line"><span class="string">            use_nchw: bool, True, 使用NCHW点云数据格式进行卷积, 作者指出这样比NHWC格式的计算更快</span></span><br><span class="line"><span class="string">        Return:</span></span><br><span class="line"><span class="string">            new_xyz: (batch_size, npoint, 3) TF tensor</span></span><br><span class="line"><span class="string">            new_points: (batch_size, npoint, mlp[-1] or mlp2[-1]) TF tensor</span></span><br><span class="line"><span class="string">            idx: (batch_size, npoint, nsample) int32 -- 区域索引</span></span><br><span class="line"><span class="string">    '''</span></span><br><span class="line">    data_format = <span class="string">'NCHW'</span> <span class="keyword">if</span> use_nchw <span class="keyword">else</span> <span class="string">'NHWC'</span></span><br><span class="line">    <span class="keyword">with</span> tf.variable_scope(scope) <span class="keyword">as</span> sc:</span><br><span class="line">        <span class="comment"># Sample and Grouping</span></span><br><span class="line">        <span class="keyword">if</span> group_all:</span><br><span class="line">            nsample = xyz.get_shape()[<span class="number">1</span>].value</span><br><span class="line">            new_xyz, new_points, idx, grouped_xyz = sample_and_group_all(xyz, points, use_xyz)</span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            new_xyz, new_points, idx, grouped_xyz = sample_and_group(npoint, radius, nsample, xyz, points, knn, use_xyz)</span><br><span class="line"></span><br><span class="line">        <span class="comment"># Point Feature Embedding</span></span><br><span class="line">        <span class="keyword">if</span> use_nchw: new_points = tf.transpose(new_points, [<span class="number">0</span>,<span class="number">3</span>,<span class="number">1</span>,<span class="number">2</span>])<span class="comment">#nchw-&gt;nwch</span></span><br><span class="line">        <span class="keyword">for</span> i, num_out_channel <span class="keyword">in</span> enumerate(mlp):</span><br><span class="line">            new_points = tf_util.conv2d(new_points, num_out_channel, [<span class="number">1</span>,<span class="number">1</span>],</span><br><span class="line">                                        padding=<span class="string">'VALID'</span>, stride=[<span class="number">1</span>,<span class="number">1</span>],</span><br><span class="line">                                        bn=bn, is_training=is_training,</span><br><span class="line">                                        scope=<span class="string">'conv%d'</span>%(i), bn_decay=bn_decay,</span><br><span class="line">                                        data_format=data_format) </span><br><span class="line">        <span class="keyword">if</span> use_nchw: new_points = tf.transpose(new_points, [<span class="number">0</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">1</span>])<span class="comment">#nchw-&gt;nhwc</span></span><br><span class="line">    <span class="string">"""</span></span><br><span class="line"><span class="string">    省略 some code(区域max pooling)</span></span><br><span class="line"><span class="string">    """</span></span><br><span class="line">    </span><br><span class="line">    </span><br><span class="line"><span class="comment">#针对稀疏点云加入多尺度采样（msg）</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">pointnet_sa_module_msg</span><span class="params">(xyz, points, npoint, radius_list, nsample_list, mlp_list, is_training, bn_decay, scope, bn=True, use_xyz=True, use_nchw=False)</span>:</span></span><br><span class="line">    <span class="string">''' PointNet Set Abstraction (SA) module with Multi-Scale Grouping (MSG)</span></span><br><span class="line"><span class="string">        Input:</span></span><br><span class="line"><span class="string">            xyz: (batch_size, ndataset, 3) TF tensor</span></span><br><span class="line"><span class="string">            points: (batch_size, ndataset, channel) TF tensor</span></span><br><span class="line"><span class="string">            npoint: int32 -- #points sampled in farthest point sampling</span></span><br><span class="line"><span class="string">            radius: list of float32 -- search radius in local region</span></span><br><span class="line"><span class="string">            nsample: list of int32 -- how many points in each local region</span></span><br><span class="line"><span class="string">            mlp: list of list of int32 -- output size for MLP on each point</span></span><br><span class="line"><span class="string">            use_xyz: bool, if True concat XYZ with local point features, otherwise just use point features</span></span><br><span class="line"><span class="string">            use_nchw: bool, if True, use NCHW data format for conv2d, which is usually faster than NHWC format</span></span><br><span class="line"><span class="string">        Return:</span></span><br><span class="line"><span class="string">            new_xyz: (batch_size, npoint, 3) TF tensor</span></span><br><span class="line"><span class="string">            new_points: (batch_size, npoint, \sum_k&#123;mlp[k][-1]&#125;) TF tensor</span></span><br><span class="line"><span class="string">    '''</span></span><br><span class="line">    data_format = <span class="string">'NCHW'</span> <span class="keyword">if</span> use_nchw <span class="keyword">else</span> <span class="string">'NHWC'</span></span><br><span class="line">    <span class="keyword">with</span> tf.variable_scope(scope) <span class="keyword">as</span> sc:</span><br><span class="line">        new_xyz = gather_point(xyz, farthest_point_sample(npoint, xyz))</span><br><span class="line">        new_points_list = []</span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> range(len(radius_list)):</span><br><span class="line">            radius = radius_list[i]</span><br><span class="line">            nsample = nsample_list[i]</span><br><span class="line">            idx, pts_cnt = query_ball_point(radius, nsample, xyz, new_xyz)</span><br><span class="line">            grouped_xyz = group_point(xyz, idx)</span><br><span class="line">            grouped_xyz -= tf.tile(tf.expand_dims(new_xyz, <span class="number">2</span>), [<span class="number">1</span>,<span class="number">1</span>,nsample,<span class="number">1</span>])</span><br><span class="line">            <span class="keyword">if</span> points <span class="keyword">is</span> <span class="keyword">not</span> <span class="literal">None</span>:</span><br><span class="line">                grouped_points = group_point(points, idx)</span><br><span class="line">                <span class="keyword">if</span> use_xyz:</span><br><span class="line">                    grouped_points = tf.concat([grouped_points, grouped_xyz], axis=<span class="number">-1</span>)</span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                grouped_points = grouped_xyz</span><br><span class="line">            <span class="keyword">if</span> use_nchw: grouped_points = tf.transpose(grouped_points, [<span class="number">0</span>,<span class="number">3</span>,<span class="number">1</span>,<span class="number">2</span>])</span><br><span class="line">            <span class="keyword">for</span> j,num_out_channel <span class="keyword">in</span> enumerate(mlp_list[i]):</span><br><span class="line">                grouped_points = tf_util.conv2d(grouped_points, num_out_channel, [<span class="number">1</span>,<span class="number">1</span>],</span><br><span class="line">                                                padding=<span class="string">'VALID'</span>, stride=[<span class="number">1</span>,<span class="number">1</span>], bn=bn, is_training=is_training,</span><br><span class="line">                                                scope=<span class="string">'conv%d_%d'</span>%(i,j), bn_decay=bn_decay)</span><br><span class="line">            <span class="keyword">if</span> use_nchw: grouped_points = tf.transpose(grouped_points, [<span class="number">0</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">1</span>])</span><br><span class="line">            new_points = tf.reduce_max(grouped_points, axis=[<span class="number">2</span>])</span><br><span class="line">            new_points_list.append(new_points)</span><br><span class="line">        new_points_concat = tf.concat(new_points_list, axis=<span class="number">-1</span>)</span><br><span class="line">        <span class="keyword">return</span> new_xyz, new_points_concat</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">pointnet_fp_module</span><span class="params">(xyz1, xyz2, points1, points2, mlp, is_training, bn_decay, scope, bn=True)</span>:</span></span><br><span class="line">    <span class="string">''' PointNet Feature Propogation (FP) Module</span></span><br><span class="line"><span class="string">    	FP层，作用是更新从插值操作和跳层连接合并来的特征</span></span><br><span class="line"><span class="string">        Input:                                                                                                      </span></span><br><span class="line"><span class="string">            xyz1: (batch_size, ndataset1, 3) TF tensor                                                              </span></span><br><span class="line"><span class="string">            xyz2: (batch_size, ndataset2, 3) TF tensor, sparser than xyz1                                           </span></span><br><span class="line"><span class="string">            points1: (batch_size, ndataset1, nchannel1) TF tensor                                                   </span></span><br><span class="line"><span class="string">            points2: (batch_size, ndataset2, nchannel2) TF tensor</span></span><br><span class="line"><span class="string">            mlp: list of int32 --对给个点进行mlp后的输出特征维度大小                                                 </span></span><br><span class="line"><span class="string">        Return:</span></span><br><span class="line"><span class="string">            new_points: (batch_size, ndataset1, mlp[-1]) TF tensor</span></span><br><span class="line"><span class="string">            注：这一部分会用到插值模块，源码中带有tf_ops/3d_interpolation/tf_interpolate_so.so文件可以使用，不用重新编译。不同于需要进行编译的grouping和sampling操作。</span></span><br><span class="line"><span class="string">    '''</span></span><br><span class="line">    <span class="keyword">with</span> tf.variable_scope(scope) <span class="keyword">as</span> sc:</span><br><span class="line">        dist, idx = three_nn(xyz1, xyz2)</span><br><span class="line">        dist = tf.maximum(dist, <span class="number">1e-10</span>)</span><br><span class="line">        norm = tf.reduce_sum((<span class="number">1.0</span>/dist),axis=<span class="number">2</span>,keep_dims=<span class="literal">True</span>)</span><br><span class="line">        norm = tf.tile(norm,[<span class="number">1</span>,<span class="number">1</span>,<span class="number">3</span>])</span><br><span class="line">        weight = (<span class="number">1.0</span>/dist) / norm</span><br><span class="line">        interpolated_points = three_interpolate(points2, idx, weight)</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span> points1 <span class="keyword">is</span> <span class="keyword">not</span> <span class="literal">None</span>:</span><br><span class="line">            new_points1 = tf.concat(axis=<span class="number">2</span>, values=[interpolated_points, points1]) <span class="comment"># B,ndataset1,nchannel1+nchannel2</span></span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            new_points1 = interpolated_points</span><br><span class="line">        new_points1 = tf.expand_dims(new_points1, <span class="number">2</span>)</span><br><span class="line">        <span class="keyword">for</span> i, num_out_channel <span class="keyword">in</span> enumerate(mlp):</span><br><span class="line">            new_points1 = tf_util.conv2d(new_points1, num_out_channel, [<span class="number">1</span>,<span class="number">1</span>],</span><br><span class="line">                                         padding=<span class="string">'VALID'</span>, stride=[<span class="number">1</span>,<span class="number">1</span>],</span><br><span class="line">                                         bn=bn, is_training=is_training,</span><br><span class="line">                                         scope=<span class="string">'conv_%d'</span>%(i), bn_decay=bn_decay)</span><br><span class="line">        new_points1 = tf.squeeze(new_points1, [<span class="number">2</span>]) <span class="comment"># B,ndataset1,mlp[-1]</span></span><br><span class="line">        <span class="keyword">return</span> new_points1</span><br></pre></td></tr></table></figure>
+
+<p>以上是SA和FP部分的代码实现，接下来对分类任务的代码进行解读。</p>
+<h2 id="单尺度成组-SSG-分类网络的实现"><a href="#单尺度成组-SSG-分类网络的实现" class="headerlink" title="单尺度成组(SSG)分类网络的实现"></a>单尺度成组(SSG)分类网络的实现</h2><p>以最基础的单尺度采样分组设计为例，结合代码了解模型的搭建过程。</p>
+<ul>
+<li><strong>models/pointnet2_cls_ssg.py /</strong> </li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">get_model</span><span class="params">(point_cloud, is_training, bn_decay=None)</span>:</span></span><br><span class="line">    <span class="string">""" Classification PointNet, input is BxNx3, output Bx40 """</span></span><br><span class="line">    batch_size = point_cloud.get_shape()[<span class="number">0</span>].value</span><br><span class="line">    num_point = point_cloud.get_shape()[<span class="number">1</span>].value</span><br><span class="line">    end_points = &#123;&#125;</span><br><span class="line">    l0_xyz = point_cloud</span><br><span class="line">    l0_points = <span class="literal">None</span></span><br><span class="line">    end_points[<span class="string">'l0_xyz'</span>] = l0_xyz</span><br><span class="line">    <span class="comment"># Set abstraction layers</span></span><br><span class="line">    <span class="comment"># Note: When using NCHW for layer 2, we see increased GPU memory usage (in TF1.4).</span></span><br><span class="line">    <span class="comment"># So we only use NCHW for layer 1 until this issue can be resolved.</span></span><br><span class="line">        <span class="string">"""</span></span><br><span class="line"><span class="string">    调用三次SA模块+三次全连接层+两次dropout=0.5，和PointNet一样，除最后一层外，在所有的全连接层后都会进行批量归一化操作+ReLU操作：</span></span><br><span class="line"><span class="string">    SA(512, 0.2, [64, 64, 128]) → SA(128, 0.4, [128, 128, 256]) → SA([256, 512, 1024]) →</span></span><br><span class="line"><span class="string">FC(512, 0.5) → FC(256, 0.5) → FC(K)</span></span><br><span class="line"><span class="string">    """</span></span><br><span class="line">    l1_xyz, l1_points, l1_indices = pointnet_sa_module(l0_xyz, l0_points, npoint=<span class="number">512</span>, radius=<span class="number">0.2</span>, nsample=<span class="number">32</span>, mlp=[<span class="number">64</span>,<span class="number">64</span>,<span class="number">128</span>], mlp2=<span class="literal">None</span>, group_all=<span class="literal">False</span>, is_training=is_training, bn_decay=bn_decay, scope=<span class="string">'layer1'</span>, use_nchw=<span class="literal">True</span>)</span><br><span class="line">    l2_xyz, l2_points, l2_indices = pointnet_sa_module(l1_xyz, l1_points, npoint=<span class="number">128</span>, radius=<span class="number">0.4</span>, nsample=<span class="number">64</span>, mlp=[<span class="number">128</span>,<span class="number">128</span>,<span class="number">256</span>], mlp2=<span class="literal">None</span>, group_all=<span class="literal">False</span>, is_training=is_training, bn_decay=bn_decay, scope=<span class="string">'layer2'</span>)</span><br><span class="line">    l3_xyz, l3_points, l3_indices = pointnet_sa_module(l2_xyz, l2_points, npoint=<span class="literal">None</span>, radius=<span class="literal">None</span>, nsample=<span class="literal">None</span>, mlp=[<span class="number">256</span>,<span class="number">512</span>,<span class="number">1024</span>], mlp2=<span class="literal">None</span>, group_all=<span class="literal">True</span>, is_training=is_training, bn_decay=bn_decay, scope=<span class="string">'layer3'</span>)</span><br><span class="line">     <span class="comment"># Fully connected layers</span></span><br><span class="line">    net = tf.reshape(l3_points, [batch_size, <span class="number">-1</span>])</span><br><span class="line">    net = tf_util.fully_connected(net, <span class="number">512</span>, bn=<span class="literal">True</span>, is_training=is_training, scope=<span class="string">'fc1'</span>, bn_decay=bn_decay)</span><br><span class="line">    net = tf_util.dropout(net, keep_prob=<span class="number">0.5</span>, is_training=is_training, scope=<span class="string">'dp1'</span>)</span><br><span class="line">    net = tf_util.fully_connected(net, <span class="number">256</span>, bn=<span class="literal">True</span>, is_training=is_training, scope=<span class="string">'fc2'</span>, bn_decay=bn_decay)</span><br><span class="line">    net = tf_util.dropout(net, keep_prob=<span class="number">0.5</span>, is_training=is_training, scope=<span class="string">'dp2'</span>)</span><br><span class="line">    net = tf_util.fully_connected(net, <span class="number">40</span>, activation_fn=<span class="literal">None</span>, scope=<span class="string">'fc3'</span>)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> net, end_points</span><br><span class="line">    <span class="string">"""</span></span><br><span class="line"><span class="string">    对于多尺度的分类网络模型（MSG）对应于pointnet2_cls_msg.py，这里的半径和mlp维度都分别转变为向量和数组表示形式，整体的计算过程如下：    </span></span><br><span class="line"><span class="string">SA(512, [0.1, 0.2, 0.4], [[32, 32, 64], [64, 64, 128], [64, 96, 128]]) →</span></span><br><span class="line"><span class="string">SA(128, [0.2, 0.4, 0.8], [[64, 64, 128], [128, 128, 256], [128, 128, 256]]) →</span></span><br><span class="line"><span class="string">SA([256, 512, 1024]) → F C(512, 0.5) → F C(256, 0.5) → F C(K)</span></span><br><span class="line"><span class="string">    对于多分辨率分类模型（MRG），作者在附录中只是给出了设计的步骤，实现源码没有给出</span></span><br><span class="line"><span class="string">    """</span></span><br></pre></td></tr></table></figure>
+
+<p>文章给出了针对ModelNet40S数据集上的分割模型的效果比较：</p>
+<p><img src="/images/p2%E5%88%86%E7%B1%BB%E6%95%88%E6%9E%9C.png" alt></p>
+<p>相比于Pointnet的结果，Pointnet++在此有小幅度的提升。</p>
+<p>对于分割部分，会单独进行一次总结，文中给出的分割效果对比图：</p>
+<p><img src="/images/p2_seg.png" alt></p>
+<p>结果显示在场景分割网络中，准确度关系为：<strong>MSG+DP &gt; MRG+DP &gt; SSG&gt; PointNet</strong></p>
+<p>源码其余部分的介绍不详细展开，根据个人理解将源码的结构与功能设计展示如下：</p>
+<p><img src="/images/PointNet2(tf).jpg" alt></p>
+<h3 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h3><p>本文主要结合代码层面总结了pointnet++网络设计以及分类任务的实现。重点理解pointnet++是如何利用set abstraction(SA)这种结构学习到局部结构上的特征，并通过跳步连接和多尺度采样（MSG+DP）来提高模型对点云的分割准确性。可以注意到pointnet++中在特征提取时使用pointnet网络，但是最后的结果的鲁棒性在不添加其他设计的情况下没有原网络好，并且作者<strong>没有继续使用T-net</strong>进行点云对齐的方法。接下来将在此基础上继续进行更多相关论文的学习。</p>
+<p>源码地址：<br>1.原论文实现代码<br><a href="https://github.com/charlesq34/pointnet2" target="_blank" rel="noopener">https://github.com/charlesq34/pointnet2</a><br>2.基于pytorch实现：<br><a href="https://github.com/erikwijmans/Pointnet2_PyTorch" target="_blank" rel="noopener">https://github.com/erikwijmans/Pointnet2_PyTorch</a><br><a href="https://github.com/yanx27/Pointnet_Pointnet2_pytorch" target="_blank" rel="noopener">https://github.com/yanx27/Pointnet_Pointnet2_pytorch</a> </p>
+
+    
+
+    
+
+    
+    <div class="declare"> 
+      <ul class="post-copyright">
+        <li>
+          <strong>作者：</strong>
+          Chris Yan
+        </li>
+        <li>
+          <strong>链接：</strong>
+          <a href="https:/Yansz.github.io/2020/03/16/pointne2学习笔记/" title="Pointnet++ 网络个人笔记" target="_blank">https:/Yansz.github.io/2020/03/16/pointne2学习笔记/</a>
+        </li>
+        
+        <li>
+          <strong>版权声明： </strong>
+          
+          本博客所有文章除特别声明外，均采用 <a href="https://github.com/JoeyBling/hexo-theme-yilia-plus/blob/master/LICENSE" rel="external nofollow" target="_blank">MIT</a> 许可协议。转载请注明出处！
+        </li>
+        
+      </ul>
+    </div>
+    
+
   </div>
-</article>
-  
+  <div class="article-info article-info-index">
     
     
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2019/01/15/Word2vec理解/" class="archive-article-date">
-        <time datetime="2019-01-14T22:50:10.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-01-15</time>
-</a>
-
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2019/01/15/Word2vec理解/">Word2vec理解</a>
-	
-    </h1>
-  
-
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Vec</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
+    
 	<div class="article-category tagcloud">
 		<i class="icon-book icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="/categories/NLP//" class="article-tag-list-link color4">NLP</a>
+        			<a href="/categories/Pointcloud-DL//" class="article-tag-list-link color4">Pointcloud,DL</a>
         		</li>
       		
 		</ul>
 	</div>
 
 
+    
+
+    
+    
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <!-- <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a> -->
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+     <!-- <img src="//pan.baidu.com/share/qrcode?url=https://Yansz.github.io/2020/03/16/pointne2学习笔记/" alt="微信分享二维码"> -->
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+
+    
+    <div class="clearfix"></div>
+  </div>
   </div>
 </article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2019/01/11/NER中的两种DL模型/" class="archive-article-date">
-        <time datetime="2019-01-10T21:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-01-11</time>
-</a>
 
+
+<nav id="article-nav">
+  
+  
+    <a href="/2020/03/10/pointnetcode/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Pointnet网络个人笔记</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2019/01/11/NER中的两种DL模型/">NER中的两种DL模型</a>
-	
-    </h1>
-  
-
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">NER</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/NLP//" class="article-tag-list-link color4">NLP</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
+        
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Pointnet-个人笔记"><span class="toc-number">1.</span> <span class="toc-text">Pointnet++个人笔记</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#前言"><span class="toc-number">1.0.1.</span> <span class="toc-text">前言</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#网络的基本组成"><span class="toc-number">1.0.1.1.</span> <span class="toc-text">网络的基本组成</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#针对非均匀点云情况"><span class="toc-number">1.0.2.</span> <span class="toc-text">## 针对非均匀点云情况</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#SA模块的代码实现"><span class="toc-number">1.1.</span> <span class="toc-text">SA模块的代码实现</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#单尺度成组-SSG-分类网络的实现"><span class="toc-number">1.2.</span> <span class="toc-text">单尺度成组(SSG)分类网络的实现</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#结语"><span class="toc-number">1.2.1.</span> <span class="toc-text">结语</span></a></li></ol></li></ol></li></ol>
+                    </div>
+                </span>
+            </div>
         </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
+        
+    </div>
+</aside>
+
+
+
+
+
+
+
+
+
+
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2019/01/10/词嵌入/" class="archive-article-date">
-        <time datetime="2019-01-09T21:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-01-10</time>
-</a>
-
-        </div>
-    	 
+  <div id="gitment-ctn"></div>
   
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2019/01/10/词嵌入/">词嵌入方法</a>
-	
-    </h1>
+    <!-- 中文 -->
+    <link rel="stylesheet" href="/lib/gitment.css">
+    <script src="/lib/gitment.js"></script>
   
+  <script>
+    <!-- id: "Pointnet++ 网络个人笔记" -->
+    var gitment = new Gitment({
+      id: "20200316000000",
+      owner: 'Yansz',
+      repo: 'Yansz.github.io',
+      oauth: {
+        client_id: '7bd19647dacd63488f5d',
+        client_secret: 'a5dab7c0a20148b56723764217e284e45a430dd0',
+      },
+    })
+    gitment.render('gitment-ctn')
+  </script>
 
 
-        <div class="article-info info-on-right">
-          
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/NLP//" class="article-tag-list-link color4">NLP</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2019/01/10/NER的概念/" class="archive-article-date">
-        <time datetime="2019-01-09T21:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-01-10</time>
-</a>
-
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2019/01/10/NER的概念/">NER的概念</a>
-	
-    </h1>
   
 
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">NER</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/NLP//" class="article-tag-list-link color4">NLP</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
-    <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/archives/2019/">&laquo; Prev</a><a class="page-number" href="/archives/2019/">1</a><span class="page-number current">2</span>
-    </nav>
-  
 
 
           </div>
@@ -496,8 +525,8 @@ $(document).ready(function() {
 	var yiliaConfig = {
 		mathjax: true,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,

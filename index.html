@@ -173,6 +173,92 @@
             
 
   
+    <article id="post-pointne2学习笔记" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+  
+  
+    <h1 itemprop="name">
+	
+	  <a class="article-title" href="/2020/03/16/pointne2学习笔记/">Pointnet++ 网络个人笔记</a>
+	
+    </h1>
+  
+
+
+  
+  
+<a href="/2020/03/16/pointne2学习笔记/" class="archive-article-date">
+        <time datetime="2020-03-15T21:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-03-16</time>
+</a>
+
+  
+  
+    
+
+  
+  </header>
+  
+  <div class="article-entry" itemprop="articleBody">
+    
+    <h1 id="Pointnet-个人笔记"><a href="#Pointnet-个人笔记" class="headerlink" title="Pointnet++个人笔记"></a>Pointnet++个人笔记</h1><h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>Pointnet提取的全局特征能够很好地完成分类任务，由于网络将所有的点最大池化为了一个全局特征，因此局部点与点之间的联系并没有被网络学习到，导致网络的输出缺乏<strong>点云的局部结构特征</strong>，因此PointNet对于场景的分割效果十分一般。在点云分类和物体的Part Segmentation中，这样的问题可以通过中心化物体的坐标轴部分地解决，但在场景分割中很难去解决。
+    
+    
+
+    
+
+    
+
+  </div>
+  <div class="article-info article-info-index">
+    
+    
+    
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/Pointcloud-DL//" class="article-tag-list-link color4">Pointcloud,DL</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+    
+    <p class="article-more-link">
+      <a class="article-more-a" href="/2020/03/16/pointne2学习笔记/">Readmore >></a>
+    </p>
+    
+
+    
+    <div class="clearfix"></div>
+  </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-pointnetcode" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -202,7 +288,7 @@
   
   <div class="article-entry" itemprop="articleBody">
     
-    <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>Pointnet开创性地将深度学习直接用于三维点云任务。由于点云数据的无序性，无法直接对原始点云使用卷积等操作。Pointnet提出对称函数来解决点的无序性问题，设计了能够进行分类和分割任务的网络结构，本文结合源码与个人的理解对于T-net网络和对称函数进行分析。
+    <h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>Pointnet开创性地将深度学习直接用于三维点云任务。由于点云数据的无序性，无法直接对原始点云使用卷积等操作。Pointnet提出对称函数来解决点的无序性问题，设计了能够进行分类和分割任务的网络结构，本文结合源码与个人的理解对于T-net网络和对称函数进行分析。
     
     
 
@@ -1042,109 +1128,6 @@
 
 
   
-    <article id="post-BERT简要介绍" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-  
-  
-    <h1 itemprop="name">
-	
-	  <a class="article-title" href="/2019/02/11/BERT简要介绍/">BERT简要介绍</a>
-	
-    </h1>
-  
-
-
-  
-  
-<a href="/2019/02/11/BERT简要介绍/" class="archive-article-date">
-        <time datetime="2019-02-10T21:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-02-11</time>
-</a>
-
-  
-  
-    
-
-  
-  </header>
-  
-  <div class="article-entry" itemprop="articleBody">
-    
-    <blockquote>
-<p>BERT(Bidirectional Encoder Representation from Transformers) 网络架构由 Jacob Devlin 等人提出<strong>用于预训练</strong>，学习在给定上下文下给出词的 Embedding 表示。BERT 采用了 Transformer 架构的编码器部分用于学习词在给定上下文下词的 Embedding 表示。考虑到语言模型任务为从左往右或从右往左预测下一个词的自回归任务，因此若采用该模式每个词无法依赖于当前上下文下后续词进行词向量表示。为了解决该问题，BERT 提出了两类预训练任务：</p>
-<ul>
-<li><p>掩码语言模型任务</p>
-</li>
-<li><p>下一句预测任务</p>
-<p>下面我们分别来看这两类任务。
-    
-    
-
-    
-
-    
-
-  </div>
-  <div class="article-info article-info-index">
-    
-    
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">BERT</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-    
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/NLP//" class="article-tag-list-link color4">NLP</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-    
-    <p class="article-more-link">
-      <a class="article-more-a" href="/2019/02/11/BERT简要介绍/">Readmore >></a>
-    </p>
-    
-
-    
-    <div class="clearfix"></div>
-  </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
   
     <nav id="page-nav">
       <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
@@ -1317,18 +1300,6 @@ $(document).ready(function() {
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">visual</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">BERT</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Algorithm</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">Git</a>
               </li>
              
@@ -1337,7 +1308,23 @@ $(document).ready(function() {
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">visual</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">3DSeg</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Transformer</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Algorithm</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Technical route</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1345,7 +1332,7 @@ $(document).ready(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Transformer</a>
+                <a href="javascript:void(0)" class="js-tag color5">BERT</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1354,10 +1341,6 @@ $(document).ready(function() {
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">NLP</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Technical route</a>
               </li>
             
             <div class="clearfix"></div>

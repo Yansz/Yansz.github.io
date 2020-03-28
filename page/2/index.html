@@ -173,6 +173,109 @@
             
 
   
+    <article id="post-BERT简要介绍" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+  
+  
+    <h1 itemprop="name">
+	
+	  <a class="article-title" href="/2019/02/11/BERT简要介绍/">BERT简要介绍</a>
+	
+    </h1>
+  
+
+
+  
+  
+<a href="/2019/02/11/BERT简要介绍/" class="archive-article-date">
+        <time datetime="2019-02-10T21:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-02-11</time>
+</a>
+
+  
+  
+    
+
+  
+  </header>
+  
+  <div class="article-entry" itemprop="articleBody">
+    
+    <blockquote>
+<p>BERT(Bidirectional Encoder Representation from Transformers) 网络架构由 Jacob Devlin 等人提出<strong>用于预训练</strong>，学习在给定上下文下给出词的 Embedding 表示。BERT 采用了 Transformer 架构的编码器部分用于学习词在给定上下文下词的 Embedding 表示。考虑到语言模型任务为从左往右或从右往左预测下一个词的自回归任务，因此若采用该模式每个词无法依赖于当前上下文下后续词进行词向量表示。为了解决该问题，BERT 提出了两类预训练任务：</p>
+<ul>
+<li><p>掩码语言模型任务</p>
+</li>
+<li><p>下一句预测任务</p>
+<p>下面我们分别来看这两类任务。
+    
+    
+
+    
+
+    
+
+  </div>
+  <div class="article-info article-info-index">
+    
+    
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">BERT</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+    
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/NLP//" class="article-tag-list-link color4">NLP</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+    
+    <p class="article-more-link">
+      <a class="article-more-a" href="/2019/02/11/BERT简要介绍/">Readmore >></a>
+    </p>
+    
+
+    
+    <div class="clearfix"></div>
+  </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-Transformer详细讲解" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -644,6 +747,100 @@
 
 
   
+    <article id="post-词嵌入" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+  
+  
+    <h1 itemprop="name">
+	
+	  <a class="article-title" href="/2019/01/10/词嵌入/">词嵌入方法</a>
+	
+    </h1>
+  
+
+
+  
+  
+<a href="/2019/01/10/词嵌入/" class="archive-article-date">
+        <time datetime="2019-01-09T21:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-01-10</time>
+</a>
+
+  
+  
+    
+
+  
+  </header>
+  
+  <div class="article-entry" itemprop="articleBody">
+    
+    <h2 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h2><p>对于自然语言处理任务，我们不能直接使用纯文本字符串作为输出，而是需要将文本字符转化为连续值的向量。</p>
+<p>词嵌入的主要思想是将文本转换为较低维度空间的矢量表示。对于这种转化后的向量有两个重要的要求：</p>
+<ul>
+<li><p>较低维度空间：尽量降低编码词向量产生的稀疏性。</p>
+</li>
+<li><p>保证上下文相似性：为了使语言模型更好的预测文本的含义。</p>
+</li>
+</ul>
+<p>总的来说，词嵌入就是一种<strong>从文本语料库构建低维向量表示的方法，可以保留单词的上下文相似性。</strong>
+    
+    
+
+    
+
+    
+
+  </div>
+  <div class="article-info article-info-index">
+    
+    
+    
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/NLP//" class="article-tag-list-link color4">NLP</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+    
+    <p class="article-more-link">
+      <a class="article-more-a" href="/2019/01/10/词嵌入/">Readmore >></a>
+    </p>
+    
+
+    
+    <div class="clearfix"></div>
+  </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-NER的概念" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -713,100 +910,6 @@
     
     <p class="article-more-link">
       <a class="article-more-a" href="/2019/01/10/NER的概念/">Readmore >></a>
-    </p>
-    
-
-    
-    <div class="clearfix"></div>
-  </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-词嵌入" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-  
-  
-    <h1 itemprop="name">
-	
-	  <a class="article-title" href="/2019/01/10/词嵌入/">词嵌入方法</a>
-	
-    </h1>
-  
-
-
-  
-  
-<a href="/2019/01/10/词嵌入/" class="archive-article-date">
-        <time datetime="2019-01-09T21:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-01-10</time>
-</a>
-
-  
-  
-    
-
-  
-  </header>
-  
-  <div class="article-entry" itemprop="articleBody">
-    
-    <h2 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h2><p>对于自然语言处理任务，我们不能直接使用纯文本字符串作为输出，而是需要将文本字符转化为连续值的向量。</p>
-<p>词嵌入的主要思想是将文本转换为较低维度空间的矢量表示。对于这种转化后的向量有两个重要的要求：</p>
-<ul>
-<li><p>较低维度空间：尽量降低编码词向量产生的稀疏性。</p>
-</li>
-<li><p>保证上下文相似性：为了使语言模型更好的预测文本的含义。</p>
-</li>
-</ul>
-<p>总的来说，词嵌入就是一种<strong>从文本语料库构建低维向量表示的方法，可以保留单词的上下文相似性。</strong>
-    
-    
-
-    
-
-    
-
-  </div>
-  <div class="article-info article-info-index">
-    
-    
-    
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/NLP//" class="article-tag-list-link color4">NLP</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-    
-    <p class="article-more-link">
-      <a class="article-more-a" href="/2019/01/10/词嵌入/">Readmore >></a>
     </p>
     
 
@@ -1008,18 +1111,6 @@ $(document).ready(function() {
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">visual</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">BERT</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Algorithm</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">Git</a>
               </li>
              
@@ -1028,7 +1119,23 @@ $(document).ready(function() {
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">visual</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">3DSeg</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Transformer</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Algorithm</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Technical route</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1036,7 +1143,7 @@ $(document).ready(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Transformer</a>
+                <a href="javascript:void(0)" class="js-tag color5">BERT</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1045,10 +1152,6 @@ $(document).ready(function() {
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">NLP</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Technical route</a>
               </li>
             
             <div class="clearfix"></div>
